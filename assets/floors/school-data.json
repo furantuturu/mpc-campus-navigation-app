@@ -1,0 +1,1023 @@
+{
+    "Offices": {
+        "F1": {
+            "Old Building": [
+                {
+                    "id": "OB1",
+                    "name": "Registrar",
+                    "coordinates": {
+                        "latitude": 6.117952,
+                        "longitude": 125.145189
+                    }
+                },
+                {
+                    "id": "OB2",
+                    "name": "VP for Administration & VP for Academic Affairs",
+                    "coordinates": {
+                        "latitude": 6.117910,
+                        "longitude": 125.145078
+                    }
+                },
+                {
+                    "id": "OB3",
+                    "name": "HRDO",
+                    "coordinates": {
+                        "latitude": 6.117891,
+                        "longitude": 125.145017
+                    }
+                },
+                {
+                    "id": "OB4",
+                    "name": "Cashier",
+                    "coordinates": {
+                        "latitude": 6.117872,
+                        "longitude": 125.144967
+                    }
+                },
+                {
+                    "id": "OB5",
+                    "name": "Guidance and Counseling Center",
+                    "coordinates": {
+                        "latitude": 6.117849,
+                        "longitude": 125.144917
+                    }
+                },
+                {
+                    "id": "OB6",
+                    "name": "GAD Office",
+                    "coordinates": {
+                        "latitude": 6.117802,
+                        "longitude": 125.144767
+                    }
+                },
+                {
+                    "id": "OB7",
+                    "name": "Clinic & Office of the Scholarship Coordinator",
+                    "coordinates": {
+                        "latitude": 6.117771,
+                        "longitude": 125.144680
+                    }
+                },
+                {
+                    "id": "OB8",
+                    "name": "Simulation Room",
+                    "coordinates": {
+                        "latitude": 6.117732,
+                        "longitude": 125.144590
+                    }
+                },
+                {
+                    "id": "OB9",
+                    "name": "BSNAME Department Head Office",
+                    "coordinates": {
+                        "latitude": 6.117682,
+                        "longitude": 125.144468
+                    }
+                }
+            ],
+            "Gym Building": [
+                {
+                    "id": "GB2",
+                    "name": "BSME Department Office",
+                    "coordinates": {
+                        "latitude": 6.117363,
+                        "longitude": 125.144802
+                    }
+                },
+                {
+                    "id": "GB3",
+                    "name": "BSME Department Head & BSIT Department Head",
+                    "coordinates": {
+                        "latitude": 6.117385,
+                        "longitude": 125.144857
+                    }
+                },
+                {
+                    "id": "GB4",
+                    "name": "BSCA Department Head",
+                    "coordinates": {
+                        "latitude": 6.117409,
+                        "longitude": 125.144913
+                    }
+                },
+                {
+                    "id": "GB5",
+                    "name": "Research and Developmentt Office",
+                    "coordinates": {
+                        "latitude": 6.117430,
+                        "longitude": 125.144966
+                    }
+                },
+                {
+                    "id": "GB6",
+                    "name": "Office of the Practicum Coordinator",
+                    "coordinates": {
+                        "latitude": 6.117448,
+                        "longitude": 125.145049
+                    }
+                },
+                {
+                    "id": "GB7",
+                    "name": "Porthole",
+                    "coordinates": {
+                        "latitude": 6.117463,
+                        "longitude": 125.145100
+                    }
+                },
+                {
+                    "id": "GB8",
+                    "name": "Quality Assurance Manager",
+                    "coordinates": {
+                        "latitude": 6.117491,
+                        "longitude": 125.145163
+                    }
+                },
+                {
+                    "id": "GB9",
+                    "name": "Office of the SHS Principal",
+                    "coordinates": {
+                        "latitude": 6.117799,
+                        "longitude": 125.145024
+                    }
+                },
+                {
+                    "id": "GB10",
+                    "name": "Supreme Student Government / SHS Department",
+                    "coordinates": {
+                        "latitude": 6.117788,
+                        "longitude": 125.144994
+                    }
+                },
+                {
+                    "id": "GB11",
+                    "name": "Physical Plant Office",
+                    "coordinates": {
+                        "latitude": 6.117781,
+                        "longitude": 125.144974
+                    }
+                },
+                {
+                    "id": "GB12",
+                    "name": "Philippine Security of Customs Administration Students (PSCAS)",
+                    "coordinates": {
+                        "latitude": 6.117769,
+                        "longitude": 125.144950
+                    }
+                },
+                {
+                    "id": "GB13",
+                    "name": "Office of the Supreme Student Council",
+                    "coordinates": {
+                        "latitude": 6.117736,
+                        "longitude": 125.144874
+                    }
+                },
+                {
+                    "id": "GB14",
+                    "name": "Society of Naval Architecture & Marine Engineering Students",
+                    "coordinates": {
+                        "latitude": 6.117735,
+                        "longitude": 125.144857
+                    }
+                },
+                {
+                    "id": "GB15",
+                    "name": "Office of the Hospitality Department",
+                    "coordinates": {
+                        "latitude": 6.117720,
+                        "longitude": 125.144820
+                    }
+                },
+                {
+                    "id": "GB16",
+                    "name": "Office of Student Activities & Services (OSAS) / NSTP Office",
+                    "coordinates": {
+                        "latitude": 6.117703,
+                        "longitude": 125.144774
+                    }
+                },
+                {
+                    "id": "GB17",
+                    "name": "Sports Office",
+                    "coordinates": {
+                        "latitude": 6.117686,
+                        "longitude": 125.144732
+                    }
+                }
+            ],
+            "Maritime Building": [
+                {
+                    "id": "MBF1-9",
+                    "name": "Dean of Maritime Education Office",
+                    "coordinates": {
+                        "latitude": 6.117157,
+                        "longitude": 125.144878
+                    }
+                },
+                {
+                    "id": "MBF1-15",
+                    "name": "Front Office Lab",
+                    "coordinates": {
+                        "latitude": 6.117132,
+                        "longitude": 125.144518
+                    }
+                }
+            ],
+            "Susana Building": [
+                {
+                    "id": "SBF1-6",
+                    "name": "RISO Office",
+                    "coordinates": {
+                        "latitude": 6.117648,
+                        "longitude": 125.144280
+                    }
+                }
+            ],
+            "Mar-E": [
+                {
+                    "id": "MARF1-1",
+                    "name": "MPC Tech-Voc Office",
+                    "coordinates": {
+                        "latitude": 6.117180,
+                        "longitude": 125.143990
+                    }
+                }
+            ],
+            "Outside": [
+                {
+                    "id": "O-3",
+                    "name": "Property Custodian",
+                    "coordinates": {
+                        "latitude": 6.116869,
+                        "longitude": 125.144185
+                    }
+                }
+            ]
+        },
+        "F3": {
+            "Maritime Building": [
+                {
+                    "id": "MBF3-9",
+                    "name": "BSCRIM Office",
+                    "coordinates": {
+                        "latitude": 6.117082,
+                        "longitude": 125.144670
+                    }
+                }
+            ]
+        },
+        "F4": {
+            "Susana Building": [
+                {
+                    "id": "SBF4-2",
+                    "name": "Multimedia Center Office",
+                    "coordinates": {
+                        "latitude": 6.117367,
+                        "longitude": 125.144416
+                    }
+                }
+            ]
+        }
+    },
+    "Rooms": {
+        "F1": {
+            "Old Building": [
+                {
+                    "id": "OB10",
+                    "name": "Room 102",
+                    "coordinates": {
+                        "latitude": 6.117664,
+                        "longitude": 125.144416
+                    }
+                }
+            ],
+            "Maritime Building": [
+                {
+                    "id": "MBF1-1",
+                    "name": "Engine Simulator Room",
+                    "coordinates": {
+                        "latitude": 6.117348,
+                        "longitude": 125.145394
+                    }
+                },
+                {
+                    "id": "MBF1-2",
+                    "name": "Room 117",
+                    "coordinates": {
+                        "latitude": 6.117325,
+                        "longitude": 125.145294
+                    }
+                },
+                {
+                    "id": "MBF1-3",
+                    "name": "Room 118",
+                    "coordinates": {
+                        "latitude": 6.117305,
+                        "longitude": 125.145253
+                    }
+                },
+                {
+                    "id": "MBF1-4",
+                    "name": "Room 119",
+                    "coordinates": {
+                        "latitude": 6.117285,
+                        "longitude": 125.145192
+                    }
+                },
+                {
+                    "id": "MBF1-5",
+                    "name": "Room 120",
+                    "coordinates": {
+                        "latitude": 6.117260,
+                        "longitude": 125.145130
+                    }
+                },
+                {
+                    "id": "MBF1-6",
+                    "name": "Room 121",
+                    "coordinates": {
+                        "latitude": 6.117227,
+                        "longitude": 125.145045
+                    }
+                },
+                {
+                    "id": "MBF1-7",
+                    "name": "Room 122",
+                    "coordinates": {
+                        "latitude": 6.117208,
+                        "longitude": 125.144996
+                    }
+                },
+                {
+                    "id": "MBF1-8",
+                    "name": "Room 123",
+                    "coordinates": {
+                        "latitude": 6.117181,
+                        "longitude": 125.144938
+                    }
+                },
+                {
+                    "id": "MBF1-10",
+                    "name": "Faculty Room",
+                    "coordinates": {
+                        "latitude": 6.117128,
+                        "longitude": 125.144800
+                    }
+                },
+                {
+                    "id": "MBF1-11",
+                    "name": "Pastry Lab",
+                    "coordinates": {
+                        "latitude": 6.117095,
+                        "longitude": 125.144689
+                    }
+                },
+                {
+                    "id": "MBF1-12",
+                    "name": "Room 127",
+                    "coordinates": {
+                        "latitude": 6.117073,
+                        "longitude": 125.144643
+                    }
+                },
+                {
+                    "id": "MBF1-13",
+                    "name": "BSHRM Lab",
+                    "coordinates": {
+                        "latitude": 6.117045,
+                        "longitude": 125.144577
+                    }
+                },
+                {
+                    "id": "MBF1-14",
+                    "name": "HRM Dining Lab",
+                    "coordinates": {
+                        "latitude": 6.117009,
+                        "longitude": 125.144543
+                    }
+                },
+                {
+                    "id": "MBF1-15",
+                    "name": "Front Office Lab",
+                    "coordinates": {
+                        "latitude": 6.117132,
+                        "longitude": 125.144518
+                    }
+                }
+            ],
+            "Susana Building": [
+                {
+                    "id": "SBF1-1",
+                    "name": "SHS Room 01",
+                    "coordinates": {
+                        "latitude": 6.117274,
+                        "longitude": 125.144459
+                    }
+                },
+                {
+                    "id": "SBF1-2",
+                    "name": "SHS Room 02",
+                    "coordinates": {
+                        "latitude": 6.117351,
+                        "longitude": 125.144428
+                    }
+                },
+                {
+                    "id": "SBF1-3",
+                    "name": "SHS Room 03",
+                    "coordinates": {
+                        "latitude": 6.117440,
+                        "longitude": 125.144396
+                    }
+                },
+                {
+                    "id": "SBF1-4",
+                    "name": "SHS Room 04",
+                    "coordinates": {
+                        "latitude": 6.117514,
+                        "longitude": 125.144370
+                    }
+                },
+                {
+                    "id": "SBF1-5",
+                    "name": "Conference Room",
+                    "coordinates": {
+                        "latitude": 6.117594,
+                        "longitude": 125.144337
+                    }
+                }
+            ],
+            "Mar-E": [
+                {
+                    "id": "MARF1-2",
+                    "name": "Engineering Lab",
+                    "coordinates": {
+                        "latitude": 6.117186,
+                        "longitude": 125.143981
+                    }
+                }
+            ]
+        },
+        "F2": {
+            "Maritime Building": [
+                {
+                    "id": "MBF2-1",
+                    "name": "Full Mission Bridge Simulation Room",
+                    "coordinates": {
+                        "latitude": 6.117352,
+                        "longitude": 125.145401
+                    }
+                },
+                {
+                    "id": "MBF2-2",
+                    "name": "Briefing/Debriefing Room",
+                    "coordinates": {
+                        "latitude": 6.117330,
+                        "longitude": 125.145332
+                    }
+                },
+                {
+                    "id": "MBF2-3",
+                    "name": "Room 203",
+                    "coordinates": {
+                        "latitude": 6.117307,
+                        "longitude": 125.145255
+                    }
+                },
+                {
+                    "id": "MBF2-4",
+                    "name": "Room 204",
+                    "coordinates": {
+                        "latitude": 6.117286,
+                        "longitude": 125.145199
+                    }
+                },
+                {
+                    "id": "MBF2-5",
+                    "name": "Room 205",
+                    "coordinates": {
+                        "latitude": 6.117263,
+                        "longitude": 125.145132
+                    }
+                },
+                {
+                    "id": "MBF2-6",
+                    "name": "Room 206",
+                    "coordinates": {
+                        "latitude": 6.117226,
+                        "longitude": 125.145041
+                    }
+                },
+                {
+                    "id": "MBF2-7",
+                    "name": "Room 207",
+                    "coordinates": {
+                        "latitude": 6.117204,
+                        "longitude": 125.144987
+                    }
+                },
+                {
+                    "id": "MBF2-8",
+                    "name": "Room 208",
+                    "coordinates": {
+                        "latitude": 6.117185,
+                        "longitude": 125.144934
+                    }
+                },
+                {
+                    "id": "MBF2-9",
+                    "name": "Simulation Room",
+                    "coordinates": {
+                        "latitude": 6.117161,
+                        "longitude": 125.144875
+                    }
+                },
+                {
+                    "id": "MBF2-13",
+                    "name": "IT Room/Storage",
+                    "coordinates": {
+                        "latitude": 6.117135,
+                        "longitude": 125.144811
+                    }
+                },
+                {
+                    "id": "MBF2-10",
+                    "name": "Computer Lab",
+                    "coordinates": {
+                        "latitude": 6.117085,
+                        "longitude": 125.144689
+                    }
+                },
+                {
+                    "id": "MBF2-11",
+                    "name": "Housekeeping Lab",
+                    "coordinates": {
+                        "latitude": 6.117096,
+                        "longitude": 125.144526
+                    }
+                },
+                {
+                    "id": "MBF2-12",
+                    "name": "Bar",
+                    "coordinates": {
+                        "latitude": 6.117006,
+                        "longitude": 125.144557
+                    }
+                }
+            ],
+            "Susana Building": [
+                {
+                    "id": "SBF2-1",
+                    "name": "Maritime Computer Lab",
+                    "coordinates": {
+                        "latitude": 6.117285,
+                        "longitude": 125.144456
+                    }
+                },
+                {
+                    "id": "SBF2-2",
+                    "name": "Room 07",
+                    "coordinates": {
+                        "latitude": 6.117342,
+                        "longitude": 125.144423
+                    }
+                },
+                {
+                    "id": "SBF2-3",
+                    "name": "Room 08",
+                    "coordinates": {
+                        "latitude": 6.117434,
+                        "longitude": 125.144394
+                    }
+                },
+                {
+                    "id": "SBF2-4",
+                    "name": "Room 09",
+                    "coordinates": {
+                        "latitude": 6.117517,
+                        "longitude": 125.144360
+                    }
+                },
+                {
+                    "id": "SBF2-5",
+                    "name": "Room 10",
+                    "coordinates": {
+                        "latitude": 6.117575,
+                        "longitude": 125.144341
+                    }
+                }
+            ],
+            "Mar-E": [
+                {
+                    "id": "MARF2-1",
+                    "name": "Room 01",
+                    "coordinates": {
+                        "latitude": 6.117173,
+                        "longitude": 125.143981
+                    }
+                },
+                {
+                    "id": "MARF2-2",
+                    "name": "Room 02",
+                    "coordinates": {
+                        "latitude": 6.117200,
+                        "longitude": 125.143972
+                    }
+                },
+                {
+                    "id": "MARF2-3",
+                    "name": "Room 03",
+                    "coordinates": {
+                        "latitude": 6.117218,
+                        "longitude": 125.143979
+                    }
+                },
+                {
+                    "id": "MARF2-4",
+                    "name": "Room 04",
+                    "coordinates": {
+                        "latitude": 6.117212,
+                        "longitude": 125.143964
+                    }
+                },
+                {
+                    "id": "MARF2-5",
+                    "name": "Room 05",
+                    "coordinates": {
+                        "latitude": 6.117280,
+                        "longitude": 125.143953
+                    }
+                },
+                {
+                    "id": "MARF2-6",
+                    "name": "Room 06",
+                    "coordinates": {
+                        "latitude": 6.117273,
+                        "longitude": 125.143938
+                    }
+                },
+                {
+                    "id": "MARF2-7",
+                    "name": "Room 07",
+                    "coordinates": {
+                        "latitude": 6.117336,
+                        "longitude": 125.143931
+                    }
+                },
+                {
+                    "id": "MARF2-8",
+                    "name": "Room 08",
+                    "coordinates": {
+                        "latitude": 6.117329,
+                        "longitude": 125.143915
+                    }
+                },
+                {
+                    "id": "MARF2-9",
+                    "name": "Room 10",
+                    "coordinates": {
+                        "latitude": 6.117385,
+                        "longitude": 125.143906
+                    }
+                },
+                {
+                    "id": "MARF2-10",
+                    "name": "Drawing Room I",
+                    "coordinates": {
+                        "latitude": 6.117434,
+                        "longitude": 125.143885
+                    }
+                },
+                {
+                    "id": "MARF2-11",
+                    "name": "Mold Lofting Room",
+                    "coordinates": {
+                        "latitude": 6.117459,
+                        "longitude": 125.143871
+                    }
+                }
+            ]
+        },
+        "F3": {
+            "Maritime Building": [
+                {
+                    "id": "MBF3-1",
+                    "name": "Meteorology / Oceanography Lab",
+                    "coordinates": {
+                        "latitude": 6.117301,
+                        "longitude": 125.145232
+                    }
+                },
+                {
+                    "id": "MBF3-2",
+                    "name": "Chart Room / Room 301",
+                    "coordinates": {
+                        "latitude": 6.117295,
+                        "longitude": 125.145218
+                    }
+                },
+                {
+                    "id": "MBF3-3",
+                    "name": "GMDSS Simulator Room",
+                    "coordinates": {
+                        "latitude": 6.117280,
+                        "longitude": 125.145183
+                    }
+                },
+                {
+                    "id": "MBF3-4",
+                    "name": "Briefing / Debriefing Room",
+                    "coordinates": {
+                        "latitude": 6.117271,
+                        "longitude": 125.145160
+                    }
+                },
+                {
+                    "id": "MBF3-5",
+                    "name": "Speech Lab",
+                    "coordinates": {
+                        "latitude": 6.117249,
+                        "longitude": 125.145104
+                    }
+                },
+                {
+                    "id": "MBF3-6",
+                    "name": "Customs Administration Lab",
+                    "coordinates": {
+                        "latitude": 6.117221,
+                        "longitude": 125.145046
+                    }
+                },
+                {
+                    "id": "MBF3-7",
+                    "name": "Library",
+                    "coordinates": {
+                        "latitude": 6.117204,
+                        "longitude": 125.145002
+                    }
+                },
+                {
+                    "id": "MBF3-8",
+                    "name": "Crime Lab 1",
+                    "coordinates": {
+                        "latitude": 6.117093,
+                        "longitude": 125.144702
+                    }
+                },
+                {
+                    "id": "MBF3-10",
+                    "name": "Crime Lab 2",
+                    "coordinates": {
+                        "latitude": 6.117078,
+                        "longitude": 125.144656
+                    }
+                },
+                {
+                    "id": "MBF3-11",
+                    "name": "Crime Lab 3",
+                    "coordinates": {
+                        "latitude": 6.117068,
+                        "longitude": 125.144627
+                    }
+                },
+                {
+                    "id": "MBF3-12",
+                    "name": "Alpha",
+                    "coordinates": {
+                        "latitude": 6.117063,
+                        "longitude": 125.144619
+                    }
+                },
+                {
+                    "id": "MBF3-13",
+                    "name": "Crime Scene Simulation Room",
+                    "coordinates": {
+                        "latitude": 6.117036,
+                        "longitude": 125.144566
+                    }
+                },
+                {
+                    "id": "MBF3-14",
+                    "name": "Court Room",
+                    "coordinates": {
+                        "latitude": 6.117007,
+                        "longitude": 125.144544
+                    }
+                },
+                {
+                    "id": "MBF3-15",
+                    "name": "Bravo",
+                    "coordinates": {
+                        "latitude": 6.117081,
+                        "longitude": 125.144523
+                    }
+                },
+                {
+                    "id": "MBF3-16",
+                    "name": "Charles",
+                    "coordinates": {
+                        "latitude": 6.117150,
+                        "longitude": 125.144499
+                    }
+                }
+            ],
+            "Susana Building": [
+                {
+                    "id": "SBF3-1",
+                    "name": "PSCAS Room / Room 11",
+                    "coordinates": {
+                        "latitude": 6.117268,
+                        "longitude": 125.144459
+                    }
+                },
+                {
+                    "id": "SBF3-2",
+                    "name": "Room 12",
+                    "coordinates": {
+                        "latitude": 6.117339,
+                        "longitude": 125.144428
+                    }
+                },
+                {
+                    "id": "SBF3-3",
+                    "name": "Room 13",
+                    "coordinates": {
+                        "latitude": 6.117435,
+                        "longitude": 125.144392
+                    }
+                },
+                {
+                    "id": "SBF3-4",
+                    "name": "Room 14",
+                    "coordinates": {
+                        "latitude": 6.117518,
+                        "longitude": 125.144363
+                    }
+                },
+                {
+                    "id": "SBF3-5",
+                    "name": "Room 15",
+                    "coordinates": {
+                        "latitude": 6.117574,
+                        "longitude": 125.144341
+                    }
+                }
+            ]
+        },
+        "F4": {
+            "Susana Building": [
+                {
+                    "id": "SBF4-1",
+                    "name": "Audio Visual Room",
+                    "coordinates": {
+                        "latitude": 6.117300,
+                        "longitude": 125.144441
+                    }
+                },
+                {
+                    "id": "SBF4-2",
+                    "name": "Multimedia Center Office",
+                    "coordinates": {
+                        "latitude": 6.117367,
+                        "longitude": 125.144416
+                    }
+                },
+                {
+                    "id": "SBF4-3",
+                    "name": "Physics Lab",
+                    "coordinates": {
+                        "latitude": 6.117464,
+                        "longitude": 125.144377
+                    }
+                },
+                {
+                    "id": "SBF4-4",
+                    "name": "Nat. Science Lab",
+                    "coordinates": {
+                        "latitude": 6.117500,
+                        "longitude": 125.144367
+                    }
+                },
+                {
+                    "id": "SBF4-5",
+                    "name": "Chemistry Lab",
+                    "coordinates": {
+                        "latitude": 6.117559,
+                        "longitude": 125.144344
+                    }
+                }
+            ]
+        }
+    },
+    "Toilets": {
+        "F1": [
+            {
+                "id": "CRF1-1",
+                "name": "Maritime CR (Male)",
+                "coordinates": {
+                    "latitude": 6.117227,
+                    "longitude": 125.145109
+                }
+            },
+            {
+                "id": "CRF1-2",
+                "name": "Maritime CR (Female)",
+                "coordinates": {
+                    "latitude": 6.117082,
+                    "longitude": 125.144732
+                }
+            },
+            {
+                "id": "CRF1-3",
+                "name": "Mar-E CR",
+                "coordinates": {
+                    "latitude": 6.117185,
+                    "longitude": 125.143971
+                }
+            },
+            {
+                "id": "CRF1-4",
+                "name": "Back of Canteen CR",
+                "coordinates": {
+                    "latitude": 6.117612,
+                    "longitude": 125.144203
+                }
+            }
+        ],
+        "F2": [
+            {
+                "id": "CRF2-1",
+                "name": "Maritime CR",
+                "coordinates": {
+                    "latitude": 6.117224,
+                    "longitude": 125.145117
+                }
+            },
+            {
+                "id": "CRF2-2",
+                "name": "Maritime CR (Female)",
+                "coordinates": {
+                    "latitude": 6.117079,
+                    "longitude": 125.144730
+                }
+            },
+            {
+                "id": "CRF2-3",
+                "name": "Susana CR",
+                "coordinates": {
+                    "latitude": 6.117689,
+                    "longitude": 125.144246
+                }
+            }
+        ],
+        "F3": [
+            {
+                "id": "CRF3-1",
+                "name": "Susana CR",
+                "coordinates": {
+                    "latitude": 6.117687,
+                    "longitude": 125.144246
+                }
+            }
+        ],
+        "F4": [
+            {
+                "id": "CRF4-1",
+                "name": "Susana CR",
+                "coordinates": {
+                    "latitude": 6.117690,
+                    "longitude": 125.144245
+                }
+            }
+        ]
+    },
+    "Outdoor": [
+        {
+            "id": "GB1",
+            "name": "Gym",
+            "icon": "@/assets/images/gym-marker.png",
+            "coordinates": {
+                "latitude": 6.117617,
+                "longitude": 125.145000
+            }
+        },
+        {
+            "id": "O-1",
+            "name": "Canteen",
+            "icon": "@/assets/images/canteen-marker.png",
+            "coordinates": {
+                "latitude": 6.117333,
+                "longitude": 125.144223
+            }
+        },
+        {
+            "id": "O-2",
+            "name": "Swimming Area",
+            "icon": "@/assets/images/swimming-marker.png",
+            "coordinates": {
+                "latitude": 6.116813,
+                "longitude": 125.144650
+            }
+        }
+    ]
+}
