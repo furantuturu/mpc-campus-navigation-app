@@ -1,4 +1,5 @@
 import { useMyStoreV2 } from "@/store/useMyStore";
+import { isEqual } from "es-toolkit";
 import { lazy, Suspense } from "react";
 import { ActivityIndicator, ScrollView, StyleSheet } from "react-native";
 import { Divider, Text } from 'react-native-paper';
@@ -9,10 +10,11 @@ import ToiletAreaActionButtons from "./ToiletAreaActionButton";
 
 export default function FloorSheetContent() {
     const { selectedCategory, selectedFloor } = useMyStoreV2();
+
     const LazyOfficeAreaActionButtons = lazy(() => import("./OfficeAreaActionButton"));
     const LazyRoomAreaActionButtons = lazy(() => import("./RoomAreaActionButton"));
 
-    const selectedFloorName = selectedFloor === "F1" ? "Floor 1 / Ground" : selectedFloor === "F2" ? "Floor 2" : selectedFloor === "F3" ? "Floor 3" : "Floor 4";
+    const selectedFloorName = isEqual(selectedFloor, "F1") ? "Floor 1 / Ground" : isEqual(selectedFloor, "F2") ? "Floor 2" : isEqual(selectedFloor, "F3") ? "Floor 3" : "Floor 4";
 
     return (
         <>
@@ -23,18 +25,18 @@ export default function FloorSheetContent() {
             </Text>
             <Divider />
             <ScrollView nestedScrollEnabled>
-                {selectedCategory === "Offices" && (
+                {isEqual(selectedCategory, "Offices") && (
                     <Suspense fallback={<ActivityIndicator style={styles.loadingStyle} size="large" />}>
                         <LazyOfficeAreaActionButtons />
                     </Suspense>
                 )}
-                {selectedCategory === "Rooms" && (
+                {isEqual(selectedCategory, "Rooms") && (
                     <Suspense fallback={<ActivityIndicator style={styles.loadingStyle} size="large" />}>
                         <LazyRoomAreaActionButtons />
                     </Suspense>
                 )}
-                {selectedCategory === "Toilets" && <ToiletAreaActionButtons />}
-                {selectedCategory === "Outdoors" && <OutdoorAreaActionButtons />}
+                {isEqual(selectedCategory, "Toilets") && <ToiletAreaActionButtons />}
+                {isEqual(selectedCategory, "Outdoors") && <OutdoorAreaActionButtons />}
             </ScrollView>
         </>
     );
