@@ -1,11 +1,13 @@
 import { outdoorData } from "@/constants/floorData";
 import { canteenMarkerImg, gymMarkerImg, swimmingMarkerImg } from "@/constants/markerConfig";
+import { isEqual } from "es-toolkit";
+import { map } from "es-toolkit/compat";
 import MemoMapMarker from "./MapMarker";
 
 export default function OutdoorMarkers() {
     return (
-        outdoorData.map((outdoorMarker) => {
-            const markerImg = outdoorMarker.name === "Gym" ? gymMarkerImg : outdoorMarker.name === "Canteen" ? canteenMarkerImg : swimmingMarkerImg;
+        map(outdoorData, (outdoorMarker) => {
+            const markerImg = isEqual(outdoorMarker.name, "Gym") ? gymMarkerImg : isEqual(outdoorMarker.name, "Gym") ? canteenMarkerImg : swimmingMarkerImg;
 
             return (
                 <MemoMapMarker
