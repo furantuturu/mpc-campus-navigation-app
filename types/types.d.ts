@@ -10,7 +10,9 @@ export type Floor = "F1" | "F2" | "F3" | "F4";
 export interface AreaData {
     id: string;
     name: string;
-    icon?: string;
+    category: string;
+    floor: string;
+    building?: string;
     coordinates: {
         latitude: number,
         longitude: number,
