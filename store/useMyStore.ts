@@ -31,6 +31,6 @@ export const useMyStoreV2 = create<StoreV2>((set) => ({
     setIsPanning: (panning) => set({ isPanning: panning }),
     showAreaSheet: false,
     setShowAreaSheet: (areaSheet) => set({ showAreaSheet: areaSheet }),
-    areaData: { id: "", name: "", coordinates: { latitude: 0, longitude: 0 } },
+    areaData: { id: "", name: "", category: "", floor: "", coordinates: { latitude: 0, longitude: 0 } },
     setAreaData: (data: AreaData) => set({ areaData: data })
 }));
