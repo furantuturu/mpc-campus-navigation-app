@@ -1,5 +1,6 @@
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { TrueSheet } from "@lodev09/react-native-true-sheet";
+import { split } from "es-toolkit/compat";
 import { StyleSheet, View } from "react-native";
 import { Button, Divider, Text } from "react-native-paper";
 
@@ -8,14 +9,21 @@ export default function AreaSheetContent() {
 
     async function dismissAreaSheet() {
         await TrueSheet.dismiss("sub-sheet");
-        await TrueSheet.present("main-sheet", 1);
+        await TrueSheet.present("main-sheet");
         setShowAreaSheet(false);
     }
 
     return (
         <>
             <View style={styles.titleView}>
-                <Text style={styles.titleStyles} variant="titleLarge">{areaData.name}</Text>
+                <View style={styles.titleContainer}>
+                    <Text style={styles.titleStyles} variant="titleLarge">{areaData.name}</Text>
+                    <View style={styles.areaOriginDetail}>
+                        <Text variant="labelSmall">Category: {areaData.category},</Text>
+                        <Text variant="labelSmall">Floor: {split(areaData.floor, '/')[0]},</Text>
+                        <Text variant="labelSmall">Building: {areaData.building ?? "N/A"}</Text>
+                    </View>
+                </View>
                 <View style={styles.buttonContainer}>
                     <Button
                         mode="elevated"
@@ -49,10 +57,18 @@ const styles = StyleSheet.create({
     titleView: {
         marginBlock: 20
     },
+    titleContainer: {
+        marginBottom: 15,
+    },
     titleStyles: {
         textAlign: 'center',
+        fontWeight: 'bold',
         marginBottom: 15,
-        fontWeight: 'bold'
+    },
+    areaOriginDetail: {
+        flexDirection: "row",
+        justifyContent: 'center',
+        gap: 10
     },
     buttonContainer: {
         flexDirection: 'row',
