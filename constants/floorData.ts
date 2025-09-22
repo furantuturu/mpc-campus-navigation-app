@@ -1,5 +1,6 @@
+import schoolDataSearch from "@/assets/floors/school-data-for-search.json";
 import schoolData from "@/assets/floors/school-data.json";
-import { FloorsPerCategory } from "@/types/types";
+import { AreaData, FloorsPerCategory } from "@/types/types";
 
 export const floorsPerCategory: FloorsPerCategory = {
     "Offices": ["F1", "F3", "F4"],
@@ -12,6 +13,8 @@ export const officeData = schoolData["Offices"];
 export const roomData = schoolData["Rooms"];
 export const toiletData = schoolData["Toilets"];
 export const outdoorData = schoolData["Outdoor"];
+
+export const schoolDataForSearch: AreaData[] = schoolDataSearch;
 
 export const roomBuildingNamesPerFloor = {
     "F1": ["Old Building", "Maritime Building", "Susana Building", "Mar-E"],
@@ -31,6 +34,7 @@ export const customBlueButton = "#c7e6fdff";
 export const customRed = "#fe4343";
 export const customRedButton = "#ffd1d1ff";
 export const customYellow = "#fff71f";
+export const customDarkYellow = "#e0da23ff";
 export const customYellowButton = "#fffed7ff";
 export const customBlack = "#565656";
 export const customBlackButton = "#c4c4c4ff";
