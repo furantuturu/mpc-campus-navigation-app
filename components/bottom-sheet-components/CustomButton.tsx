@@ -1,7 +1,8 @@
+import { areaDetailsSheet } from "@/constants/helpers/helper";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { AreaData } from "@/types/types";
-import { TrueSheet } from "@lodev09/react-native-true-sheet";
-import { Pressable, StyleSheet, Text } from "react-native";
+import { StyleSheet, Text } from "react-native";
+import { TouchableRipple } from "react-native-paper";
 
 interface CustomButtonProps {
     areaData: AreaData;
@@ -12,16 +13,18 @@ export default function CustomButton({ areaData, buttonColor }: CustomButtonProp
     const { setShowAreaSheet, setAreaData } = useMyStoreV2();
 
     async function buttonSheetPress() {
-        await TrueSheet.dismiss("main-sheet");
-        await TrueSheet.present("sub-sheet", 1);
-        setAreaData(areaData);
-        setShowAreaSheet(true);
+        areaDetailsSheet(areaData, setAreaData, setShowAreaSheet);
     }
 
     return (
-        <Pressable style={[styles.buttonStyles, { backgroundColor: buttonColor }]} onPress={buttonSheetPress}>
+        <TouchableRipple
+            style={[styles.buttonStyles, { backgroundColor: buttonColor }]}
+            borderless
+            rippleColor="rgba(0, 0, 0, 0.12)"
+            onPress={buttonSheetPress}
+        >
             <Text style={styles.buttonText}>{areaData.name}</Text>
-        </Pressable>
+        </TouchableRipple>
     );
 }
 
@@ -31,7 +34,7 @@ const styles = StyleSheet.create({
         paddingInline: 20,
         margin: 5,
         borderRadius: 999,
-        elevation: 5,
+        elevation: 3,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.25,
