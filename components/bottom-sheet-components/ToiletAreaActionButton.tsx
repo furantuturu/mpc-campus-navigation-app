@@ -1,6 +1,7 @@
-import { customYellowButton, toiletData } from "@/constants/floorData";
+import { customDarkYellow, customYellowButton, toiletData } from "@/constants/floorData";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { AreaData } from "@/types/types";
+import { map } from "es-toolkit/compat";
 import { StyleSheet, View } from "react-native";
 import { Divider, Icon, Text } from "react-native-paper";
 import CustomButton from "./CustomButton";
@@ -15,10 +16,10 @@ export default function ToiletAreaActionButtons() {
             <View style={styles.container}>
                 <View style={styles.titleView}>
                     <Text style={styles.titleStyle} variant="titleMedium">Toilet ({selectedFloor})</Text>
-                    <Icon source="toilet" size={25} />
+                    <Icon source="toilet" color={customDarkYellow} size={25} />
                 </View>
                 <View style={styles.listContainer}>
-                    {toiletAreaPerFloor.map((toiletArea: AreaData) => {
+                    {map(toiletAreaPerFloor, (toiletArea: AreaData) => {
                         return (
                             <CustomButton
                                 key={toiletArea.id}
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     },
     titleView: {
         flexDirection: 'row',
-        gap: 5
+        gap: 8
     },
     titleStyle: {
         marginBottom: 10
