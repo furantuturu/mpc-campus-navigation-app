@@ -2,6 +2,7 @@ import { roomBuildingNamesPerFloor, roomData } from "@/constants/floorData";
 import { roomMarkerImg } from "@/constants/markerConfig";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { Building } from "@/types/types";
+import { map } from "es-toolkit/compat";
 import MemoMapMarker from "./MapMarker";
 
 export default function RoomMarkers() {
@@ -11,8 +12,8 @@ export default function RoomMarkers() {
     const buldingNameRoomData = roomBuildingNamesPerFloor[selectedFloor];
 
     return (
-        buldingNameRoomData.map(roomBuildingName => {
-            return buldingRoomData[roomBuildingName].map((roomMarker) => {
+        map(buldingNameRoomData, roomBuildingName => {
+            return map(buldingRoomData[roomBuildingName], (roomMarker) => {
                 return (
                     <MemoMapMarker
                         key={roomMarker.id}
