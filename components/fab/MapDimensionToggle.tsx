@@ -1,20 +1,19 @@
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { useState } from "react";
-import { StyleSheet, Text } from "react-native";
-import { TouchableRipple } from "react-native-paper";
+import { StyleSheet } from "react-native";
+import { Icon, TouchableRipple } from "react-native-paper";
 
 export default function MapDimensionToggle() {
     const { setCameraPitch } = useMyStoreV2();
-
-    const [dimension, setDimension] = useState("2D");
+    const [cameraToggle, setCameraToggle] = useState(false);
 
     function handleDimension() {
-        if (dimension === "2D") {
-            setDimension("3D");
+        if (!cameraToggle) {
             setCameraPitch(60);
+            setCameraToggle(true);
         } else {
-            setDimension("2D");
             setCameraPitch(0);
+            setCameraToggle(false);
         }
     }
 
@@ -25,7 +24,7 @@ export default function MapDimensionToggle() {
             rippleColor="rgba(0, 0, 0, 0.12)"
             onPress={handleDimension}
         >
-            <Text style={styles.text}>{dimension}</Text>
+            <Icon source="camera-switch" size={25} />
         </TouchableRipple>
     );
 }
@@ -44,11 +43,8 @@ const styles = StyleSheet.create({
         height: 50,
         shadowColor: '#000',
         shadowOpacity: 0.12,
-        shadowRadius: 6,
+        shadowRadius: 5,
         shadowOffset: { width: 0, height: 2 },
-        elevation: 6,
-    },
-    text: {
-        fontWeight: "bold",
+        elevation: 5,
     }
 });
