@@ -1,4 +1,4 @@
-import { customBlack, customBlue, customRed, customYellow } from "@/constants/floorData";
+import { customBlack, customBlue, customDarkYellow, customRed, customYellow } from "@/constants/floorData";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { Category } from "@/types/types";
 import { useState } from "react";
@@ -37,12 +37,13 @@ export default function SchoolCategoryButton() {
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
                 style={styles.scrollViewStyles}
+
             >
                 <Button
                     style={styles.buttonStyles}
                     labelStyle={styles.textStyles}
                     mode={active.Offices ? "contained" : "elevated"}
-                    textColor={active.Offices ? "white" : "#222"}
+                    textColor={active.Offices ? "white" : customBlue}
                     buttonColor={active.Offices ? customBlue : "white"}
                     icon="office-building"
                     onPress={() => categorySelect("Offices")}
@@ -53,7 +54,7 @@ export default function SchoolCategoryButton() {
                     style={styles.buttonStyles}
                     labelStyle={styles.textStyles}
                     mode={active.Rooms ? "contained" : "elevated"}
-                    textColor={active.Rooms ? "white" : "#222"}
+                    textColor={active.Rooms ? "white" : customRed}
                     buttonColor={active.Rooms ? customRed : "white"}
                     icon="google-classroom"
                     onPress={() => categorySelect("Rooms")}
@@ -64,7 +65,7 @@ export default function SchoolCategoryButton() {
                     style={styles.buttonStyles}
                     labelStyle={styles.textStyles}
                     mode={active.Toilets ? "contained" : "elevated"}
-                    textColor={active.Toilets ? "white" : "#222"}
+                    textColor={active.Toilets ? "white" : customDarkYellow}
                     buttonColor={active.Toilets ? customYellow : "white"}
                     icon="toilet"
                     onPress={() => categorySelect("Toilets")}
@@ -74,7 +75,7 @@ export default function SchoolCategoryButton() {
                 <Button
                     labelStyle={styles.textStyles}
                     mode={active.Outdoors ? "contained" : "elevated"}
-                    textColor={active.Outdoors ? "white" : "#222"}
+                    textColor={active.Outdoors ? "white" : customBlack}
                     buttonColor={active.Outdoors ? customBlack : "white"}
                     icon="home-group"
                     onPress={() => categorySelect("Outdoors")}
@@ -89,7 +90,8 @@ export default function SchoolCategoryButton() {
 const styles = StyleSheet.create({
     container: {
         position: 'absolute',
-        top: 80,
+        top: 30,
+        pointerEvents: 'box-none'
     },
     scrollViewStyles: {
         marginInline: 15,
