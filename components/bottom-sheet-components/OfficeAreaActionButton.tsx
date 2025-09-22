@@ -1,7 +1,8 @@
-import { customBlueButton, officeBuildingNamesPerFloor, officeData } from "@/constants/floorData";
+import { customBlue, customBlueButton, officeBuildingNamesPerFloor, officeData } from "@/constants/floorData";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { AreaData, Building } from "@/types/types";
 import { FlashList } from '@shopify/flash-list/src';
+import { map } from "es-toolkit/compat";
 import { StyleSheet, View } from "react-native";
 import { Divider, Icon, Text } from "react-native-paper";
 import CustomButton from "./CustomButton";
@@ -11,8 +12,8 @@ export default function OfficeAreaActionButtons() {
 
     if (selectedFloor === "F2") return null;
 
-    const buldingOfficeData: Building = officeData[selectedFloor];
-    const buldingNameOfficeData = officeBuildingNamesPerFloor[selectedFloor];
+    const buildingOfficeData: Building = officeData[selectedFloor];
+    const buildingNameOfficeData = officeBuildingNamesPerFloor[selectedFloor];
 
     function renderOfficeAreaButtons({ item }: { item: string; }) {
         return (
@@ -20,10 +21,10 @@ export default function OfficeAreaActionButtons() {
                 <View style={styles.container}>
                     <View style={styles.titleView}>
                         <Text style={styles.titleStyle} variant="titleMedium">{item}</Text>
-                        <Icon source="office-building" size={25} />
+                        <Icon source="office-building" color={customBlue} size={25} />
                     </View>
                     <View style={styles.listContainer}>
-                        {buldingOfficeData[item].map((officeArea: AreaData) => {
+                        {map(buildingOfficeData[item], (officeArea: AreaData) => {
                             return (
                                 <CustomButton
                                     key={officeArea.id}
@@ -31,8 +32,7 @@ export default function OfficeAreaActionButtons() {
                                     buttonColor={customBlueButton}
                                 />
                             );
-                        })
-                        }
+                        })}
                     </View>
                 </View>
                 <Divider />
@@ -43,7 +43,7 @@ export default function OfficeAreaActionButtons() {
     return (
         <View>
             <FlashList
-                data={buldingNameOfficeData}
+                data={buildingNameOfficeData}
                 renderItem={renderOfficeAreaButtons}
                 keyExtractor={item => `${selectedCategory}-${item}-${selectedFloor}`}
             />
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     },
     titleView: {
         flexDirection: 'row',
-        gap: 5
+        gap: 8
     },
     titleStyle: {
         marginBottom: 10
