@@ -1,7 +1,9 @@
-import { customBlackButton, outdoorData } from "@/constants/floorData";
+import { customBlack, customBlackButton, outdoorData } from "@/constants/floorData";
 import { AreaData } from "@/types/types";
+import { map } from "es-toolkit/compat";
 import { StyleSheet, View } from "react-native";
 import { Divider, Icon, Text } from "react-native-paper";
+
 import CustomButton from "./CustomButton";
 
 export default function OutdoorAreaActionButtons() {
@@ -11,10 +13,10 @@ export default function OutdoorAreaActionButtons() {
             <View style={styles.container}>
                 <View style={styles.titleView}>
                     <Text style={styles.titleStyle} variant="titleMedium">Outdoor</Text>
-                    <Icon source="home-group" size={25} />
+                    <Icon source="home-group" color={customBlack} size={25} />
                 </View>
                 <View style={styles.listContainer}>
-                    {outdoorData.map((outdoorArea: AreaData) => {
+                    {map(outdoorData, (outdoorArea: AreaData) => {
                         return (
                             <CustomButton
                                 key={outdoorArea.id}
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
     },
     titleView: {
         flexDirection: 'row',
-        gap: 5
+        gap: 8
     },
     titleStyle: {
         marginBottom: 10
