@@ -1,9 +1,11 @@
-import { customRedButton, roomBuildingNamesPerFloor, roomData } from "@/constants/floorData";
+import { customRed, customRedButton, roomBuildingNamesPerFloor, roomData } from "@/constants/floorData";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { AreaData, Building } from "@/types/types";
 import { FlashList } from '@shopify/flash-list/src';
+import { map } from "es-toolkit/compat";
 import { StyleSheet, View } from "react-native";
 import { Divider, Icon, Text } from "react-native-paper";
+
 import CustomButton from "./CustomButton";
 
 export default function RoomAreaActionButtons() {
@@ -18,10 +20,10 @@ export default function RoomAreaActionButtons() {
                 <View style={styles.container}>
                     <View style={styles.titleView}>
                         <Text style={styles.titleStyle} variant="titleMedium">{item}</Text>
-                        <Icon source="google-classroom" size={25} />
+                        <Icon source="google-classroom" color={customRed} size={25} />
                     </View>
                     <View style={styles.listContainer}>
-                        {buldingRoomData[item].map((roomArea: AreaData) => {
+                        {map(buldingRoomData[item], (roomArea: AreaData) => {
                             return (
                                 <CustomButton
                                     key={roomArea.id}
@@ -58,7 +60,7 @@ const styles = StyleSheet.create({
     },
     titleView: {
         flexDirection: 'row',
-        gap: 5
+        gap: 8
     },
     titleStyle: {
         marginBottom: 10
