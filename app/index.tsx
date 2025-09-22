@@ -1,27 +1,30 @@
 import { StyleSheet, View } from "react-native";
 import { PaperProvider } from "react-native-paper";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 //* Components
 import FloorBottomSheet from "@/components/bottom-sheet-components/MapBottomSheet";
-import AreaSearchBar from "@/components/fab/AreaSearchBar";
 import FloorsSelectionPerCategoryModal from "@/components/fab/FloorsSelectionPerCategoryModal";
 import MapDimensionToggle from "@/components/fab/MapDimensionToggle";
 import SchoolCategoryButton from "@/components/fab/SchoolCategoryButton";
+import AreaSearchBar from "@/components/fab/SearchAreaModal";
 import Map from "@/components/marker-components/Map";
 
 export default function Index() {
   return (
     <PaperProvider>
-      <View style={styles.container}>
+      <SafeAreaProvider>
+        <View style={styles.container}>
 
-        <Map />
+          <Map />
 
-        <AreaSearchBar />
-        <FloorsSelectionPerCategoryModal />
-        <MapDimensionToggle />
-        <SchoolCategoryButton />
-      </View>
-      <FloorBottomSheet />
+          <AreaSearchBar />
+          <SchoolCategoryButton />
+          <MapDimensionToggle />
+          <FloorsSelectionPerCategoryModal />
+        </View>
+        <FloorBottomSheet />
+      </SafeAreaProvider>
     </PaperProvider>
   );
 }
