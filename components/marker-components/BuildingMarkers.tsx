@@ -21,7 +21,7 @@ export default function BuildingMarkers() {
                 <Text style={styles.textStyle}>Mar-E Shop</Text>
             </MarkerView>
             <MarkerView coordinate={[125.145789, 6.117183]} anchor={initAnchor} style={styles.textContainer}>
-                <Text style={styles.textStyle}>Gate</Text>
+                <Text style={styles.textStyle}>Gate 1</Text>
             </MarkerView>
             <MarkerView coordinate={[125.145648, 6.117559]} anchor={initAnchor} style={styles.textContainer}>
                 <Text style={styles.textStyle}>Gate 2</Text>
