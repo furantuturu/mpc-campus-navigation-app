@@ -8,9 +8,9 @@ export default function AreaSheetContent() {
     const { setShowAreaSheet, areaData } = useMyStoreV2();
 
     async function dismissAreaSheet() {
+        setShowAreaSheet(false);
         await TrueSheet.dismiss("sub-sheet");
         await TrueSheet.present("main-sheet");
-        setShowAreaSheet(false);
     }
 
     return (
