@@ -1,16 +1,16 @@
 import { customBlack, customBlue, customDarkYellow, customRed, schoolDataForSearch } from "@/constants/floorData";
-import { areaDetailsSheet, contains } from "@/constants/helpers/helper";
+import { areaDetailsSheet, categorySelect, contains } from "@/constants/helpers/helper";
 import { useMyStoreV2 } from "@/store/useMyStore";
-import { AreaData } from "@/types/types";
-import { isEqual, trim } from "es-toolkit";
-import { filter, toLower } from "es-toolkit/compat";
+import { AreaData, Category, Floor } from "@/types/types";
+import { isEqual, sortBy, trim } from "es-toolkit";
+import { filter, split, toLower } from "es-toolkit/compat";
 import { useState } from "react";
 import { FlatList, Modal, ScrollView, StyleSheet, View } from "react-native";
 import { Button, Divider, Icon, Searchbar, Text, TouchableRipple } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function AreaSearchBar() {
-    const { setShowAreaSheet, setAreaData } = useMyStoreV2();
+    const { showAreaSheet, setShowAreaSheet, setAreaData, setSelectedCategory, setSelectedFloor, setActiveCategory, setAreaFocus } = useMyStoreV2();
 
     const [visible, setVisible] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
@@ -32,13 +32,27 @@ export default function AreaSearchBar() {
             return contains(area, formattedQuery);
         });
 
-        setFilteredSchoolData(filteredData);
+        const sortedFilteredData = sortBy(filteredData, ['name']);
+
+        setFilteredSchoolData(sortedFilteredData);
     }
 
-    //TODO switch category and floor active button as well
+
+
     async function listPress(areaData: AreaData) {
-        areaDetailsSheet(areaData, setAreaData, setShowAreaSheet);
         closeMenu();
+        if (showAreaSheet) {
+            setAreaData(areaData);
+        } else {
+            await areaDetailsSheet(areaData, setAreaData, setShowAreaSheet);
+        }
+
+        await categorySelect(areaData.category as Category, setSelectedCategory, setActiveCategory);
+        setSelectedFloor(trim(split(areaData.floor, "/")[1]) as Floor);
+        setAreaFocus({
+            coordinates: [areaData.coordinates.longitude, areaData.coordinates.latitude],
+            zoomTo: 20
+        });
     }
 
     function renderAreaList({ item }: { item: AreaData; }) {
@@ -51,9 +65,11 @@ export default function AreaSearchBar() {
                 rippleColor="rgba(0, 0, 0, 0.12)"
                 onPress={() => listPress(item)}
             >
-                <View style={styles.areaTextStyles}>
+                <View style={styles.areaTextContainer}>
                     <Icon source={icon} color={iconColor} size={25} />
-                    <Text variant="titleMedium">{item.name}</Text>
+                    <Text style={styles.areaTextStyles} variant="titleSmall">
+                        {item.name}
+                    </Text>
                 </View>
             </TouchableRipple>
         );
@@ -70,7 +86,7 @@ export default function AreaSearchBar() {
                     <Searchbar
                         style={styles.searchBarStyle}
                         icon="home-search"
-                        placeholder="Search Area (ex. office, f1, room102)"
+                        placeholder="Search Area, Floor, Category or Building Name"
                         value={searchQuery}
                         onChangeText={(query) => searchArea(query)}
                         elevation={3}
@@ -142,11 +158,16 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingBlock: 15
     },
-    areaTextStyles: {
+    areaTextContainer: {
         flex: 1,
         flexDirection: 'row',
+        alignItems: "center",
         padding: 15,
         marginVertical: 5,
-        gap: 20
+        gap: 20,
+    },
+    areaTextStyles: {
+        flexShrink: 1,
+        lineHeight: 21
     }
 });
