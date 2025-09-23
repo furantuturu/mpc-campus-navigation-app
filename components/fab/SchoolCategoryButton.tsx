@@ -1,34 +1,17 @@
 import { customBlack, customBlue, customDarkYellow, customRed, customYellow } from "@/constants/floorData";
+import { categorySelect } from "@/constants/helpers/helper";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { Category } from "@/types/types";
-import { useState } from "react";
 import { ScrollView, StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 
 export default function SchoolCategoryButton() {
-    const { setSelectedCategory } = useMyStoreV2();
-    const [active, setActive] = useState({
-        Offices: true,
-        Rooms: false,
-        Toilets: false,
-        Outdoors: false,
-    });
+    const { activeCategory, setSelectedCategory, setActiveCategory } = useMyStoreV2();
 
-    function categorySelect(category: Category) {
-        const activeFalse = {
-            Offices: false,
-            Rooms: false,
-            Toilets: false,
-            Outdoors: false,
-        };
-
-        setActive((prevState) => {
-            return { ...activeFalse, [category]: true };
-        });
-
-        setSelectedCategory(category);
+    async function selectActiveCategory(category: Category) {
+        await categorySelect(category, setSelectedCategory, setActiveCategory);
     }
 
     return (
@@ -42,43 +25,43 @@ export default function SchoolCategoryButton() {
                 <Button
                     style={styles.buttonStyles}
                     labelStyle={styles.textStyles}
-                    mode={active.Offices ? "contained" : "elevated"}
-                    textColor={active.Offices ? "white" : customBlue}
-                    buttonColor={active.Offices ? customBlue : "white"}
+                    mode={activeCategory.Offices ? "contained" : "elevated"}
+                    textColor={activeCategory.Offices ? "white" : customBlue}
+                    buttonColor={activeCategory.Offices ? customBlue : "white"}
                     icon="office-building"
-                    onPress={() => categorySelect("Offices")}
+                    onPress={() => selectActiveCategory("Offices")}
                 >
                     Offices
                 </Button>
                 <Button
                     style={styles.buttonStyles}
                     labelStyle={styles.textStyles}
-                    mode={active.Rooms ? "contained" : "elevated"}
-                    textColor={active.Rooms ? "white" : customRed}
-                    buttonColor={active.Rooms ? customRed : "white"}
+                    mode={activeCategory.Rooms ? "contained" : "elevated"}
+                    textColor={activeCategory.Rooms ? "white" : customRed}
+                    buttonColor={activeCategory.Rooms ? customRed : "white"}
                     icon="google-classroom"
-                    onPress={() => categorySelect("Rooms")}
+                    onPress={() => selectActiveCategory("Rooms")}
                 >
                     Rooms
                 </Button>
                 <Button
                     style={styles.buttonStyles}
                     labelStyle={styles.textStyles}
-                    mode={active.Toilets ? "contained" : "elevated"}
-                    textColor={active.Toilets ? "white" : customDarkYellow}
-                    buttonColor={active.Toilets ? customYellow : "white"}
+                    mode={activeCategory.Toilets ? "contained" : "elevated"}
+                    textColor={activeCategory.Toilets ? "white" : customDarkYellow}
+                    buttonColor={activeCategory.Toilets ? customYellow : "white"}
                     icon="toilet"
-                    onPress={() => categorySelect("Toilets")}
+                    onPress={() => selectActiveCategory("Toilets")}
                 >
                     Toilets
                 </Button>
                 <Button
                     labelStyle={styles.textStyles}
-                    mode={active.Outdoors ? "contained" : "elevated"}
-                    textColor={active.Outdoors ? "white" : customBlack}
-                    buttonColor={active.Outdoors ? customBlack : "white"}
+                    mode={activeCategory.Outdoors ? "contained" : "elevated"}
+                    textColor={activeCategory.Outdoors ? "white" : customBlack}
+                    buttonColor={activeCategory.Outdoors ? customBlack : "white"}
                     icon="home-group"
-                    onPress={() => categorySelect("Outdoors")}
+                    onPress={() => selectActiveCategory("Outdoors")}
                 >
                     Outdoors
                 </Button>
