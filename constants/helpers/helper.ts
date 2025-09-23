@@ -1,14 +1,13 @@
-import { AreaData } from "@/types/types";
+import { ActiveCategory, AreaData, Category } from "@/types/types";
 import { TrueSheet } from "@lodev09/react-native-true-sheet";
-import { words } from "es-toolkit";
-import { includes, join, toLower } from "es-toolkit/compat";
+import { includes, toLower } from "es-toolkit/compat";
 
 export function contains({ category, floor, building, name }: AreaData, query: string) {
     if (
+        includes(toLower(name), query) ||
         includes(toLower(category), query) ||
-        includes(toLower(join(words(floor), '')), query) ||
-        includes(toLower(join(words(building ?? ''), '')), query) ||
-        includes(toLower(join(words(name), '')), query)
+        includes(toLower(floor), query) ||
+        includes(toLower(building ?? ''), query)
     ) {
         return true;
     }
@@ -21,8 +20,29 @@ export async function areaDetailsSheet(
     setAreaData: (data: AreaData) => void,
     setShowAreaSheet: (areaSheet: boolean) => void
 ) {
-    await TrueSheet.dismiss("main-sheet");
-    await TrueSheet.present("sub-sheet", 1);
     setAreaData(areaData);
     setShowAreaSheet(true);
+    await TrueSheet.dismiss("main-sheet");
+    await TrueSheet.present("sub-sheet", 1);
+}
+
+const activeFalse = {
+    Offices: false,
+    Rooms: false,
+    Toilets: false,
+    Outdoors: false,
+};
+
+export async function categorySelect(
+    category: Category,
+    setSelectedCategory: (category: Category) => void,
+    setActiveCategory: (category: ActiveCategory) => void,
+) {
+    setSelectedCategory(category);
+
+    setActiveCategory({
+        ...activeFalse,
+        [category]: true
+    });
+
 }
