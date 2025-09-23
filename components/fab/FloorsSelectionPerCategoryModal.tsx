@@ -1,15 +1,16 @@
 import { floorsPerCategory } from "@/constants/floorData";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { Floor } from "@/types/types";
+import { map, size } from "es-toolkit/compat";
 import { useState } from "react";
 import { Modal, StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import { Icon, Menu, Text, TouchableRipple } from 'react-native-paper';
 
 export default function FloorsSelectionPerCategoryModal() {
-    const { selectedCategory, selectedFloor, setSelectedFloor } = useMyStoreV2();
+    const { selectedCategory, selectedFloor, setSelectedFloor, showAreaSheet } = useMyStoreV2();
     const [visible, setVisible] = useState(false);
 
-    const categoryFloors: Floor[] | null = floorsPerCategory[selectedCategory];
+    const categoryFloors: Floor[] = floorsPerCategory[selectedCategory];
 
     function openMenu() {
         setVisible(true);
@@ -20,12 +21,12 @@ export default function FloorsSelectionPerCategoryModal() {
     }
 
     function selectFloor(floor: Floor) {
-        setSelectedFloor(floor);
         closeMenu();
+        setSelectedFloor(floor);
     }
 
     return (
-        <View style={[styles.container, categoryFloors === null && { display: 'none' }]}>
+        <View style={[styles.container, size(categoryFloors) <= 1 || showAreaSheet ? { display: 'none' } : '']}>
             <Modal
                 animationType="fade"
                 visible={visible}
@@ -43,8 +44,8 @@ export default function FloorsSelectionPerCategoryModal() {
                                     <Icon source="office-building" size={25} />
                                 </View>
                                 <View style={styles.divider}></View>
-                                {categoryFloors !== null && (
-                                    categoryFloors.map((floor) => {
+                                {size(categoryFloors) > 1 && (
+                                    map(categoryFloors, (floor) => {
                                         return (
                                             <Menu.Item
                                                 key={`${selectedCategory}-${floor}`}
@@ -53,8 +54,7 @@ export default function FloorsSelectionPerCategoryModal() {
                                                 onPress={() => selectFloor(floor)}
                                             />
                                         );
-                                    })
-                                )}
+                                    }))}
                             </View>
                         </TouchableWithoutFeedback>
                     </View>
