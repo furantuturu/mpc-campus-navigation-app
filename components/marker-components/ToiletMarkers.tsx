@@ -10,12 +10,11 @@ export default function ToiletMarkers() {
     const floorToiletData = toiletData[selectedFloor];
 
     return (
-        map(floorToiletData, (toiletMarker) => {
+        map(floorToiletData, (toiletData) => {
             return (
                 <MemoMapMarker
-                    key={toiletMarker.id}
-                    coordinateLat={toiletMarker.coordinates.latitude}
-                    coordinateLng={toiletMarker.coordinates.longitude}
+                    key={toiletData.id}
+                    areaData={toiletData}
                     markerImg={toilerMarkerImg}
                 />
             );
