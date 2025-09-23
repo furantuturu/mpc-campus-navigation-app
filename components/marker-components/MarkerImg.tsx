@@ -1,8 +1,12 @@
+import { areaDetailsSheet } from "@/constants/helpers/helper";
+import { useMyStoreV2 } from "@/store/useMyStore";
+import { AreaData } from "@/types/types";
 import { Image } from "expo-image";
 import { useState } from "react";
 import { GestureResponderEvent, StyleSheet, View } from "react-native";
 
 interface MarkerImgProps {
+    markerAreaData: AreaData;
     image: any;
 }
 
@@ -12,12 +16,25 @@ interface TouchStartData {
     time: number;
 }
 
-export default function MarkerImg({ image }: MarkerImgProps) {
+export default function MarkerImg({ markerAreaData, image }: MarkerImgProps) {
+    const { showAreaSheet, setShowAreaSheet, setAreaData, areaData, setAreaFocus } = useMyStoreV2();
+
     const [touchStart, setTouchStart] = useState<TouchStartData | null>(null);
     const [isDragging, setIsDragging] = useState(false);
 
-    function onMarkerPress() {
-        console.log("pressed");
+    const sameID = markerAreaData.id === areaData.id;
+
+    async function onMarkerPress() {
+        if (showAreaSheet) {
+            setAreaData(markerAreaData);
+        } else {
+            await areaDetailsSheet(markerAreaData, setAreaData, setShowAreaSheet);
+        }
+
+        setAreaFocus({
+            coordinates: [markerAreaData.coordinates.longitude, markerAreaData.coordinates.latitude],
+            zoomTo: 20
+        });
     }
 
     function handleTouchStart(event: GestureResponderEvent) {
@@ -62,10 +79,14 @@ export default function MarkerImg({ image }: MarkerImgProps) {
         setIsDragging(false);
     }
 
-    //TODO figure out if i ever needed this code for the drag + touch
     return (
-        <View style={styles.outer} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
-            <Image source={image} style={styles.marker} />
+        <View
+            style={styles.outer}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
+            <Image source={image} style={sameID ? styles.bigMarker : styles.marker} />
         </View>
     );
 }
@@ -74,6 +95,10 @@ const styles = StyleSheet.create({
     marker: {
         width: 25,
         height: 32
+    },
+    bigMarker: {
+        width: 35,
+        height: 42
     },
     outer: {
         alignItems: "center",
