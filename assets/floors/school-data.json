@@ -799,7 +799,7 @@
                 },
                 {
                     "id": "SBF2-5",
-                    "name": "Room 10",
+                    "name": "Room 10 (Susana)",
                     "category": "Rooms",
                     "floor": "Floor 2 / F2",
                     "building": "Susana Building",
@@ -900,7 +900,7 @@
                 },
                 {
                     "id": "MARF2-9",
-                    "name": "Room 10",
+                    "name": "Room 10 (Mar-E)",
                     "category": "Rooms",
                     "floor": "Floor 2 / F2",
                     "building": "Mar-E",
@@ -1308,11 +1308,11 @@
             }
         ]
     },
-    "Outdoor": [
+    "Outdoors": [
         {
             "id": "GB1",
             "name": "Gym",
-            "category": "Outdoor",
+            "category": "Outdoors",
             "floor": "Floor 1 / F1 / Ground",
             "coordinates": {
                 "latitude": 6.117617,
@@ -1322,7 +1322,7 @@
         {
             "id": "O-1",
             "name": "Canteen",
-            "category": "Outdoor",
+            "category": "Outdoors",
             "floor": "Floor 1 / F1 / Ground",
             "coordinates": {
                 "latitude": 6.117333,
@@ -1332,8 +1332,8 @@
         {
             "id": "O-2",
             "name": "Swimming Area",
-            "category": "Outdoor",
             "floor": "Floor 1 / F1 / Ground",
+            "category": "Outdoors",
             "coordinates": {
                 "latitude": 6.116813,
                 "longitude": 125.144650
