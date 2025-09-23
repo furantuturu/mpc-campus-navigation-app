@@ -5,20 +5,20 @@ import { memo } from "react";
 import {
     initAnchor
 } from "@/constants/markerConfig";
+import { AreaData } from "@/types/types";
 import MarkerImg from "./MarkerImg";
 
 type MapMarkerProps = {
-    coordinateLng: number,
-    coordinateLat: number;
+    areaData: AreaData;
     markerImg: any;
 };
 
-function MapMarker({ coordinateLng, coordinateLat, markerImg }: MapMarkerProps) {
-    const coords = [coordinateLng, coordinateLat];
+function MapMarker({ areaData, markerImg }: MapMarkerProps) {
+    const coords = [areaData.coordinates.longitude, areaData.coordinates.latitude];
 
     return (
-        <MarkerView coordinate={coords} anchor={initAnchor} allowOverlap={true}>
-            <MarkerImg image={markerImg} />
+        <MarkerView id={areaData.id} coordinate={coords} anchor={initAnchor} allowOverlap={true}>
+            <MarkerImg markerAreaData={areaData} image={markerImg} />
         </MarkerView>
     );
 }
