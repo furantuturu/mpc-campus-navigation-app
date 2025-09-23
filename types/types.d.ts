@@ -6,6 +6,10 @@ export interface CameraBounds {
     sw: number[];
 }
 export type RegionPayloadFeature = GeoJSON.Feature<GeoJSON.Point, RegionPayload>;
+export interface AreaFocus {
+    coordinates: Position,
+    zoomTo: number;
+}
 export type Floor = "F1" | "F2" | "F3" | "F4";
 export interface AreaData {
     id: string;
@@ -30,5 +34,12 @@ export interface FloorsPerCategory {
     ["Offices"]: Floor[];
     ["Rooms"]: Floor[];
     ["Toilets"]: Floor[];
-    ["Outdoors"]: null;
+    ["Outdoors"]: Floor[];
+}
+
+export interface ActiveCategory {
+    Offices: boolean;
+    Rooms: boolean;
+    Toilets: boolean;
+    Outdoors: boolean;
 }
