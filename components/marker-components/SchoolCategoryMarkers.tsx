@@ -1,4 +1,5 @@
 import { useMyStoreV2 } from "@/store/useMyStore";
+import { isEqual } from "es-toolkit";
 import OfficeMarkers from "./OfficeMarkers";
 import OutdoorMarkers from "./OutdoorMarkers";
 import RoomMarkers from "./RoomMarkers";
@@ -9,10 +10,10 @@ export default function SchoolCategoryMarkers() {
 
     return (
         <>
-            {selectedCategory === "Offices" && <OfficeMarkers />}
-            {selectedCategory === "Rooms" && <RoomMarkers />}
-            {selectedCategory === "Toilets" && <ToiletMarkers />}
-            {selectedCategory === "Outdoors" && <OutdoorMarkers />}
+            {isEqual(selectedCategory, "Offices") && <OfficeMarkers />}
+            {isEqual(selectedCategory, "Rooms") && <RoomMarkers />}
+            {isEqual(selectedCategory, "Toilets") && <ToiletMarkers />}
+            {isEqual(selectedCategory, "Outdoors") && <OutdoorMarkers />}
         </>
     );
 }
