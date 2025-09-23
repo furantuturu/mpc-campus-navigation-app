@@ -6,13 +6,13 @@ export const floorsPerCategory: FloorsPerCategory = {
     "Offices": ["F1", "F3", "F4"],
     "Rooms": ["F1", "F2", "F3", "F4"],
     "Toilets": ["F1", "F2", "F3", "F4"],
-    "Outdoors": null,
+    "Outdoors": ["F1"]
 };
 
 export const officeData = schoolData["Offices"];
 export const roomData = schoolData["Rooms"];
 export const toiletData = schoolData["Toilets"];
-export const outdoorData = schoolData["Outdoor"];
+export const outdoorData = schoolData["Outdoors"];
 
 export const schoolDataForSearch: AreaData[] = schoolDataSearch;
 
