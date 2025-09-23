@@ -10,10 +10,14 @@ interface CustomButtonProps {
 }
 
 export default function CustomButton({ areaData, buttonColor }: CustomButtonProps) {
-    const { setShowAreaSheet, setAreaData } = useMyStoreV2();
+    const { setShowAreaSheet, setAreaData, setAreaFocus } = useMyStoreV2();
 
     async function buttonSheetPress() {
-        areaDetailsSheet(areaData, setAreaData, setShowAreaSheet);
+        await areaDetailsSheet(areaData, setAreaData, setShowAreaSheet);
+        setAreaFocus({
+            coordinates: [areaData.coordinates.longitude, areaData.coordinates.latitude],
+            zoomTo: 20
+        });
     }
 
     return (
