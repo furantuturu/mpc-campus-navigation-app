@@ -15,12 +15,11 @@ export default function OfficeMarkers() {
 
     return (
         map(buldingNameOfficeData, officeBuildingName => {
-            return map(buldingOfficeData[officeBuildingName], (officeMarker) => {
+            return map(buldingOfficeData[officeBuildingName], (officeData) => {
                 return (
                     <MemoMapMarker
-                        key={officeMarker.id}
-                        coordinateLat={officeMarker.coordinates.latitude}
-                        coordinateLng={officeMarker.coordinates.longitude}
+                        key={officeData.id}
+                        areaData={officeData}
                         markerImg={officeMarkerImg}
                     />
                 );
