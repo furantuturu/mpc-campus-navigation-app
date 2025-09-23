@@ -1,5 +1,7 @@
 import {
+    ActiveCategory,
     AreaData,
+    AreaFocus,
     Category,
     Floor
 } from '@/types/types';
@@ -18,6 +20,10 @@ interface StoreV2 {
     setShowAreaSheet: (areaSheet: boolean) => void;
     areaData: AreaData,
     setAreaData: (data: AreaData) => void;
+    activeCategory: ActiveCategory;
+    setActiveCategory: (active: ActiveCategory) => void;
+    areaFocus: AreaFocus;
+    setAreaFocus: (focus: AreaFocus) => void;
 }
 
 export const useMyStoreV2 = create<StoreV2>((set) => ({
@@ -32,5 +38,17 @@ export const useMyStoreV2 = create<StoreV2>((set) => ({
     showAreaSheet: false,
     setShowAreaSheet: (areaSheet) => set({ showAreaSheet: areaSheet }),
     areaData: { id: "", name: "", category: "", floor: "", coordinates: { latitude: 0, longitude: 0 } },
-    setAreaData: (data: AreaData) => set({ areaData: data })
+    setAreaData: (data: AreaData) => set({ areaData: data }),
+    activeCategory: {
+        Offices: true,
+        Rooms: false,
+        Toilets: false,
+        Outdoors: false,
+    },
+    setActiveCategory: (active: ActiveCategory) => set({ activeCategory: active }),
+    areaFocus: {
+        coordinates: [125.14527578791139, 6.1174022336355955],
+        zoomTo: 17
+    },
+    setAreaFocus: (focus: AreaFocus) => set({ areaFocus: focus }),
 }));
