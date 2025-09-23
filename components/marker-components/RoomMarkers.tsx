@@ -13,12 +13,11 @@ export default function RoomMarkers() {
 
     return (
         map(buldingNameRoomData, roomBuildingName => {
-            return map(buldingRoomData[roomBuildingName], (roomMarker) => {
+            return map(buldingRoomData[roomBuildingName], (roomData) => {
                 return (
                     <MemoMapMarker
-                        key={roomMarker.id}
-                        coordinateLat={roomMarker.coordinates.latitude}
-                        coordinateLng={roomMarker.coordinates.longitude}
+                        key={roomData.id}
+                        areaData={roomData}
                         markerImg={roomMarkerImg}
                     />
                 );
