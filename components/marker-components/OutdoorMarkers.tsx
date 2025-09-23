@@ -6,14 +6,13 @@ import MemoMapMarker from "./MapMarker";
 
 export default function OutdoorMarkers() {
     return (
-        map(outdoorData, (outdoorMarker) => {
-            const markerImg = isEqual(outdoorMarker.name, "Gym") ? gymMarkerImg : isEqual(outdoorMarker.name, "Gym") ? canteenMarkerImg : swimmingMarkerImg;
+        map(outdoorData, (outdoorData) => {
+            const markerImg = isEqual(outdoorData.name, "Gym") ? gymMarkerImg : isEqual(outdoorData.name, "Gym") ? canteenMarkerImg : swimmingMarkerImg;
 
             return (
                 <MemoMapMarker
-                    key={outdoorMarker.id}
-                    coordinateLat={outdoorMarker.coordinates.latitude}
-                    coordinateLng={outdoorMarker.coordinates.longitude}
+                    key={outdoorData.id}
+                    areaData={outdoorData}
                     markerImg={markerImg}
                 />
             );
