@@ -14,8 +14,6 @@ interface Store {
     setSelectedCategory: (category: Category) => void;
     selectedFloor: Floor;
     setSelectedFloor: (floor: Floor) => void;
-    isPanning: boolean;
-    setIsPanning: (isPanning: boolean) => void;
     showAreaSheet: boolean;
     setShowAreaSheet: (areaSheet: boolean) => void;
     areaData: AreaData,
@@ -35,8 +33,6 @@ export const useMyStoreV2 = create<Store>((set) => ({
     setSelectedCategory: (category) => set({ selectedCategory: category }),
     selectedFloor: "F1",
     setSelectedFloor: (floor) => set({ selectedFloor: floor }),
-    isPanning: false,
-    setIsPanning: (panning) => set({ isPanning: panning }),
     showAreaSheet: false,
     setShowAreaSheet: (areaSheet) => set({ showAreaSheet: areaSheet }),
     areaData: { id: "", name: "", category: "", floor: "", coordinates: { latitude: 0, longitude: 0 } },
