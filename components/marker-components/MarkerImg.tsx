@@ -17,7 +17,7 @@ interface TouchStartData {
 }
 
 export default function MarkerImg({ markerAreaData, image }: MarkerImgProps) {
-    const { showAreaSheet, setShowAreaSheet, setAreaData, areaData, setAreaFocus } = useMyStoreV2();
+    const { showAreaSheet, setShowAreaSheet, setAreaData, areaData, setAreaCoordinates, setCameraFocus } = useMyStoreV2();
 
     const [touchStart, setTouchStart] = useState<TouchStartData | null>(null);
     const [isDragging, setIsDragging] = useState(false);
@@ -31,10 +31,8 @@ export default function MarkerImg({ markerAreaData, image }: MarkerImgProps) {
             await areaDetailsSheet(markerAreaData, setAreaData, setShowAreaSheet);
         }
 
-        setAreaFocus({
-            coordinates: [markerAreaData.coordinates.longitude, markerAreaData.coordinates.latitude],
-            zoomTo: 20
-        });
+        setCameraFocus(true);
+        setAreaCoordinates([markerAreaData.coordinates.longitude, markerAreaData.coordinates.latitude]);
     }
 
     function handleTouchStart(event: GestureResponderEvent) {
