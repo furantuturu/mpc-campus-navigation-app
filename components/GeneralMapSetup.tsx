@@ -11,17 +11,27 @@ import {
 import { useEffect, useRef } from 'react';
 
 export default function GeneralMapSetup() {
-    const { cameraPitch, areaFocus } = useMyStoreV2();
+    const { cameraPitch, areaCoordinates, cameraFocus, setCameraFocus } = useMyStoreV2();
     const cameraRef = useRef<CameraRef>(null);
 
     useEffect(() => {
-        cameraRef.current?.setCamera({
-            centerCoordinate: areaFocus.coordinates,
-            zoomLevel: areaFocus.zoomTo,
-            animationDuration: 500,
-            animationMode: 'flyTo'
-        });
-    }, [areaFocus]);
+        if (cameraFocus) {
+            cameraRef.current?.setCamera({
+                centerCoordinate: areaCoordinates,
+                animationDuration: 500
+            });
+            setCameraFocus(false);
+        } else {
+            cameraRef.current?.setCamera({
+                stops: [{
+                    centerCoordinate: areaCoordinates,
+                    animationDuration: 500
+                }]
+            });
+        }
+
+    }, [areaCoordinates, cameraFocus, setCameraFocus]);
+
 
     return (
         <>
