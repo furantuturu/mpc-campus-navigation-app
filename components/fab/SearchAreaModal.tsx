@@ -10,7 +10,7 @@ import { Button, Divider, Icon, Searchbar, Text, TouchableRipple } from "react-n
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function AreaSearchBar() {
-    const { showAreaSheet, setShowAreaSheet, setAreaData, setSelectedCategory, setSelectedFloor, setActiveCategory, setAreaFocus } = useMyStoreV2();
+    const { showAreaSheet, setShowAreaSheet, setAreaData, setSelectedCategory, setSelectedFloor, setActiveCategory, setAreaCoordinates, setCameraFocus } = useMyStoreV2();
 
     const [visible, setVisible] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
@@ -37,8 +37,6 @@ export default function AreaSearchBar() {
         setFilteredSchoolData(sortedFilteredData);
     }
 
-
-
     async function listPress(areaData: AreaData) {
         closeMenu();
         if (showAreaSheet) {
@@ -49,10 +47,8 @@ export default function AreaSearchBar() {
 
         await categorySelect(areaData.category as Category, setSelectedCategory, setActiveCategory);
         setSelectedFloor(trim(split(areaData.floor, "/")[1]) as Floor);
-        setAreaFocus({
-            coordinates: [areaData.coordinates.longitude, areaData.coordinates.latitude],
-            zoomTo: 20
-        });
+        setAreaCoordinates([areaData.coordinates.longitude, areaData.coordinates.latitude]);
+        setCameraFocus(true);
     }
 
     function renderAreaList({ item }: { item: AreaData; }) {
