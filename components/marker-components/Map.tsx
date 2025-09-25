@@ -1,9 +1,11 @@
-import { MapView } from "@maplibre/maplibre-react-native";
+import { initAnchor } from "@/constants/markerConfig";
+import { MapView, MarkerView } from "@maplibre/maplibre-react-native";
+import { Image } from 'expo-image';
+import { StyleSheet } from "react-native";
 
 //* Components
 import GeneralMapSetup from "@/components/GeneralMapSetup";
 import SchoolCategoryMarkers from "@/components/marker-components/SchoolCategoryMarkers";
-import { StyleSheet } from "react-native";
 import BuildingMarkers from "./BuildingMarkers";
 
 const INIT_TILE_URL = "https://api.maptiler.com/maps/satellite/style.json?key=fdSU29XQAXY9nIuYyqZ4";
@@ -22,6 +24,9 @@ export default function Map() {
             <GeneralMapSetup />
             <BuildingMarkers />
             <SchoolCategoryMarkers />
+            <MarkerView coordinate={[125.145323, 6.117693,]} anchor={initAnchor}>
+                <Image source={require("@/assets/images/userMock.png")} style={{ width: 25, height: 25 }} />
+            </MarkerView>
         </MapView>
     );
 }
