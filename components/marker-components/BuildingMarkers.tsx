@@ -1,30 +1,45 @@
-import { initAnchor } from "@/constants/markerConfig";
+import { gate1NameMarker, gate2NameMarker, gymNameMarker, initAnchor, mareNameMarker, maritimeNameMarker, oldNameMarker, susanaNameMarker } from "@/constants/markerConfig";
 import { MarkerView } from "@maplibre/maplibre-react-native";
-import { StyleSheet, Text } from "react-native";
+import { Image } from "expo-image";
+import { StyleSheet, View } from "react-native";
 
 export default function BuildingMarkers() {
     return (
         <>
-            <MarkerView coordinate={[125.144867, 6.117568]} anchor={initAnchor} style={styles.textContainer} allowOverlap={true}>
-                <Text style={styles.textStyle}>Gym Building</Text>
+            <MarkerView coordinate={[125.144867, 6.117568]} anchor={initAnchor} allowOverlap={true}>
+                <View style={styles.textContainer}>
+                    <Image source={gymNameMarker} style={styles.oldAndGymMarker} />
+                </View>
             </MarkerView>
-            <MarkerView coordinate={[125.144968, 6.117134]} anchor={initAnchor} style={styles.textContainer} allowOverlap={true}>
-                <Text style={styles.textStyle}>Maritime Building</Text>
+            <MarkerView coordinate={[125.144968, 6.117134]} anchor={initAnchor} allowOverlap={true}>
+                <View style={styles.textContainer}>
+                    <Image source={maritimeNameMarker} style={styles.maritimeMarker} />
+                </View>
             </MarkerView>
-            <MarkerView coordinate={[125.144356, 6.117434]} anchor={initAnchor} style={styles.textContainer} allowOverlap={true}>
-                <Text style={styles.textStyle}>Susana Building</Text>
+            <MarkerView coordinate={[125.144356, 6.117434]} anchor={initAnchor} allowOverlap={true}>
+                <View style={styles.textContainer}>
+                    <Image source={susanaNameMarker} style={styles.susanaMarker} />
+                </View>
             </MarkerView>
-            <MarkerView coordinate={[125.144790, 6.117853]} anchor={initAnchor} style={styles.textContainer} allowOverlap={true}>
-                <Text style={styles.textStyle}>Old Building</Text>
+            <MarkerView coordinate={[125.144790, 6.117853]} anchor={initAnchor} allowOverlap={true}>
+                <View style={styles.textContainer}>
+                    <Image source={oldNameMarker} style={styles.oldAndGymMarker} />
+                </View>
             </MarkerView>
-            <MarkerView coordinate={[125.143916, 6.117341]} anchor={initAnchor} style={styles.textContainer} allowOverlap={true}>
-                <Text style={styles.textStyle}>Mar-E Shop</Text>
+            <MarkerView coordinate={[125.143916, 6.117341]} anchor={initAnchor} allowOverlap={true}>
+                <View style={styles.textContainer}>
+                    <Image source={mareNameMarker} style={styles.marEMarker} />
+                </View>
             </MarkerView>
-            <MarkerView coordinate={[125.145789, 6.117183]} anchor={initAnchor} style={styles.textContainer} allowOverlap={true}>
-                <Text style={styles.textStyle}>Gate 1</Text>
+            <MarkerView coordinate={[125.145789, 6.117183]} anchor={initAnchor} allowOverlap={true}>
+                <View style={styles.textContainer}>
+                    <Image source={gate1NameMarker} style={styles.gateMarker} />
+                </View>
             </MarkerView>
-            <MarkerView coordinate={[125.145648, 6.117559]} anchor={initAnchor} style={styles.textContainer} allowOverlap={true}>
-                <Text style={styles.textStyle}>Gate 2</Text>
+            <MarkerView coordinate={[125.145648, 6.117559]} anchor={initAnchor} allowOverlap={true}>
+                <View style={styles.textContainer}>
+                    <Image source={gate2NameMarker} style={styles.gateMarker} />
+                </View>
             </MarkerView>
         </>
     );
@@ -34,16 +49,26 @@ const styles = StyleSheet.create({
     textContainer: {
         flex: 0,
         alignItems: "center",
+        pointerEvents: 'box-none'
     },
-    textStyle: {
-        includeFontPadding: false,
-        textAlignVertical: 'center',
-        flexShrink: 0,
-        fontWeight: 'bold',
-        color: "#fff",
-        textShadowColor: '#000',
-        textShadowOffset: { width: 0, height: 0 },
-        textShadowRadius: 2,
-
-    }
+    maritimeMarker: {
+        width: 100,
+        height: 25
+    },
+    oldAndGymMarker: {
+        width: 80,
+        height: 20
+    },
+    susanaMarker: {
+        width: 100,
+        height: 20
+    },
+    marEMarker: {
+        width: 70,
+        height: 20
+    },
+    gateMarker: {
+        width: 40,
+        height: 15
+    },
 });
