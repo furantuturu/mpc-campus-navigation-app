@@ -1,13 +1,13 @@
 import {
     ActiveCategory,
     AreaData,
-    AreaFocus,
     Category,
-    Floor
+    Floor,
+    Position
 } from '@/types/types';
 import { create } from 'zustand';
 
-interface StoreV2 {
+interface Store {
     cameraPitch: 0 | 60;
     setCameraPitch: (pitch: 0 | 60) => void;
     selectedCategory: Category;
@@ -22,11 +22,13 @@ interface StoreV2 {
     setAreaData: (data: AreaData) => void;
     activeCategory: ActiveCategory;
     setActiveCategory: (active: ActiveCategory) => void;
-    areaFocus: AreaFocus;
-    setAreaFocus: (focus: AreaFocus) => void;
+    areaCoordinates: Position;
+    setAreaCoordinates: (coords: Position) => void;
+    cameraFocus: boolean;
+    setCameraFocus: (camFocus: boolean) => void;
 }
 
-export const useMyStoreV2 = create<StoreV2>((set) => ({
+export const useMyStoreV2 = create<Store>((set) => ({
     cameraPitch: 0,
     setCameraPitch: (pitch) => set({ cameraPitch: pitch }),
     selectedCategory: "Offices",
@@ -46,9 +48,8 @@ export const useMyStoreV2 = create<StoreV2>((set) => ({
         Outdoors: false,
     },
     setActiveCategory: (active: ActiveCategory) => set({ activeCategory: active }),
-    areaFocus: {
-        coordinates: [125.14527578791139, 6.1174022336355955],
-        zoomTo: 17
-    },
-    setAreaFocus: (focus: AreaFocus) => set({ areaFocus: focus }),
+    areaCoordinates: [125.14527578791139, 6.1174022336355955],
+    setAreaCoordinates: (coords: Position) => set({ areaCoordinates: coords }),
+    cameraFocus: false,
+    setCameraFocus: (camFocus: boolean) => set({ cameraFocus: camFocus }),
 }));
