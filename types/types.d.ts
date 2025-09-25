@@ -1,11 +1,9 @@
-import { RegionPayload } from "@maplibre/maplibre-react-native";
 
-export type Position = number[];
+export type Position = GeoJSON.Position;
 export interface CameraBounds {
     ne: number[];
     sw: number[];
 }
-export type RegionPayloadFeature = GeoJSON.Feature<GeoJSON.Point, RegionPayload>;
 export interface AreaFocus {
     coordinates: Position,
     zoomTo: number;
