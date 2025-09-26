@@ -1,6 +1,9 @@
-import { ActiveCategory, AreaData, Category } from "@/types/types";
+import { ActiveCategory, AreaData, Category, Position } from "@/types/types";
 import { TrueSheet } from "@lodev09/react-native-true-sheet";
+import { point } from "@turf/helpers";
+import { shortestPath } from "@turf/shortest-path";
 import { includes, toLower } from "es-toolkit/compat";
+import { campusF1Obstacles } from "../obstacles-geojson";
 
 export function contains({ category, floor, building, name }: AreaData, query: string) {
     if (
@@ -44,5 +47,34 @@ export async function categorySelect(
         ...activeFalse,
         [category]: true
     });
+}
 
+export function getRoute(
+    start: Position,
+    end: Position,
+    setRoutePath: (route: GeoJSON.FeatureCollection<GeoJSON.LineString>) => void
+) {
+    const from = point(start);
+    const to = point(end);
+
+    const calculateShortestPath = shortestPath(from, to, {
+        obstacles: campusF1Obstacles,
+        units: 'meters'
+    });
+
+    const pathLineString: GeoJSON.FeatureCollection<GeoJSON.LineString> = {
+        type: 'FeatureCollection',
+        features: [
+            {
+                type: 'Feature',
+                properties: {
+                    'line-color': '#3887be',
+                    'line-width': 3
+                },
+                geometry: calculateShortestPath.geometry
+            }
+        ]
+    };
+
+    setRoutePath(pathLineString);
 }
