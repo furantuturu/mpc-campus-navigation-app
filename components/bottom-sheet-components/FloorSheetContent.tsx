@@ -14,7 +14,21 @@ export default function FloorSheetContent() {
     const LazyOfficeAreaActionButtons = lazy(() => import("./OfficeAreaActionButton"));
     const LazyRoomAreaActionButtons = lazy(() => import("./RoomAreaActionButton"));
 
-    const selectedFloorName = isEqual(selectedFloor, "F1") ? "Floor 1 / Ground" : isEqual(selectedFloor, "F2") ? "Floor 2" : isEqual(selectedFloor, "F3") ? "Floor 3" : "Floor 4";
+    let selectedFloorName: string;
+    switch (selectedFloor) {
+        case "F1":
+            selectedFloorName = "Floor 1 / Ground";
+            break;
+        case "F2":
+            selectedFloorName = "Floor 2";
+            break;
+        case "F3":
+            selectedFloorName = "Floor 3";
+            break;
+        default:
+            selectedFloorName = "Floor 4";
+            break;
+    }
 
     return (
         <>
