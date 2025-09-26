@@ -24,6 +24,8 @@ interface Store {
     setAreaCoordinates: (coords: Position) => void;
     cameraFocus: boolean;
     setCameraFocus: (camFocus: boolean) => void;
+    routePath: GeoJSON.FeatureCollection<GeoJSON.LineString> | null;
+    setRoutePath: (route: GeoJSON.FeatureCollection<GeoJSON.LineString> | null) => void;
 }
 
 export const useMyStoreV2 = create<Store>((set) => ({
@@ -48,4 +50,6 @@ export const useMyStoreV2 = create<Store>((set) => ({
     setAreaCoordinates: (coords: Position) => set({ areaCoordinates: coords }),
     cameraFocus: false,
     setCameraFocus: (camFocus: boolean) => set({ cameraFocus: camFocus }),
+    routePath: null,
+    setRoutePath: (route: GeoJSON.FeatureCollection<GeoJSON.LineString> | null) => set({ routePath: route })
 }));
