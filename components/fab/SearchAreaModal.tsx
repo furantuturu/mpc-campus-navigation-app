@@ -2,7 +2,7 @@ import { customBlack, customBlue, customDarkYellow, customRed, schoolDataForSear
 import { areaDetailsSheet, categorySelect, contains } from "@/constants/helpers/helper";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { AreaData, Category, Floor } from "@/types/types";
-import { isEqual, sortBy, trim } from "es-toolkit";
+import { sortBy, trim } from "es-toolkit";
 import { filter, split, toLower } from "es-toolkit/compat";
 import { useState } from "react";
 import { FlatList, Modal, ScrollView, StyleSheet, View } from "react-native";
@@ -52,8 +52,26 @@ export default function AreaSearchBar() {
     }
 
     function renderAreaList({ item }: { item: AreaData; }) {
-        const icon = isEqual(item.category, "Offices") ? "office-building" : isEqual(item.category, "Rooms") ? "google-classroom" : isEqual(item.category, "Toilets") ? "toilet" : "home-group";
-        const iconColor = isEqual(item.category, "Offices") ? customBlue : isEqual(item.category, "Rooms") ? customRed : isEqual(item.category, "Toilets") ? customDarkYellow : customBlack;
+        let icon: string;
+        let iconColor: string;
+        switch (item.category) {
+            case "Offices":
+                icon = "office-building";
+                iconColor = customBlue;
+                break;
+            case "Rooms":
+                icon = "google-classroom";
+                iconColor = customRed;
+                break;
+            case "Toilets":
+                icon = "toilet";
+                iconColor = customDarkYellow;
+                break;
+            default:
+                icon = "home-group";
+                iconColor = customBlack;
+                break;
+        }
 
         return (
             <TouchableRipple
