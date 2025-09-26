@@ -7,7 +7,7 @@ import { Modal, StyleSheet, TouchableWithoutFeedback, View } from "react-native"
 import { Icon, Menu, Text, TouchableRipple } from 'react-native-paper';
 
 export default function FloorsSelectionPerCategoryModal() {
-    const { selectedCategory, selectedFloor, setSelectedFloor, showAreaSheet } = useMyStoreV2();
+    const { selectedCategory, selectedFloor, setSelectedFloor, showAreaSheet, setRoutePath } = useMyStoreV2();
     const [visible, setVisible] = useState(false);
 
     const categoryFloors: Floor[] = floorsPerCategory[selectedCategory];
@@ -22,6 +22,7 @@ export default function FloorsSelectionPerCategoryModal() {
 
     function selectFloor(floor: Floor) {
         closeMenu();
+        setRoutePath(null);
         setSelectedFloor(floor);
     }
 
