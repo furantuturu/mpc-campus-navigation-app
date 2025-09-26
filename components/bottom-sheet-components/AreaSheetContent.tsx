@@ -1,3 +1,4 @@
+import { getRoute } from "@/constants/helpers/helper";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { TrueSheet } from "@lodev09/react-native-true-sheet";
 import { split } from "es-toolkit/compat";
@@ -5,12 +6,17 @@ import { Pressable, StyleSheet, View } from "react-native";
 import { Divider, Icon, Text } from "react-native-paper";
 
 export default function AreaSheetContent() {
-    const { setShowAreaSheet, areaData } = useMyStoreV2();
+    const { setShowAreaSheet, areaData, setRoutePath } = useMyStoreV2();
+    const areaCoords = [areaData.coordinates.longitude, areaData.coordinates.latitude];
 
     async function dismissAreaSheet() {
         setShowAreaSheet(false);
         await TrueSheet.dismiss("sub-sheet");
         await TrueSheet.present("main-sheet");
+    }
+
+    function getAreaRoute() {
+        getRoute([125.145323, 6.117693], areaCoords, setRoutePath);
     }
 
     return (
@@ -32,7 +38,7 @@ export default function AreaSheetContent() {
                             borderless: false,
                             foreground: true,
                         }}
-                        onPress={dismissAreaSheet}
+                        onPress={getAreaRoute}
                     >
                         <Icon source="navigation-variant" size={25} color="white" />
                         <Text style={styles.buttonText}>Navigate</Text>
