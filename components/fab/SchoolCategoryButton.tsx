@@ -8,9 +8,10 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 
 export default function SchoolCategoryButton() {
-    const { activeCategory, setSelectedCategory, setActiveCategory } = useMyStoreV2();
+    const { activeCategory, setSelectedCategory, setActiveCategory, setRoutePath } = useMyStoreV2();
 
     async function selectActiveCategory(category: Category) {
+        setRoutePath(null);
         await categorySelect(category, setSelectedCategory, setActiveCategory);
     }
 
