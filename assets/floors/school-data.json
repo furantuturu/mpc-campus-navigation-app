@@ -1,12 +1,12 @@
 {
     "Offices": {
-        "F1": {
+        "1F": {
             "Old Building": [
                 {
                     "id": "OB1",
                     "name": "Registrar",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
                     "coordinates": {
                         "latitude": 6.117952,
@@ -17,7 +17,7 @@
                     "id": "OB2",
                     "name": "VP for Administration & VP for Academic Affairs",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
                     "coordinates": {
                         "latitude": 6.117910,
@@ -28,7 +28,7 @@
                     "id": "OB3",
                     "name": "HRDO",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
                     "coordinates": {
                         "latitude": 6.117891,
@@ -39,7 +39,7 @@
                     "id": "OB4",
                     "name": "Cashier",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
                     "coordinates": {
                         "latitude": 6.117872,
@@ -50,7 +50,7 @@
                     "id": "OB5",
                     "name": "Guidance and Counseling Center",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
                     "coordinates": {
                         "latitude": 6.117849,
@@ -61,7 +61,7 @@
                     "id": "OB6",
                     "name": "GAD Office",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
                     "coordinates": {
                         "latitude": 6.117802,
@@ -72,7 +72,7 @@
                     "id": "OB7",
                     "name": "Clinic & Office of the Scholarship Coordinator",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
                     "coordinates": {
                         "latitude": 6.117771,
@@ -83,7 +83,7 @@
                     "id": "OB8",
                     "name": "Simulation Room",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
                     "coordinates": {
                         "latitude": 6.117732,
@@ -94,7 +94,7 @@
                     "id": "OB9",
                     "name": "BSNAME Department Head Office",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
                     "coordinates": {
                         "latitude": 6.117682,
@@ -107,7 +107,7 @@
                     "id": "GB2",
                     "name": "BSME Department Office",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117363,
@@ -118,7 +118,7 @@
                     "id": "GB3",
                     "name": "BSME Department Head & BSIT Department Head",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117385,
@@ -129,7 +129,7 @@
                     "id": "GB4",
                     "name": "BSCA Department Head",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117409,
@@ -140,7 +140,7 @@
                     "id": "GB5",
                     "name": "Research and Developmentt Office",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117430,
@@ -151,7 +151,7 @@
                     "id": "GB6",
                     "name": "Office of the Practicum Coordinator",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117448,
@@ -162,7 +162,7 @@
                     "id": "GB7",
                     "name": "Porthole",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117463,
@@ -173,7 +173,7 @@
                     "id": "GB8",
                     "name": "Quality Assurance Manager",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117491,
@@ -184,7 +184,7 @@
                     "id": "GB9",
                     "name": "Office of the SHS Principal",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117799,
@@ -195,7 +195,7 @@
                     "id": "GB10",
                     "name": "Supreme Student Government / SHS Department",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117788,
@@ -206,7 +206,7 @@
                     "id": "GB11",
                     "name": "Physical Plant Office",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117781,
@@ -217,7 +217,7 @@
                     "id": "GB12",
                     "name": "Philippine Security of Customs Administration Students (PSCAS)",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117769,
@@ -228,7 +228,7 @@
                     "id": "GB13",
                     "name": "Office of the Supreme Student Council",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117736,
@@ -239,7 +239,7 @@
                     "id": "GB14",
                     "name": "Society of Naval Architecture & Marine Engineering Students",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117735,
@@ -250,7 +250,7 @@
                     "id": "GB15",
                     "name": "Office of the Hospitality Department",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117720,
@@ -261,7 +261,7 @@
                     "id": "GB16",
                     "name": "Office of Student Activities & Services (OSAS) / NSTP Office",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117703,
@@ -272,7 +272,7 @@
                     "id": "GB17",
                     "name": "Sports Office",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
                     "coordinates": {
                         "latitude": 6.117686,
@@ -282,10 +282,10 @@
             ],
             "Maritime Building": [
                 {
-                    "id": "MBF1-9",
+                    "id": "MB1F-9",
                     "name": "Dean of Maritime Education Office",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117157,
@@ -293,10 +293,10 @@
                     }
                 },
                 {
-                    "id": "MBF1-15",
+                    "id": "MB1F-15",
                     "name": "Front Office Lab",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117132,
@@ -306,10 +306,10 @@
             ],
             "Susana Building": [
                 {
-                    "id": "SBF1-6",
+                    "id": "SB1F-6",
                     "name": "RISO Office",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117648,
@@ -319,10 +319,10 @@
             ],
             "Mar-E": [
                 {
-                    "id": "MARF1-1",
+                    "id": "MAR1F-1",
                     "name": "MPC Tech-Voc Office",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117180,
@@ -335,7 +335,7 @@
                     "id": "O-3",
                     "name": "Property Custodian",
                     "category": "Offices",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Outside",
                     "coordinates": {
                         "latitude": 6.116869,
@@ -344,13 +344,13 @@
                 }
             ]
         },
-        "F3": {
+        "3F": {
             "Maritime Building": [
                 {
-                    "id": "MBF3-9",
+                    "id": "MB3F-9",
                     "name": "BSCRIM Office",
                     "category": "Offices",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117082,
@@ -359,13 +359,13 @@
                 }
             ]
         },
-        "F4": {
+        "4F": {
             "Susana Building": [
                 {
-                    "id": "SBF4-2",
+                    "id": "SB4F-2",
                     "name": "Multimedia Center Office",
                     "category": "Offices",
-                    "floor": "Floor 4 / F4",
+                    "floor": "4th Floor / 4F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117367,
@@ -376,13 +376,13 @@
         }
     },
     "Rooms": {
-        "F1": {
+        "1F": {
             "Old Building": [
                 {
                     "id": "OB10",
                     "name": "Room 102",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
                     "coordinates": {
                         "latitude": 6.117664,
@@ -392,10 +392,10 @@
             ],
             "Maritime Building": [
                 {
-                    "id": "MBF1-1",
+                    "id": "MB1F-1",
                     "name": "Engine Simulator Room",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117348,
@@ -403,10 +403,10 @@
                     }
                 },
                 {
-                    "id": "MBF1-2",
+                    "id": "MB1F-2",
                     "name": "Room 117",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117325,
@@ -414,10 +414,10 @@
                     }
                 },
                 {
-                    "id": "MBF1-3",
+                    "id": "MB1F-3",
                     "name": "Room 118",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117305,
@@ -425,10 +425,10 @@
                     }
                 },
                 {
-                    "id": "MBF1-4",
+                    "id": "MB1F-4",
                     "name": "Room 119",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117285,
@@ -436,10 +436,10 @@
                     }
                 },
                 {
-                    "id": "MBF1-5",
+                    "id": "MB1F-5",
                     "name": "Room 120",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117260,
@@ -447,10 +447,10 @@
                     }
                 },
                 {
-                    "id": "MBF1-6",
+                    "id": "MB1F-6",
                     "name": "Room 121",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117227,
@@ -458,10 +458,10 @@
                     }
                 },
                 {
-                    "id": "MBF1-7",
+                    "id": "MB1F-7",
                     "name": "Room 122",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117208,
@@ -469,10 +469,10 @@
                     }
                 },
                 {
-                    "id": "MBF1-8",
+                    "id": "MB1F-8",
                     "name": "Room 123",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117181,
@@ -480,10 +480,10 @@
                     }
                 },
                 {
-                    "id": "MBF1-10",
+                    "id": "MB1F-10",
                     "name": "Faculty Room",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117128,
@@ -491,10 +491,10 @@
                     }
                 },
                 {
-                    "id": "MBF1-11",
+                    "id": "MB1F-11",
                     "name": "Pastry Lab",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117095,
@@ -502,10 +502,10 @@
                     }
                 },
                 {
-                    "id": "MBF1-12",
+                    "id": "MB1F-12",
                     "name": "Room 127",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117073,
@@ -513,10 +513,10 @@
                     }
                 },
                 {
-                    "id": "MBF1-13",
+                    "id": "MB1F-13",
                     "name": "BSHRM Lab",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117045,
@@ -524,10 +524,10 @@
                     }
                 },
                 {
-                    "id": "MBF1-14",
+                    "id": "MB1F-14",
                     "name": "HRM Dining Lab",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117009,
@@ -537,10 +537,10 @@
             ],
             "Susana Building": [
                 {
-                    "id": "SBF1-1",
+                    "id": "SB1F-1",
                     "name": "SHS Room 01",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117274,
@@ -548,10 +548,10 @@
                     }
                 },
                 {
-                    "id": "SBF1-2",
+                    "id": "SB1F-2",
                     "name": "SHS Room 02",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117351,
@@ -559,10 +559,10 @@
                     }
                 },
                 {
-                    "id": "SBF1-3",
+                    "id": "SB1F-3",
                     "name": "SHS Room 03",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117440,
@@ -570,10 +570,10 @@
                     }
                 },
                 {
-                    "id": "SBF1-4",
+                    "id": "SB1F-4",
                     "name": "SHS Room 04",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117514,
@@ -581,10 +581,10 @@
                     }
                 },
                 {
-                    "id": "SBF1-5",
+                    "id": "SB1F-5",
                     "name": "Conference Room",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117594,
@@ -594,10 +594,10 @@
             ],
             "Mar-E": [
                 {
-                    "id": "MARF1-2",
+                    "id": "MAR1F-2",
                     "name": "Engineering Lab",
                     "category": "Rooms",
-                    "floor": "Floor 1 / F1 / Ground",
+                    "floor": "1st Floor / 1F / Ground",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117186,
@@ -606,13 +606,13 @@
                 }
             ]
         },
-        "F2": {
+        "2F": {
             "Maritime Building": [
                 {
-                    "id": "MBF2-1",
+                    "id": "MB2F-1",
                     "name": "Full Mission Bridge Simulation Room",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117352,
@@ -620,10 +620,10 @@
                     }
                 },
                 {
-                    "id": "MBF2-2",
+                    "id": "MB2F-2",
                     "name": "Briefing/Debriefing Room",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117330,
@@ -631,10 +631,10 @@
                     }
                 },
                 {
-                    "id": "MBF2-3",
+                    "id": "MB2F-3",
                     "name": "Room 203",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117307,
@@ -642,10 +642,10 @@
                     }
                 },
                 {
-                    "id": "MBF2-4",
+                    "id": "MB2F-4",
                     "name": "Room 204",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117286,
@@ -653,10 +653,10 @@
                     }
                 },
                 {
-                    "id": "MBF2-5",
+                    "id": "MB2F-5",
                     "name": "Room 205",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117263,
@@ -664,10 +664,10 @@
                     }
                 },
                 {
-                    "id": "MBF2-6",
+                    "id": "MB2F-6",
                     "name": "Room 206",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117226,
@@ -675,10 +675,10 @@
                     }
                 },
                 {
-                    "id": "MBF2-7",
+                    "id": "MB2F-7",
                     "name": "Room 207",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117204,
@@ -686,10 +686,10 @@
                     }
                 },
                 {
-                    "id": "MBF2-8",
+                    "id": "MB2F-8",
                     "name": "Room 208",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117185,
@@ -697,10 +697,10 @@
                     }
                 },
                 {
-                    "id": "MBF2-9",
+                    "id": "MB2F-9",
                     "name": "Simulation Room",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117161,
@@ -708,10 +708,10 @@
                     }
                 },
                 {
-                    "id": "MBF2-13",
+                    "id": "MB2F-13",
                     "name": "IT Room/Storage",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117135,
@@ -719,10 +719,10 @@
                     }
                 },
                 {
-                    "id": "MBF2-10",
+                    "id": "MB2F-10",
                     "name": "Computer Lab",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117085,
@@ -730,10 +730,10 @@
                     }
                 },
                 {
-                    "id": "MBF2-11",
+                    "id": "MB2F-11",
                     "name": "Housekeeping Lab",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117096,
@@ -741,10 +741,10 @@
                     }
                 },
                 {
-                    "id": "MBF2-12",
+                    "id": "MB2F-12",
                     "name": "Bar",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117006,
@@ -754,10 +754,10 @@
             ],
             "Susana Building": [
                 {
-                    "id": "SBF2-1",
+                    "id": "SB2F-1",
                     "name": "Mar Computer Lab",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117285,
@@ -765,10 +765,10 @@
                     }
                 },
                 {
-                    "id": "SBF2-2",
+                    "id": "SB2F-2",
                     "name": "Room 07",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117342,
@@ -776,10 +776,10 @@
                     }
                 },
                 {
-                    "id": "SBF2-3",
+                    "id": "SB2F-3",
                     "name": "Room 08",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117434,
@@ -787,10 +787,10 @@
                     }
                 },
                 {
-                    "id": "SBF2-4",
+                    "id": "SB2F-4",
                     "name": "Room 09",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117517,
@@ -798,10 +798,10 @@
                     }
                 },
                 {
-                    "id": "SBF2-5",
+                    "id": "SB2F-5",
                     "name": "Room 10 (Susana)",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117575,
@@ -811,10 +811,10 @@
             ],
             "Mar-E": [
                 {
-                    "id": "MARF2-1",
+                    "id": "MAR2F-1",
                     "name": "Room 01",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117173,
@@ -822,10 +822,10 @@
                     }
                 },
                 {
-                    "id": "MARF2-2",
+                    "id": "MAR2F-2",
                     "name": "Room 02",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117200,
@@ -833,10 +833,10 @@
                     }
                 },
                 {
-                    "id": "MARF2-3",
+                    "id": "MAR2F-3",
                     "name": "Room 03",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117218,
@@ -844,10 +844,10 @@
                     }
                 },
                 {
-                    "id": "MARF2-4",
+                    "id": "MAR2F-4",
                     "name": "Room 04",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117212,
@@ -855,10 +855,10 @@
                     }
                 },
                 {
-                    "id": "MARF2-5",
+                    "id": "MAR2F-5",
                     "name": "Room 05",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117280,
@@ -866,10 +866,10 @@
                     }
                 },
                 {
-                    "id": "MARF2-6",
+                    "id": "MAR2F-6",
                     "name": "Room 06",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117273,
@@ -877,10 +877,10 @@
                     }
                 },
                 {
-                    "id": "MARF2-7",
+                    "id": "MAR2F-7",
                     "name": "Room 07",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117336,
@@ -888,10 +888,10 @@
                     }
                 },
                 {
-                    "id": "MARF2-8",
+                    "id": "MAR2F-8",
                     "name": "Room 08",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117329,
@@ -899,10 +899,10 @@
                     }
                 },
                 {
-                    "id": "MARF2-9",
+                    "id": "MAR2F-9",
                     "name": "Room 10 (Mar-E)",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117385,
@@ -910,10 +910,10 @@
                     }
                 },
                 {
-                    "id": "MARF2-10",
+                    "id": "MAR2F-10",
                     "name": "Drawing Room I",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117434,
@@ -921,10 +921,10 @@
                     }
                 },
                 {
-                    "id": "MARF2-11",
+                    "id": "MAR2F-11",
                     "name": "Mold Lofting Room",
                     "category": "Rooms",
-                    "floor": "Floor 2 / F2",
+                    "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117459,
@@ -933,13 +933,13 @@
                 }
             ]
         },
-        "F3": {
+        "3F": {
             "Maritime Building": [
                 {
-                    "id": "MBF3-1",
+                    "id": "MB3F-1",
                     "name": "Meteorology / Oceanography Lab",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117301,
@@ -947,10 +947,10 @@
                     }
                 },
                 {
-                    "id": "MBF3-2",
+                    "id": "MB3F-2",
                     "name": "Chart Room / Room 301",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117295,
@@ -958,10 +958,10 @@
                     }
                 },
                 {
-                    "id": "MBF3-3",
+                    "id": "MB3F-3",
                     "name": "GMDSS Simulator Room",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117280,
@@ -969,10 +969,10 @@
                     }
                 },
                 {
-                    "id": "MBF3-4",
+                    "id": "MB3F-4",
                     "name": "Briefing / Debriefing Room",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117271,
@@ -980,10 +980,10 @@
                     }
                 },
                 {
-                    "id": "MBF3-5",
+                    "id": "MB3F-5",
                     "name": "Speech Lab",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117249,
@@ -991,10 +991,10 @@
                     }
                 },
                 {
-                    "id": "MBF3-6",
+                    "id": "MB3F-6",
                     "name": "Customs Administration Lab",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117221,
@@ -1002,10 +1002,10 @@
                     }
                 },
                 {
-                    "id": "MBF3-7",
+                    "id": "MB3F-7",
                     "name": "Library",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117204,
@@ -1013,10 +1013,10 @@
                     }
                 },
                 {
-                    "id": "MBF3-8",
+                    "id": "MB3F-8",
                     "name": "Crime Lab 1",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117093,
@@ -1024,10 +1024,10 @@
                     }
                 },
                 {
-                    "id": "MBF3-10",
+                    "id": "MB3F-10",
                     "name": "Crime Lab 2",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117078,
@@ -1035,10 +1035,10 @@
                     }
                 },
                 {
-                    "id": "MBF3-11",
+                    "id": "MB3F-11",
                     "name": "Crime Lab 3",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117068,
@@ -1046,10 +1046,10 @@
                     }
                 },
                 {
-                    "id": "MBF3-12",
+                    "id": "MB3F-12",
                     "name": "Alpha",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117063,
@@ -1057,10 +1057,10 @@
                     }
                 },
                 {
-                    "id": "MBF3-13",
+                    "id": "MB3F-13",
                     "name": "Crime Scene Simulation Room",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117036,
@@ -1068,10 +1068,10 @@
                     }
                 },
                 {
-                    "id": "MBF3-14",
+                    "id": "MB3F-14",
                     "name": "Court Room",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117007,
@@ -1079,10 +1079,10 @@
                     }
                 },
                 {
-                    "id": "MBF3-15",
+                    "id": "MB3F-15",
                     "name": "Bravo",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117081,
@@ -1090,10 +1090,10 @@
                     }
                 },
                 {
-                    "id": "MBF3-16",
+                    "id": "MB3F-16",
                     "name": "Charles",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
                     "coordinates": {
                         "latitude": 6.117150,
@@ -1103,10 +1103,10 @@
             ],
             "Susana Building": [
                 {
-                    "id": "SBF3-1",
+                    "id": "SB3F-1",
                     "name": "PSCAS Room / Room 11",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117268,
@@ -1114,10 +1114,10 @@
                     }
                 },
                 {
-                    "id": "SBF3-2",
+                    "id": "SB3F-2",
                     "name": "Room 12",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117339,
@@ -1125,10 +1125,10 @@
                     }
                 },
                 {
-                    "id": "SBF3-3",
+                    "id": "SB3F-3",
                     "name": "Room 13",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117435,
@@ -1136,10 +1136,10 @@
                     }
                 },
                 {
-                    "id": "SBF3-4",
+                    "id": "SB3F-4",
                     "name": "Room 14",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117518,
@@ -1147,10 +1147,10 @@
                     }
                 },
                 {
-                    "id": "SBF3-5",
+                    "id": "SB3F-5",
                     "name": "Room 15",
                     "category": "Rooms",
-                    "floor": "Floor 3 / F3",
+                    "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117574,
@@ -1159,13 +1159,13 @@
                 }
             ]
         },
-        "F4": {
+        "4F": {
             "Susana Building": [
                 {
-                    "id": "SBF4-1",
+                    "id": "SB4F-1",
                     "name": "Audio Visual Room",
                     "category": "Rooms",
-                    "floor": "Floor 4 / F4",
+                    "floor": "4th Floor / 4F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117300,
@@ -1173,10 +1173,10 @@
                     }
                 },
                 {
-                    "id": "SBF4-3",
+                    "id": "SB4F-3",
                     "name": "Physics Lab",
                     "category": "Rooms",
-                    "floor": "Floor 4 / F4",
+                    "floor": "4th Floor / 4F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117464,
@@ -1184,10 +1184,10 @@
                     }
                 },
                 {
-                    "id": "SBF4-4",
+                    "id": "SB4F-4",
                     "name": "Nat. Science Lab",
                     "category": "Rooms",
-                    "floor": "Floor 4 / F4",
+                    "floor": "4th Floor / 4F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117500,
@@ -1195,10 +1195,10 @@
                     }
                 },
                 {
-                    "id": "SBF4-5",
+                    "id": "SB4F-5",
                     "name": "Chemistry Lab",
                     "category": "Rooms",
-                    "floor": "Floor 4 / F4",
+                    "floor": "4th Floor / 4F",
                     "building": "Susana Building",
                     "coordinates": {
                         "latitude": 6.117559,
@@ -1209,98 +1209,98 @@
         }
     },
     "Toilets": {
-        "F1": [
+        "1F": [
             {
-                "id": "CRF1-1",
-                "name": "Maritime CR Male (F1)",
+                "id": "CR1F-1",
+                "name": "Maritime CR Male (1F)",
                 "category": "Toilets",
-                "floor": "Floor 1 / F1 / Ground",
+                "floor": "1st Floor / 1F / Ground",
                 "coordinates": {
                     "latitude": 6.117227,
                     "longitude": 125.145109
                 }
             },
             {
-                "id": "CRF1-2",
-                "name": "Maritime CR Female (F1)",
+                "id": "CR1F-2",
+                "name": "Maritime CR Female (1F)",
                 "category": "Toilets",
-                "floor": "Floor 1 / F1 / Ground",
+                "floor": "1st Floor / 1F / Ground",
                 "coordinates": {
                     "latitude": 6.117082,
                     "longitude": 125.144732
                 }
             },
             {
-                "id": "CRF1-3",
+                "id": "CR1F-3",
                 "name": "Mar-E CR",
                 "category": "Toilets",
-                "floor": "Floor 1 / F1 / Ground",
+                "floor": "1st Floor / 1F / Ground",
                 "coordinates": {
                     "latitude": 6.117185,
                     "longitude": 125.143971
                 }
             },
             {
-                "id": "CRF1-4",
+                "id": "CR1F-4",
                 "name": "Back of Canteen CR",
                 "category": "Toilets",
-                "floor": "Floor 1 / F1 / Ground",
+                "floor": "1st Floor / 1F / Ground",
                 "coordinates": {
                     "latitude": 6.117612,
                     "longitude": 125.144203
                 }
             }
         ],
-        "F2": [
+        "2F": [
             {
-                "id": "CRF2-1",
-                "name": "Maritime CR (F2)",
+                "id": "CR2F-1",
+                "name": "Maritime CR (2F)",
                 "category": "Toilets",
-                "floor": "Floor 2 / F2",
+                "floor": "2nd Floor / 2F",
                 "coordinates": {
                     "latitude": 6.117224,
                     "longitude": 125.145117
                 }
             },
             {
-                "id": "CRF2-2",
-                "name": "Maritime CR Female (F2)",
+                "id": "CR2F-2",
+                "name": "Maritime CR Female (2F)",
                 "category": "Toilets",
-                "floor": "Floor 2 / F2",
+                "floor": "2nd Floor / 2F",
                 "coordinates": {
                     "latitude": 6.117079,
                     "longitude": 125.144730
                 }
             },
             {
-                "id": "CRF2-3",
-                "name": "Susana CR (F2)",
+                "id": "CR2F-3",
+                "name": "Susana CR (2F)",
                 "category": "Toilets",
-                "floor": "Floor 2 / F2",
+                "floor": "2nd Floor / 2F",
                 "coordinates": {
                     "latitude": 6.117689,
                     "longitude": 125.144246
                 }
             }
         ],
-        "F3": [
+        "3F": [
             {
-                "id": "CRF3-1",
-                "name": "Susana CR (F3)",
+                "id": "CR3F-1",
+                "name": "Susana CR (3F)",
                 "category": "Toilets",
-                "floor": "Floor 3 / F3",
+                "floor": "3rd Floor / 3F",
                 "coordinates": {
                     "latitude": 6.117687,
                     "longitude": 125.144246
                 }
             }
         ],
-        "F4": [
+        "4F": [
             {
-                "id": "CRF4-1",
-                "name": "Susana CR (F4)",
+                "id": "CR4F-1",
+                "name": "Susana CR (4F)",
                 "category": "Toilets",
-                "floor": "Floor 4 / F4",
+                "floor": "4th Floor / 4F",
                 "coordinates": {
                     "latitude": 6.117690,
                     "longitude": 125.144245
@@ -1313,7 +1313,7 @@
             "id": "GB1",
             "name": "Gym",
             "category": "Outdoors",
-            "floor": "Floor 1 / F1 / Ground",
+            "floor": "1st Floor / 1F / Ground",
             "coordinates": {
                 "latitude": 6.117617,
                 "longitude": 125.145000
@@ -1323,7 +1323,7 @@
             "id": "O-1",
             "name": "Canteen",
             "category": "Outdoors",
-            "floor": "Floor 1 / F1 / Ground",
+            "floor": "1st Floor / 1F / Ground",
             "coordinates": {
                 "latitude": 6.117333,
                 "longitude": 125.144223
@@ -1332,7 +1332,7 @@
         {
             "id": "O-2",
             "name": "Swimming Area",
-            "floor": "Floor 1 / F1 / Ground",
+            "floor": "1st Floor / 1F / Ground",
             "category": "Outdoors",
             "coordinates": {
                 "latitude": 6.116813,
