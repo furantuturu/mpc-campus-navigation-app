@@ -1,9 +1,10 @@
 import { ActiveCategory, AreaData, Category, Position } from "@/types/types";
 import { TrueSheet } from "@lodev09/react-native-true-sheet";
 import { point } from "@turf/helpers";
+import { length } from "@turf/length";
 import { shortestPath } from "@turf/shortest-path";
 import { includes, toLower } from "es-toolkit/compat";
-import { campusF1Obstacles } from "../obstacles-geojson";
+import { campus2FObstacles } from "../obstacles-geojson";
 
 export function contains({ category, floor, building, name }: AreaData, query: string) {
     if (
@@ -57,10 +58,12 @@ export function getRoute(
     const from = point(start);
     const to = point(end);
 
+    //TODO change obstacle based on floor 
     const calculateShortestPath = shortestPath(from, to, {
-        obstacles: campusF1Obstacles,
-        units: 'meters'
+        obstacles: campus2FObstacles,
+        units: 'meters',
     });
+    const pathDistance = length(calculateShortestPath, { units: 'meters' });
 
     const pathLineString: GeoJSON.FeatureCollection<GeoJSON.LineString> = {
         type: 'FeatureCollection',
