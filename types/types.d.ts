@@ -8,7 +8,7 @@ export interface AreaFocus {
     coordinates: Position,
     zoomTo: number;
 }
-export type Floor = "F1" | "F2" | "F3" | "F4";
+export type Floor = "1F" | "2F" | "3F" | "4F";
 export interface AreaData {
     id: string;
     name: string;
