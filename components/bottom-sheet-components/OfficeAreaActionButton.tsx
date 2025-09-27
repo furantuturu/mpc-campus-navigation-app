@@ -10,7 +10,7 @@ import CustomButton from "./CustomButton";
 export default function OfficeAreaActionButtons() {
     const { selectedCategory, selectedFloor } = useMyStoreV2();
 
-    if (selectedFloor === "F2") return null;
+    if (selectedFloor === "2F") return null;
 
     const buildingOfficeData: Building = officeData[selectedFloor];
     const buildingNameOfficeData = officeBuildingNamesPerFloor[selectedFloor];
