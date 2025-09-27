@@ -47,11 +47,27 @@ export default function FloorsSelectionPerCategoryModal() {
                                 <View style={styles.divider}></View>
                                 {size(categoryFloors) > 1 && (
                                     map(categoryFloors, (floor) => {
+                                        let selectedFloorName: string;
+                                        switch (floor) {
+                                            case "1F":
+                                                selectedFloorName = "1st Floor";
+                                                break;
+                                            case "2F":
+                                                selectedFloorName = "2nd Floor";
+                                                break;
+                                            case "3F":
+                                                selectedFloorName = "3rd Floor";
+                                                break;
+                                            default:
+                                                selectedFloorName = "4th Floor";
+                                                break;
+                                        }
+
                                         return (
                                             <Menu.Item
                                                 key={`${selectedCategory}-${floor}`}
                                                 leadingIcon="office-building-marker"
-                                                title={`${floor.at(0)}loor ${floor.at(1)}`}
+                                                title={selectedFloorName}
                                                 onPress={() => selectFloor(floor)}
                                             />
                                         );
