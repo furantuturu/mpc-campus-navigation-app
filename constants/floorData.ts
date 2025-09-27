@@ -3,10 +3,10 @@ import schoolData from "@/assets/floors/school-data.json";
 import { AreaData, FloorsPerCategory } from "@/types/types";
 
 export const floorsPerCategory: FloorsPerCategory = {
-    "Offices": ["F1", "F3", "F4"],
-    "Rooms": ["F1", "F2", "F3", "F4"],
-    "Toilets": ["F1", "F2", "F3", "F4"],
-    "Outdoors": ["F1"]
+    "Offices": ["1F", "3F", "4F"],
+    "Rooms": ["1F", "2F", "3F", "4F"],
+    "Toilets": ["1F", "2F", "3F", "4F"],
+    "Outdoors": ["1F"]
 };
 
 export const officeData = schoolData["Offices"];
@@ -17,16 +17,16 @@ export const outdoorData = schoolData["Outdoors"];
 export const schoolDataForSearch: AreaData[] = schoolDataSearch;
 
 export const roomBuildingNamesPerFloor = {
-    "F1": ["Old Building", "Maritime Building", "Susana Building", "Mar-E"],
-    "F2": ["Maritime Building", "Susana Building", "Mar-E"],
-    "F3": ["Maritime Building", "Susana Building"],
-    "F4": ["Susana Building"]
+    "1F": ["Old Building", "Maritime Building", "Susana Building", "Mar-E"],
+    "2F": ["Maritime Building", "Susana Building", "Mar-E"],
+    "3F": ["Maritime Building", "Susana Building"],
+    "4F": ["Susana Building"]
 };
 
 export const officeBuildingNamesPerFloor = {
-    "F1": ["Old Building", "Gym Building", "Maritime Building", "Susana Building", "Mar-E", "Outside"],
-    "F3": ["Maritime Building"],
-    "F4": ["Susana Building"]
+    "1F": ["Old Building", "Gym Building", "Maritime Building", "Susana Building", "Mar-E", "Outside"],
+    "3F": ["Maritime Building"],
+    "4F": ["Susana Building"]
 };
 
 export const customBlue = "#0593fc";
