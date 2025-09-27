@@ -16,17 +16,17 @@ export default function FloorSheetContent() {
 
     let selectedFloorName: string;
     switch (selectedFloor) {
-        case "F1":
-            selectedFloorName = "Floor 1 / Ground";
+        case "1F":
+            selectedFloorName = "1st Floor / Ground";
             break;
-        case "F2":
-            selectedFloorName = "Floor 2";
+        case "2F":
+            selectedFloorName = "2nd Floor";
             break;
-        case "F3":
-            selectedFloorName = "Floor 3";
+        case "3F":
+            selectedFloorName = "3rd Floor";
             break;
         default:
-            selectedFloorName = "Floor 4";
+            selectedFloorName = "4th Floor";
             break;
     }
 
