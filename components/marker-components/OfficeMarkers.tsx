@@ -8,7 +8,7 @@ import MemoMapMarker from "./MapMarker";
 export default function OfficeMarkers() {
     const { selectedFloor } = useMyStoreV2();
 
-    if (selectedFloor === "F2") return null;
+    if (selectedFloor === "2F") return null;
 
     const buldingOfficeData: Building = officeData[selectedFloor];
     const buldingNameOfficeData = officeBuildingNamesPerFloor[selectedFloor];
