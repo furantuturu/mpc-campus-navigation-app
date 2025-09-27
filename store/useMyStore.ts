@@ -33,7 +33,7 @@ export const useMyStoreV2 = create<Store>((set) => ({
     setCameraPitch: (pitch) => set({ cameraPitch: pitch }),
     selectedCategory: "Offices",
     setSelectedCategory: (category) => set({ selectedCategory: category }),
-    selectedFloor: "F1",
+    selectedFloor: "1F",
     setSelectedFloor: (floor) => set({ selectedFloor: floor }),
     showAreaSheet: false,
     setShowAreaSheet: (areaSheet) => set({ showAreaSheet: areaSheet }),
