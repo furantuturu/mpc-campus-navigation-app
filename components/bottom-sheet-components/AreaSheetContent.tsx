@@ -16,7 +16,7 @@ export default function AreaSheetContent() {
     }
 
     function getAreaRoute() {
-        getRoute([125.145323, 6.117693], areaCoords, setRoutePath);
+        getRoute([125.145324, 6.117679], areaCoords, setRoutePath);
     }
 
     return (
@@ -44,7 +44,7 @@ export default function AreaSheetContent() {
                         <Text style={styles.buttonText}>Navigate</Text>
                     </Pressable>
                     <Pressable
-                        style={[styles.buttonStyles, { backgroundColor: "#db4f4fff" }]}
+                        style={[styles.buttonStyles, { backgroundColor: "#ff4444ff" }]}
                         android_ripple={{
                             color: 'rgba(0, 0, 0, 0.2)',
                             borderless: false,
