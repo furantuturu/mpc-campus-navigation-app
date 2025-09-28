@@ -1,5 +1,6 @@
 import { getRoute } from "@/constants/helpers/helper";
 import { useMyStoreV2 } from "@/store/useMyStore";
+import { Floor } from "@/types/types";
 import { TrueSheet } from "@lodev09/react-native-true-sheet";
 import { split } from "es-toolkit/compat";
 import { Pressable, StyleSheet, View } from "react-native";
@@ -16,7 +17,8 @@ export default function AreaSheetContent() {
     }
 
     function getAreaRoute() {
-        getRoute([125.145324, 6.117679], areaCoords, setRoutePath);
+        const floor = split(areaData.floor, "/")[1] as Floor;
+        getRoute([125.145324, 6.117679], areaCoords, floor, setRoutePath);
     }
 
     return (
