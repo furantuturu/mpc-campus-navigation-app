@@ -40,7 +40,7 @@ export default function FloorsSelectionPerCategoryModal() {
                             <View style={styles.modalView}>
                                 <View style={styles.modalTitleView}>
                                     <Text style={styles.modalTitle} variant="titleMedium">
-                                        Select Floor
+                                        Select Floor Level
                                     </Text>
                                     <Icon source="office-building" size={25} />
                                 </View>
