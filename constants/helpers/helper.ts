@@ -1,10 +1,12 @@
-import { ActiveCategory, AreaData, Category, Position } from "@/types/types";
+import { ActiveCategory, AreaData, Category, Floor, Position } from "@/types/types";
 import { TrueSheet } from "@lodev09/react-native-true-sheet";
 import { point } from "@turf/helpers";
 import { length } from "@turf/length";
 import { shortestPath } from "@turf/shortest-path";
 import { includes, toLower } from "es-toolkit/compat";
-import { campus2FObstacles } from "../obstacles-geojson";
+import { campus1FObstacles, } from "../1fObstaclesGeojson";
+import { campus2FObstacles } from "../2fObstaclesGeojson";
+import { campus3FObstacles } from "../3fObstaclesGeojson";
 
 export function contains({ category, floor, building, name }: AreaData, query: string) {
     if (
@@ -53,14 +55,31 @@ export async function categorySelect(
 export function getRoute(
     start: Position,
     end: Position,
+    floor: Floor,
     setRoutePath: (route: GeoJSON.FeatureCollection<GeoJSON.LineString>) => void
 ) {
     const from = point(start);
     const to = point(end);
 
+    let obstacles;
+    switch (floor) {
+        case "1F":
+            obstacles = campus1FObstacles;
+            break;
+        case "2F":
+            obstacles = campus2FObstacles;
+            break;
+        case "3F":
+            obstacles = campus3FObstacles;
+            break;
+        default:
+            obstacles = campus2FObstacles;
+            break;
+    }
+
     //TODO change obstacle based on floor 
     const calculateShortestPath = shortestPath(from, to, {
-        obstacles: campus2FObstacles,
+        obstacles: obstacles,
         units: 'meters',
     });
     const pathDistance = length(calculateShortestPath, { units: 'meters' });
