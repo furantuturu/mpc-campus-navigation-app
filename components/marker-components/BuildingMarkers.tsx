@@ -1,4 +1,13 @@
-import { gate1NameMarker, gate2NameMarker, gymNameMarker, initAnchor, mareNameMarker, maritimeNameMarker, oldNameMarker, susanaNameMarker } from "@/constants/markerConfig";
+import {
+    gate1NameMarker,
+    gate2NameMarker,
+    gymNameMarker,
+    initAnchor,
+    mareNameMarker,
+    maritimeNameMarker,
+    oldNameMarker,
+    susanaNameMarker
+} from "@/constants/markerConfig";
 import { MarkerView } from "@maplibre/maplibre-react-native";
 import { Image } from "expo-image";
 import { StyleSheet, View } from "react-native";
@@ -47,7 +56,6 @@ export default function BuildingMarkers() {
 
 const styles = StyleSheet.create({
     textContainer: {
-        flex: 0,
         alignItems: "center",
         pointerEvents: 'box-none'
     },
