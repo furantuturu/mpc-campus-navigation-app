@@ -17,3 +17,5 @@ export const oldNameMarker = require("@/assets/images/buildingnames-markers/Old-
 export const mareNameMarker = require("@/assets/images/buildingnames-markers/Mar-E-Shop.png");
 export const gate1NameMarker = require("@/assets/images/buildingnames-markers/Gate-1.png");
 export const gate2NameMarker = require("@/assets/images/buildingnames-markers/Gate-2.png");
+
+export const stairsMarker = require("@/assets/images/markers/stairs-marker.png");
