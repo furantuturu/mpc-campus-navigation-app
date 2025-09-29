@@ -91,12 +91,12 @@ export default function MarkerImg({ markerAreaData, image }: MarkerImgProps) {
 
 const styles = StyleSheet.create({
     marker: {
-        width: 25,
-        height: 32
+        width: 20,
+        height: 27
     },
     bigMarker: {
-        width: 35,
-        height: 42
+        width: 30,
+        height: 37
     },
     outer: {
         alignItems: "center",
