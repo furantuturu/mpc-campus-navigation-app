@@ -16,6 +16,7 @@ export default function FloorBottomSheet() {
         setShowAreaSheet(false);
         await mainSheetRef.current?.present();
     }
+
     return (
         <>
             <TrueSheet
@@ -33,7 +34,7 @@ export default function FloorBottomSheet() {
                 <TrueSheet
                     name="sub-sheet"
                     ref={subSheetRef}
-                    sizes={['25%', '43%', 'large']}
+                    sizes={['28%', '43%', 'large']}
                     dimmed={false}
                     cornerRadius={24}
                     contentContainerStyle={styles.sheet}
