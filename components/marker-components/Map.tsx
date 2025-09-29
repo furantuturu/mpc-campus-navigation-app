@@ -6,6 +6,7 @@ import GeneralMapSetup from "@/components/GeneralMapSetup";
 import SchoolCategoryMarkers from "@/components/marker-components/SchoolCategoryMarkers";
 import BuildingMarkers from "./BuildingMarkers";
 import RouteLinePath from "./RouteLinePath";
+import StairsMarkers from "./StairsMarkers";
 
 export default function Map() {
 
@@ -20,6 +21,7 @@ export default function Map() {
             {/* <GoogleBaseMap /> */}
             <GeneralMapSetup />
             <BuildingMarkers />
+            <StairsMarkers />
             <SchoolCategoryMarkers />
             <RouteLinePath />
         </MapView>
