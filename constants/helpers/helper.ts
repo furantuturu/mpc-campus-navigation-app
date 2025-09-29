@@ -29,7 +29,7 @@ export async function areaDetailsSheet(
     setAreaData(areaData);
     setShowAreaSheet(true);
     await TrueSheet.dismiss("main-sheet");
-    await TrueSheet.present("sub-sheet", 1);
+    await TrueSheet.present("sub-sheet", 0);
 }
 
 const activeFalse = {
@@ -56,7 +56,7 @@ export function getRoute(
     start: Position,
     end: Position,
     floor: Floor,
-    setRoutePath: (route: GeoJSON.FeatureCollection<GeoJSON.LineString>) => void
+    setRoutePath: (route: GeoJSON.FeatureCollection<GeoJSON.LineString>) => void,
 ) {
     const from = point(start);
     const to = point(end);
@@ -77,13 +77,11 @@ export function getRoute(
             break;
     }
 
-    //TODO change obstacle based on floor 
     const calculateShortestPath = shortestPath(from, to, {
         obstacles: obstacles,
         units: 'meters',
     });
     const pathDistance = length(calculateShortestPath, { units: 'meters' });
-
     const pathLineString: GeoJSON.FeatureCollection<GeoJSON.LineString> = {
         type: 'FeatureCollection',
         features: [
