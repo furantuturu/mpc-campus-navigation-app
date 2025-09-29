@@ -2,13 +2,16 @@ import { getRoute } from "@/constants/helpers/helper";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { Floor } from "@/types/types";
 import { TrueSheet } from "@lodev09/react-native-true-sheet";
+import { trim } from "es-toolkit";
 import { split } from "es-toolkit/compat";
+import { useState } from "react";
 import { Pressable, StyleSheet, View } from "react-native";
-import { Divider, Icon, Text } from "react-native-paper";
+import { ActivityIndicator, Divider, Icon, Text } from "react-native-paper";
 
 export default function AreaSheetContent() {
-    const { setShowAreaSheet, areaData, setRoutePath } = useMyStoreV2();
+    const { setShowAreaSheet, areaData, setRoutePath, setIsNavigating } = useMyStoreV2();
     const areaCoords = [areaData.coordinates.longitude, areaData.coordinates.latitude];
+    const [isRouteFetching, setIsRouteFetching] = useState(false);
 
     async function dismissAreaSheet() {
         setShowAreaSheet(false);
@@ -17,8 +20,21 @@ export default function AreaSheetContent() {
     }
 
     function getAreaRoute() {
-        const floor = split(areaData.floor, "/")[1] as Floor;
-        getRoute([125.145324, 6.117679], areaCoords, floor, setRoutePath);
+        setIsRouteFetching(true);
+
+        new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("Fetching...");
+            }, 1000);
+        })
+            .then((status) => {
+                const floor = trim(split(areaData.floor, "/")[1]) as Floor;
+                getRoute([125.145339, 6.117629], areaCoords, floor, setRoutePath);
+            })
+            .finally(() => {
+                setIsRouteFetching(false);
+                setIsNavigating(false);
+            });
     }
 
     return (
@@ -41,9 +57,13 @@ export default function AreaSheetContent() {
                             foreground: true,
                         }}
                         onPress={getAreaRoute}
+                        disabled={isRouteFetching}
                     >
-                        <Icon source="navigation-variant" size={25} color="white" />
-                        <Text style={styles.buttonText}>Navigate</Text>
+                        {isRouteFetching
+                            ? <ActivityIndicator size={25} color="white" />
+                            : <Icon source="navigation-variant" size={25} color="white" />
+                        }
+                        <Text style={styles.buttonText}>Get Route</Text>
                     </Pressable>
                     <Pressable
                         style={[styles.buttonStyles, { backgroundColor: "#ff4444ff" }]}
