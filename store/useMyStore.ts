@@ -26,6 +26,8 @@ interface Store {
     setCameraFocus: (camFocus: boolean) => void;
     routePath: GeoJSON.FeatureCollection<GeoJSON.LineString> | null;
     setRoutePath: (route: GeoJSON.FeatureCollection<GeoJSON.LineString> | null) => void;
+    isNavigating: boolean,
+    setIsNavigating: (isFetching: boolean) => void;
 }
 
 export const useMyStoreV2 = create<Store>((set) => ({
@@ -51,5 +53,7 @@ export const useMyStoreV2 = create<Store>((set) => ({
     cameraFocus: false,
     setCameraFocus: (camFocus: boolean) => set({ cameraFocus: camFocus }),
     routePath: null,
-    setRoutePath: (route: GeoJSON.FeatureCollection<GeoJSON.LineString> | null) => set({ routePath: route })
+    setRoutePath: (route: GeoJSON.FeatureCollection<GeoJSON.LineString> | null) => set({ routePath: route }),
+    isNavigating: false,
+    setIsNavigating: (isFetching: boolean) => set({ isNavigating: isFetching })
 }));
