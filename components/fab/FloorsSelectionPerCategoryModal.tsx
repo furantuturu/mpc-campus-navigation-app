@@ -12,6 +12,8 @@ export default function FloorsSelectionPerCategoryModal() {
 
     const categoryFloors: Floor[] = floorsPerCategory[selectedCategory];
 
+    if (size(categoryFloors) <= 1 || showAreaSheet) return null;
+
     function openMenu() {
         setVisible(true);
     }
@@ -27,7 +29,7 @@ export default function FloorsSelectionPerCategoryModal() {
     }
 
     return (
-        <View style={[styles.container, size(categoryFloors) <= 1 || showAreaSheet ? { display: 'none' } : '']}>
+        <View style={styles.container}>
             <Modal
                 animationType="fade"
                 visible={visible}
