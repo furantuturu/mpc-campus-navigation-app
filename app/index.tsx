@@ -4,6 +4,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 
 //* Components
 import FloorBottomSheet from "@/components/bottom-sheet-components/MapBottomSheet";
+import ActivateUserLocation from "@/components/fab/ActivateUserLocation";
 import FloorsSelectionPerCategoryModal from "@/components/fab/FloorsSelectionPerCategoryModal";
 import MapDimensionToggle from "@/components/fab/MapDimensionToggle";
 import SchoolCategoryButton from "@/components/fab/SchoolCategoryButton";
@@ -22,6 +23,7 @@ export default function Index() {
           <SchoolCategoryButton />
           <MapDimensionToggle />
           <FloorsSelectionPerCategoryModal />
+          <ActivateUserLocation />
         </View>
         <FloorBottomSheet />
       </SafeAreaProvider>
