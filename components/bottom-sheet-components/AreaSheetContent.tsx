@@ -1,15 +1,16 @@
 import { getRoute } from "@/constants/helpers/helper";
-import { useMyStoreV2 } from "@/store/useMyStore";
+import { useMyStoreV2, useUserLocStore } from "@/store/useMyStore";
 import { Floor } from "@/types/types";
 import { TrueSheet } from "@lodev09/react-native-true-sheet";
-import { trim } from "es-toolkit";
+import { isNull, trim } from "es-toolkit";
 import { split } from "es-toolkit/compat";
 import { useState } from "react";
-import { Pressable, StyleSheet, View } from "react-native";
+import { Alert, Pressable, StyleSheet, View } from "react-native";
 import { ActivityIndicator, Divider, Icon, Text } from "react-native-paper";
 
 export default function AreaSheetContent() {
-    const { setShowAreaSheet, areaData, setRoutePath, setIsNavigating } = useMyStoreV2();
+    const { setShowAreaSheet, areaData, setRoutePath, setRouteDistance } = useMyStoreV2();
+    const { setIsNavigating, userCoordinates } = useUserLocStore();
     const areaCoords = [areaData.coordinates.longitude, areaData.coordinates.latitude];
     const [isRouteFetching, setIsRouteFetching] = useState(false);
 
@@ -19,7 +20,12 @@ export default function AreaSheetContent() {
         await TrueSheet.present("main-sheet");
     }
 
-    function getAreaRoute() {
+    async function getAreaRoute() {
+        if (isNull(userCoordinates)) {
+            Alert.alert("Location services is required for this app", "Location is needed to make the routing work. After activating the location service, you need to get the routing again");
+            return;
+        }
+
         setIsRouteFetching(true);
 
         new Promise((resolve) => {
@@ -29,11 +35,11 @@ export default function AreaSheetContent() {
         })
             .then((status) => {
                 const floor = trim(split(areaData.floor, "/")[1]) as Floor;
-                getRoute([125.145339, 6.117629], areaCoords, floor, setRoutePath);
+                getRoute(userCoordinates, areaCoords, floor, setRoutePath, setRouteDistance);
             })
             .finally(() => {
                 setIsRouteFetching(false);
-                setIsNavigating(false);
+                setIsNavigating(true);
             });
     }
 
@@ -61,7 +67,7 @@ export default function AreaSheetContent() {
                     >
                         {isRouteFetching
                             ? <ActivityIndicator size={25} color="white" />
-                            : <Icon source="navigation-variant" size={25} color="white" />
+                            : <Icon source="map-marker-path" size={25} color="white" />
                         }
                         <Text style={styles.buttonText}>Get Route</Text>
                     </Pressable>
