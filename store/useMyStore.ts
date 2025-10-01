@@ -26,8 +26,8 @@ interface Store {
     setCameraFocus: (camFocus: boolean) => void;
     routePath: GeoJSON.FeatureCollection<GeoJSON.LineString> | null;
     setRoutePath: (route: GeoJSON.FeatureCollection<GeoJSON.LineString> | null) => void;
-    isNavigating: boolean,
-    setIsNavigating: (isFetching: boolean) => void;
+    routeDistance: number,
+    setRouteDistance: (distance: number) => void;
 }
 
 export const useMyStoreV2 = create<Store>((set) => ({
@@ -54,6 +54,24 @@ export const useMyStoreV2 = create<Store>((set) => ({
     setCameraFocus: (camFocus: boolean) => set({ cameraFocus: camFocus }),
     routePath: null,
     setRoutePath: (route: GeoJSON.FeatureCollection<GeoJSON.LineString> | null) => set({ routePath: route }),
+    routeDistance: 0,
+    setRouteDistance: (distance: number) => set({ routeDistance: distance })
+}));
+
+interface UserLocStore {
+    isNavigating: boolean,
+    setIsNavigating: (isFetching: boolean) => void;
+    showUserLocation: boolean,
+    setShowUserLocation: (userLocation: boolean) => void;
+    userCoordinates: Position | null,
+    setUserCoordinates: (coords: Position | null) => void;
+}
+
+export const useUserLocStore = create<UserLocStore>((set) => ({
     isNavigating: false,
-    setIsNavigating: (isFetching: boolean) => set({ isNavigating: isFetching })
+    setIsNavigating: (isFetching: boolean) => set({ isNavigating: isFetching }),
+    showUserLocation: false,
+    setShowUserLocation: (userLocation: boolean) => set({ showUserLocation: userLocation }),
+    userCoordinates: null,
+    setUserCoordinates: (coords: Position | null) => set({ userCoordinates: coords })
 }));
