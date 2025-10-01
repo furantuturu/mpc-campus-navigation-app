@@ -1,6 +1,13 @@
 import { CameraBounds, Position } from "@/types/types";
 
 const INIT_COORDS: Position = [125.14527578791139, 6.1174022336355955];
+export const IMAGE_BG_OVERLAY_COORDS: [Position, Position, Position, Position] = [
+    [125.112950, 6.120932],
+    [125.165715, 6.140763],
+    [125.178199, 6.108200],
+    [125.124949, 6.088551]
+];
+export const SCHOOL_BG_IMAGE_URL = require("@/assets/images/mpcbgpic.webp");
 export const IMAGE_OVERLAY_COORDS: [Position, Position, Position, Position] = [
     [125.14544362902387, 6.11816384690516],
     [125.1437233331672, 6.117520354279671],
