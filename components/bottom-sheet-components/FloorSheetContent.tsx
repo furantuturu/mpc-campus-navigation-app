@@ -1,18 +1,24 @@
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { isEqual } from "es-toolkit";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useMemo } from "react";
 import { ActivityIndicator, ScrollView, StyleSheet } from "react-native";
 import { Divider, Text } from 'react-native-paper';
 
 //* Components
 import OutdoorAreaActionButtons from "./OutdoorAreaActionButton";
 import ToiletAreaActionButtons from "./ToiletAreaActionButton";
-
 export default function FloorSheetContent() {
     const { selectedCategory, selectedFloor } = useMyStoreV2();
 
-    const LazyOfficeAreaActionButtons = lazy(() => import("./OfficeAreaActionButton"));
-    const LazyRoomAreaActionButtons = lazy(() => import("./RoomAreaActionButton"));
+    const LazyOfficeAreaActionButtons = useMemo(
+        () => lazy(() => import("./OfficeAreaActionButton")),
+        [selectedCategory, selectedFloor]
+    );
+
+    const LazyRoomAreaActionButtons = useMemo(
+        () => lazy(() => import("./RoomAreaActionButton")),
+        [selectedCategory, selectedFloor]
+    );
 
     let selectedFloorName: string;
     switch (selectedFloor) {
