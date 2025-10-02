@@ -1,34 +1,35 @@
-import { checkLocationServices } from "@/constants/helpers/helper";
 import { useMyStoreV2, useUserLocStore } from "@/store/useMyStore";
-import { Accuracy, getCurrentPositionAsync, hasServicesEnabledAsync, requestForegroundPermissionsAsync } from "expo-location";
-import { useEffect, useState } from "react";
+import { Accuracy, enableNetworkProviderAsync, getCurrentPositionAsync, hasServicesEnabledAsync, requestForegroundPermissionsAsync } from "expo-location";
+import { useEffect } from "react";
 import { Alert, StyleSheet } from "react-native";
 import { Icon, TouchableRipple } from "react-native-paper";
 
 export default function ActivateUserLocation() {
-    const { showAreaSheet, setAreaCoordinates, setCameraFocus } = useMyStoreV2();
-    const { showUserLocation, setShowUserLocation, userCoordinates, setUserCoordinates } = useUserLocStore();
-    const [isLocationDisabled, setIsLocationDisabled] = useState(true);
+    const { showAreaSheet, setCameraFocus, setAreaCoordinates } = useMyStoreV2();
+    const { showUserLocation, setShowUserLocation, setUserCoordinates, isLocationServiceEnabled, setIsLocationServiceEnabled, isNavigating } = useUserLocStore();
 
     useEffect(() => {
-        async function checkService() {
-            const serviceEnabled = await hasServicesEnabledAsync();
-            if (!serviceEnabled) {
-                setIsLocationDisabled(true);
-                setUserCoordinates(null);
-                checkLocationServices();
-            } else {
-                setIsLocationDisabled(false);
-            }
+        const interval = setInterval(async () => {
+            const enabled = await hasServicesEnabledAsync();
+            setIsLocationServiceEnabled(enabled);
+        }, 2500);
+
+        return () => clearInterval(interval);
+    }, [isNavigating, setIsLocationServiceEnabled]);
+
+    async function enableLocationService() {
+        try {
+            await enableNetworkProviderAsync();
+        } catch (error) {
+            Alert.alert(
+                'Location Services Required',
+                'Please enable location services to use this feature.',
+            );
+            return;
         }
-
-        checkService();
-    }, [setUserCoordinates]);
-
-    if (showAreaSheet) return null;
+    }
 
     async function getInitUserLocation() {
-
         try {
             const { status } = await requestForegroundPermissionsAsync();
             if (status !== "granted") {
@@ -40,58 +41,69 @@ export default function ActivateUserLocation() {
                 accuracy: Accuracy.BestForNavigation
             });
 
-
-            setIsLocationDisabled(false);
-            setShowUserLocation(true);
+            setCameraFocus(true);
+            setAreaCoordinates([position.coords.longitude, position.coords.latitude]);
             setUserCoordinates([position.coords.longitude, position.coords.latitude]);
         } catch (error) {
+            setUserCoordinates(null);
             console.error("Error getting location: ", error);
             Alert.alert('Error', 'Failed to get your location. Please try again.');
         }
     }
 
-    function toggleShowUserLocation() {
-        if (!showUserLocation) {
-            if (userCoordinates) {
-                setCameraFocus(true);
-                setAreaCoordinates(userCoordinates);
+    async function handleLocationService() {
+        try {
+            const { status } = await requestForegroundPermissionsAsync();
+            if (status !== "granted") {
+                Alert.alert("Permission denied");
+                return;
             }
+
+            const enabled = await hasServicesEnabledAsync();
+
+            if (!enabled) {
+                enableLocationService();
+            }
+
+        } catch (error) {
+            console.error("Error checking location status:", error);
+        }
+    }
+
+    async function handleLocationDisplay() {
+        if (!showUserLocation) {
+            getInitUserLocation();
             setShowUserLocation(true);
         } else {
+            setUserCoordinates(null);
             setShowUserLocation(false);
         }
     }
 
-    function handlePress() {
-        if (isLocationDisabled) {
-            getInitUserLocation();
-        }
-
-        toggleShowUserLocation();
-    }
-
     function GpsIcon() {
-        if (isLocationDisabled) {
+        if (!isLocationServiceEnabled) {
             return <Icon source="crosshairs-question" size={25} color="#ff4444ff" />;
         }
 
-        if (showUserLocation) {
+        if (isLocationServiceEnabled && showUserLocation) {
             return <Icon source="crosshairs-gps" size={25} color="#5cb85c" />;
+        } else {
+            return <Icon source="crosshairs-off" size={25} color="#000" />;
         }
-
-        return <Icon source="crosshairs-off" size={25} />;
     }
 
-
     return (
-        <TouchableRipple
-            style={styles.container}
-            borderless
-            rippleColor="rgba(0, 0, 0, 0.12)"
-            onPress={handlePress}
-        >
-            <GpsIcon />
-        </TouchableRipple>
+        <>
+            <TouchableRipple
+                style={[styles.container, { display: showAreaSheet ? 'none' : 'flex' }]}
+                borderless
+                rippleColor="rgba(0, 0, 0, 0.12)"
+                onPress={!isLocationServiceEnabled ? handleLocationService : handleLocationDisplay}
+            >
+                <GpsIcon />
+            </TouchableRipple>
+
+        </>
     );
 }
 
