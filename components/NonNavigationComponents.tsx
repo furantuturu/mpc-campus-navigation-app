@@ -8,11 +8,11 @@ import AreaSearchBar from "@/components/fab/SearchAreaModal";
 export default function NonNavigationComponents() {
     return (
         <>
+            <ActivateUserLocation />
             <AreaSearchBar />
             <SchoolCategoryButton />
             <MapDimensionToggle />
             <FloorsSelectionPerCategoryModal />
-            <ActivateUserLocation />
             <FloorBottomSheet />
         </>
     );
