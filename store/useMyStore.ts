@@ -55,7 +55,7 @@ export const useMyStoreV2 = create<Store>((set) => ({
     routePath: null,
     setRoutePath: (route: GeoJSON.FeatureCollection<GeoJSON.LineString> | null) => set({ routePath: route }),
     routeDistance: 0,
-    setRouteDistance: (distance: number) => set({ routeDistance: distance })
+    setRouteDistance: (distance: number) => set({ routeDistance: distance }),
 }));
 
 interface UserLocStore {
@@ -65,6 +65,14 @@ interface UserLocStore {
     setShowUserLocation: (userLocation: boolean) => void;
     userCoordinates: Position | null,
     setUserCoordinates: (coords: Position | null) => void;
+    isLocationServiceEnabled: boolean,
+    setIsLocationServiceEnabled: (enabled: boolean) => void;
+    navigationMode: boolean;
+    setNavigationMode: (mode: boolean) => void;
+    userCameraHeading: number,
+    setUserCameraHeading: (heading: number) => void;
+    userFollowMode: boolean,
+    setUserFollowMode: (followMode: boolean) => void;
 }
 
 export const useUserLocStore = create<UserLocStore>((set) => ({
@@ -73,5 +81,13 @@ export const useUserLocStore = create<UserLocStore>((set) => ({
     showUserLocation: false,
     setShowUserLocation: (userLocation: boolean) => set({ showUserLocation: userLocation }),
     userCoordinates: null,
-    setUserCoordinates: (coords: Position | null) => set({ userCoordinates: coords })
+    setUserCoordinates: (coords: Position | null) => set({ userCoordinates: coords }),
+    isLocationServiceEnabled: false,
+    setIsLocationServiceEnabled: (enabled: boolean) => set({ isLocationServiceEnabled: enabled }),
+    navigationMode: false,
+    setNavigationMode: (mode: boolean) => set({ navigationMode: mode }),
+    userCameraHeading: 250,
+    setUserCameraHeading: (heading: number) => set({ userCameraHeading: heading }),
+    userFollowMode: false,
+    setUserFollowMode: (followMode: boolean) => set({ userFollowMode: followMode })
 }));
