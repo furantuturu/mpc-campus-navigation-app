@@ -1,4 +1,4 @@
-import { useMyStoreV2 } from '@/store/useMyStore';
+import { useMyStoreV2, useUserLocStore } from '@/store/useMyStore';
 import { Camera, CameraRef } from "@maplibre/maplibre-react-native";
 
 //* Constants
@@ -8,7 +8,8 @@ import {
 import { useEffect, useRef } from 'react';
 
 export default function CameraMapSetup() {
-    const { cameraPitch, areaCoordinates, cameraFocus, setCameraFocus } = useMyStoreV2();
+    const { cameraPitch, setCameraPitch, areaCoordinates, cameraFocus, setCameraFocus } = useMyStoreV2();
+    const { userCameraHeading, userCoordinates, userFollowMode } = useUserLocStore();
     const cameraRef = useRef<CameraRef>(null);
 
     useEffect(() => {
@@ -29,6 +30,25 @@ export default function CameraMapSetup() {
 
     }, [areaCoordinates, cameraFocus, setCameraFocus]);
 
+
+    useEffect(() => {
+        if (userFollowMode) {
+            cameraRef.current?.setCamera({
+                centerCoordinate: userCoordinates!,
+                heading: userCameraHeading,
+                animationDuration: 900,
+            });
+            setCameraPitch(60);
+        } else {
+            cameraRef.current?.setCamera({
+                stops: [{
+                    centerCoordinate: userCoordinates!,
+                    animationDuration: 500,
+                }]
+            });
+            setCameraPitch(0);
+        }
+    }, [setCameraPitch, userCameraHeading, userCoordinates, userFollowMode]);
 
     return (
         <Camera
