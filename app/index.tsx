@@ -1,5 +1,5 @@
 import Map from "@/components/Map";
-import NavigationController from "@/components/NavigationController";
+import NavigationComponents from "@/components/NavigationComponents";
 import NonNavigationComponents from "@/components/NonNavigationComponents";
 import { useUserLocStore } from "@/store/useMyStore";
 import { StyleSheet, View } from "react-native";
@@ -9,7 +9,6 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 export default function Index() {
   const { isNavigating } = useUserLocStore();
 
-
   return (
     <PaperProvider>
       <SafeAreaProvider>
@@ -17,7 +16,7 @@ export default function Index() {
 
           <Map />
           {isNavigating
-            ? <NavigationController />
+            ? <NavigationComponents />
             : <NonNavigationComponents />
           }
         </View>
