@@ -4,8 +4,6 @@ import { point } from "@turf/helpers";
 import { length } from "@turf/length";
 import { shortestPath } from "@turf/shortest-path";
 import { includes, toLower } from "es-toolkit/compat";
-import { enableNetworkProviderAsync, hasServicesEnabledAsync } from "expo-location";
-import { Alert } from "react-native";
 import { campus1FObstacles, } from "../1fObstaclesGeojson";
 import { campus2FObstacles } from "../2fObstaclesGeojson";
 import { campus3FObstacles } from "../3fObstaclesGeojson";
@@ -102,20 +100,4 @@ export function getRoute(
 
     setRoutePath(pathLineString);
     setRouteDistance(pathDistance);
-}
-
-export async function checkLocationServices() {
-    const servicesEnabled = await hasServicesEnabledAsync();
-
-    if (!servicesEnabled) {
-        try {
-            await enableNetworkProviderAsync();
-        } catch (error) {
-            console.error("Error getting location from enabling service: ", error);
-            Alert.alert("Location services is required for this app");
-            return;
-        }
-    }
-
-    return servicesEnabled;
 }
