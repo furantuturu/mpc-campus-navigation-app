@@ -10,7 +10,7 @@ import { ActivityIndicator, Divider, Icon, Text } from "react-native-paper";
 
 export default function AreaSheetContent() {
     const { setShowAreaSheet, areaData, setRoutePath, setRouteDistance } = useMyStoreV2();
-    const { setIsNavigating, userCoordinates } = useUserLocStore();
+    const { setIsNavigating, userCoordinates, isLocationServiceEnabled } = useUserLocStore();
     const areaCoords = [areaData.coordinates.longitude, areaData.coordinates.latitude];
     const [isRouteFetching, setIsRouteFetching] = useState(false);
 
@@ -21,11 +21,10 @@ export default function AreaSheetContent() {
     }
 
     async function getAreaRoute() {
-        if (isNull(userCoordinates)) {
-            Alert.alert("Location services is required for this app", "Location is needed to make the routing work. After activating the location service, you need to get the routing again");
+        if (!isLocationServiceEnabled || isNull(userCoordinates)) {
+            Alert.alert("Location services is required for this app", "Location is needed to make the routing work. After activating the location service and showing your GPS, you need to get the routing again");
             return;
         }
-
         setIsRouteFetching(true);
 
         new Promise((resolve) => {
