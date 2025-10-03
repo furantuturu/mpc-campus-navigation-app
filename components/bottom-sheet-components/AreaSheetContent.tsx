@@ -11,8 +11,8 @@ import { ActivityIndicator, Divider, Icon, Text } from "react-native-paper";
 export default function AreaSheetContent() {
     const { setShowAreaSheet, areaData, setRoutePath, setRouteDistance } = useMyStoreV2();
     const { setIsNavigating, userCoordinates, isLocationServiceEnabled } = useUserLocStore();
-    const areaCoords = [areaData.coordinates.longitude, areaData.coordinates.latitude];
     const [isRouteFetching, setIsRouteFetching] = useState(false);
+    const areaCoords = [areaData.coordinates.longitude, areaData.coordinates.latitude];
 
     async function dismissAreaSheet() {
         setShowAreaSheet(false);
@@ -21,10 +21,16 @@ export default function AreaSheetContent() {
     }
 
     async function getAreaRoute() {
-        if (!isLocationServiceEnabled || isNull(userCoordinates)) {
-            Alert.alert("Location services is required for this app", "Location is needed to make the routing work. After activating the location service and showing your GPS, you need to get the routing again");
+        if (!isLocationServiceEnabled) {
+            Alert.alert("Location services is required for this app", "Location is needed to make the routing work");
             return;
         }
+
+        if (isNull(userCoordinates)) {
+            Alert.alert("Can't get your location", "GPS button still off, make sure you turn it on (make sure you are also inside the campus) and wait for your location to appear on map and get the route again");
+            return;
+        }
+
         setIsRouteFetching(true);
 
         new Promise((resolve) => {
@@ -32,9 +38,9 @@ export default function AreaSheetContent() {
                 resolve("Fetching...");
             }, 1000);
         })
-            .then((status) => {
+            .then(async (status) => {
                 const floor = trim(split(areaData.floor, "/")[1]) as Floor;
-                getRoute(userCoordinates, areaCoords, floor, setRoutePath, setRouteDistance);
+                getRoute(userCoordinates!, areaCoords, floor, setRoutePath, setRouteDistance);
             })
             .finally(() => {
                 setIsRouteFetching(false);
