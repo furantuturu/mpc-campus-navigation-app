@@ -39,5 +39,5 @@ export default function Map() {
 const styles = StyleSheet.create({
     map: {
         flex: 1
-    },
+    }
 });
