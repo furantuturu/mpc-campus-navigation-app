@@ -1,4 +1,4 @@
-import { getRoute } from "@/constants/helpers/helper";
+import { getRoute, isUserInsideCampus } from "@/constants/helpers/helper";
 import { useMyStoreV2, useUserLocStore } from "@/store/useMyStore";
 import { Floor } from "@/types/types";
 import { TrueSheet } from "@lodev09/react-native-true-sheet";
@@ -21,7 +21,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 export default function NavigationController() {
     const insets = useSafeAreaInsets();
     const { routeDistance, areaData, setShowAreaSheet, setRoutePath, setRouteDistance } = useMyStoreV2();
-    const { setIsNavigating, navigationMode, setNavigationMode, setUserCameraHeading, setUserCoordinates, userFollowMode, setUserFollowMode } = useUserLocStore();
+    const { setIsNavigating, navigationMode, setNavigationMode, setUserCameraHeading, setUserCoordinates, userFollowMode, setUserFollowMode, setShowUserLocation } = useUserLocStore();
     const [locationSubscription, setLocationSubscription] = useState<LocationSubscription | null>(null);
     const [headingSubscription, setHeadingSubscription] = useState<LocationSubscription | null>(null);
     const [locSpeed, setLocSpeed] = useState<number | null>(null);
@@ -56,7 +56,7 @@ export default function NavigationController() {
                     accuracy: Accuracy.BestForNavigation,
                     timeInterval: 1000,
                     distanceInterval: 5,
-                    mayShowUserSettingsDialog: true,
+                    mayShowUserSettingsDialog: true
                 },
                 (newLocation) => {
                     console.log('Location update:', {
@@ -66,9 +66,28 @@ export default function NavigationController() {
                     });
 
                     const userCoords = [newLocation.coords.longitude, newLocation.coords.latitude];
+
+                    const isInside = isUserInsideCampus(userCoords);
+                    if (!isInside) {
+                        Alert.alert('Outside Boundary', 'You are currently outside the campus.', [
+                            {
+                                text: "Cancel operation",
+                                style: 'cancel',
+                                onPress: () => {
+                                    stopLocationTrack();
+                                    onCancel();
+                                    setShowUserLocation(false);
+                                }
+                            }
+                        ]);
+                        return;
+                    }
+
                     setUserCoordinates(userCoords);
 
-                    getRoute(userCoords, areaCoords, floor, setRoutePath, setRouteDistance);
+                    setTimeout(() => {
+                        getRoute(userCoords, areaCoords, floor, setRoutePath, setRouteDistance);
+                    }, 0);
 
                     setLocSpeed(newLocation.coords.speed);
                     if (newLocation.coords.heading !== null) {
@@ -90,13 +109,6 @@ export default function NavigationController() {
             setNavigationMode(true);
         } catch (error) {
             console.error('Error getting location:', error);
-            Alert.alert('Error', 'Failed to get your location. Please try again.', [
-                {
-                    text: "Cancel Operation",
-                    style: "cancel",
-                    onPress: () => stopLocationTrack()
-                }
-            ]);
         } finally {
             setIsStarting(false);
         }
