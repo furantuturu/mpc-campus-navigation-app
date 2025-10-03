@@ -108,7 +108,9 @@ export default function NavigationController() {
             setHeadingSubscription(headSubscription);
             setNavigationMode(true);
         } catch (error) {
+            stopLocationTrack();
             console.error('Error getting location:', error);
+            Alert.alert('Error', 'Failed to get your location. Please try again.');
         } finally {
             setIsStarting(false);
         }
