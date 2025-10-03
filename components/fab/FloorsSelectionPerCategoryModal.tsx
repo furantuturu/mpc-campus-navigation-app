@@ -6,6 +6,12 @@ import { useState } from "react";
 import { Modal, StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import { Icon, Menu, Text, TouchableRipple } from 'react-native-paper';
 
+const floorName: any = {
+    "1F": "1st Floor / Ground",
+    "2F": "2nd Floor",
+    "3F": "3rd Floor",
+    "4F": "4th Floor"
+};
 export default function FloorsSelectionPerCategoryModal() {
     const { selectedCategory, selectedFloor, setSelectedFloor, showAreaSheet, setRoutePath } = useMyStoreV2();
     const [visible, setVisible] = useState(false);
@@ -49,21 +55,7 @@ export default function FloorsSelectionPerCategoryModal() {
                                 <View style={styles.divider}></View>
                                 {size(categoryFloors) > 1 && (
                                     map(categoryFloors, (floor) => {
-                                        let selectedFloorName: string;
-                                        switch (floor) {
-                                            case "1F":
-                                                selectedFloorName = "1st Floor";
-                                                break;
-                                            case "2F":
-                                                selectedFloorName = "2nd Floor";
-                                                break;
-                                            case "3F":
-                                                selectedFloorName = "3rd Floor";
-                                                break;
-                                            default:
-                                                selectedFloorName = "4th Floor";
-                                                break;
-                                        }
+                                        const selectedFloorName = floorName[floor];
 
                                         return (
                                             <Menu.Item

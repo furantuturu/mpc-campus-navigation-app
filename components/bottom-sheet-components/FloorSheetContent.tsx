@@ -7,6 +7,13 @@ import { Divider, Text } from 'react-native-paper';
 //* Components
 import OutdoorAreaActionButtons from "./OutdoorAreaActionButton";
 import ToiletAreaActionButtons from "./ToiletAreaActionButton";
+
+const floorName: any = {
+    "1F": "1st Floor / Ground",
+    "2F": "2nd Floor",
+    "3F": "3rd Floor",
+    "4F": "4th Floor"
+};
 export default function FloorSheetContent() {
     const { selectedCategory, selectedFloor } = useMyStoreV2();
 
@@ -20,21 +27,7 @@ export default function FloorSheetContent() {
         [selectedCategory, selectedFloor]
     );
 
-    let selectedFloorName: string;
-    switch (selectedFloor) {
-        case "1F":
-            selectedFloorName = "1st Floor / Ground";
-            break;
-        case "2F":
-            selectedFloorName = "2nd Floor";
-            break;
-        case "3F":
-            selectedFloorName = "3rd Floor";
-            break;
-        default:
-            selectedFloorName = "4th Floor";
-            break;
-    }
+    const selectedFloorName: string = floorName[selectedFloor];
 
     return (
         <>

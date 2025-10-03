@@ -1,33 +1,26 @@
-import { canteenMarkerImg, gymMarkerImg, officeMarkerImg, roomMarkerImg, swimmingMarkerImg, toilerMarkerImg } from "@/constants/markerConfig";
+import { canteenMarkerImg, gymMarkerImg, officeMarkerImg, roomMarkerImg, swimmingMarkerImg, toiletMarkerImg } from "@/constants/markerConfig";
 import { useMyStoreV2 } from "@/store/useMyStore";
+import { isEqual } from "es-toolkit";
 import MemoMapMarker from "./MapMarker";
 
+const categoryMarkerImg: any = {
+    "Offices": officeMarkerImg,
+    "Rooms": roomMarkerImg,
+    "Toilets": toiletMarkerImg
+};
+const outDoorsMarkerImg: any = {
+    "Gym": gymMarkerImg,
+    "Canteen": canteenMarkerImg,
+    "Swimming Area": swimmingMarkerImg
+};
 export default function DestinationMarker() {
     const { areaData } = useMyStoreV2();
 
     let markerImg;
-    switch (areaData.category) {
-        case "Offices":
-            markerImg = officeMarkerImg;
-            break;
-        case "Rooms":
-            markerImg = roomMarkerImg;
-            break;
-        case "Toilets":
-            markerImg = toilerMarkerImg;
-            break;
-        default:
-            switch (areaData.name) {
-                case "Gym":
-                    markerImg = gymMarkerImg;
-                    break;
-                case "Canteen":
-                    markerImg = canteenMarkerImg;
-                default:
-                    markerImg = swimmingMarkerImg;
-                    break;
-            }
-            break;
+    if (isEqual(areaData.category, "Outdoors")) {
+        markerImg = outDoorsMarkerImg[areaData.name];
+    } else {
+        markerImg = categoryMarkerImg[areaData.category];
     }
 
     return (

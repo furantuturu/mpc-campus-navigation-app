@@ -3,21 +3,15 @@ import { canteenMarkerImg, gymMarkerImg, swimmingMarkerImg } from "@/constants/m
 import { map } from "es-toolkit/compat";
 import MemoMapMarker from "./MapMarker";
 
+const outDoorsMarkerImg: any = {
+    "Gym": gymMarkerImg,
+    "Canteen": canteenMarkerImg,
+    "Swimming Area": swimmingMarkerImg
+};
 export default function OutdoorMarkers() {
     return (
         map(outdoorData, (outdoorData) => {
-            let markerImg: any;
-            switch (outdoorData.name) {
-                case "Gym":
-                    markerImg = gymMarkerImg;
-                    break;
-                case "Canteen":
-                    markerImg = canteenMarkerImg;
-                    break;
-                default:
-                    markerImg = swimmingMarkerImg;
-                    break;
-            }
+            const markerImg = outDoorsMarkerImg[outdoorData.name];
 
             return (
                 <MemoMapMarker

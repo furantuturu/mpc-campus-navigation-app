@@ -1,4 +1,4 @@
-import { customBlack, customBlue, customDarkYellow, customRed, schoolDataForSearch } from "@/constants/floorData";
+import { campusDataForSearch, customBlack, customBlue, customDarkYellow, customRed } from "@/constants/floorData";
 import { areaDetailsSheet, categorySelect, contains } from "@/constants/helpers/helper";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { AreaData, Category, Floor } from "@/types/types";
@@ -9,12 +9,30 @@ import { FlatList, Modal, ScrollView, StyleSheet, View } from "react-native";
 import { Button, Divider, Icon, Searchbar, Text, TouchableRipple } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+const categoryIconOptions: any = {
+    "Offices": {
+        icon: "office-building",
+        iconColor: customBlue
+    },
+    "Rooms": {
+        icon: "google-classroom",
+        iconColor: customRed
+    },
+    "Toilets": {
+        icon: "toilet",
+        iconColor: customDarkYellow
+    },
+    "Outdoors": {
+        icon: "home-group",
+        iconColor: customBlack
+    }
+};
 export default function AreaSearchBar() {
     const { showAreaSheet, setShowAreaSheet, setAreaData, setSelectedCategory, setSelectedFloor, setActiveCategory, setAreaCoordinates, setCameraFocus } = useMyStoreV2();
 
     const [visible, setVisible] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
-    const [filteredSchoolData, setFilteredSchoolData] = useState<AreaData[]>([]);
+    const [filteredCampusData, setFilteredCampusData] = useState<AreaData[]>([]);
 
     function openMenu() {
         setVisible(true);
@@ -28,13 +46,13 @@ export default function AreaSearchBar() {
         setSearchQuery(query);
 
         const formattedQuery = toLower(trim(query));
-        const filteredData = filter(schoolDataForSearch, (area: AreaData) => {
+        const filteredData = filter(campusDataForSearch, (area: AreaData) => {
             return contains(area, formattedQuery);
         });
 
         const sortedFilteredData = sortBy(filteredData, ['name']);
 
-        setFilteredSchoolData(sortedFilteredData);
+        setFilteredCampusData(sortedFilteredData);
     }
 
     async function listPress(areaData: AreaData) {
@@ -45,33 +63,14 @@ export default function AreaSearchBar() {
             await areaDetailsSheet(areaData, setAreaData, setShowAreaSheet);
         }
 
-        await categorySelect(areaData.category as Category, setSelectedCategory, setActiveCategory);
+        categorySelect(areaData.category as Category, setSelectedCategory, setActiveCategory);
         setSelectedFloor(trim(split(areaData.floor, "/")[1]) as Floor);
         setAreaCoordinates([areaData.coordinates.longitude, areaData.coordinates.latitude]);
         setCameraFocus(true);
     }
 
     function renderAreaList({ item }: { item: AreaData; }) {
-        let icon: string;
-        let iconColor: string;
-        switch (item.category) {
-            case "Offices":
-                icon = "office-building";
-                iconColor = customBlue;
-                break;
-            case "Rooms":
-                icon = "google-classroom";
-                iconColor = customRed;
-                break;
-            case "Toilets":
-                icon = "toilet";
-                iconColor = customDarkYellow;
-                break;
-            default:
-                icon = "home-group";
-                iconColor = customBlack;
-                break;
-        }
+        const categoryIcon = categoryIconOptions[item.category];
 
         return (
             <TouchableRipple
@@ -80,7 +79,7 @@ export default function AreaSearchBar() {
                 onPress={() => listPress(item)}
             >
                 <View style={styles.areaTextContainer}>
-                    <Icon source={icon} color={iconColor} size={25} />
+                    <Icon source={categoryIcon.icon} color={categoryIcon.iconColor} size={25} />
                     <Text style={styles.areaTextStyles} variant="titleSmall">
                         {item.name}
                     </Text>
@@ -113,7 +112,7 @@ export default function AreaSearchBar() {
                     <View style={styles.areaListContainer}>
                         {trim(searchQuery).length > 0 && (
                             <FlatList
-                                data={filteredSchoolData}
+                                data={filteredCampusData}
                                 renderItem={renderAreaList}
                                 keyExtractor={item => item.id}
 
