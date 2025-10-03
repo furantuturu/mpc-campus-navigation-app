@@ -60,6 +60,7 @@ export default function ActivateUserLocation() {
             setUserCoordinates(userCoords);
         } catch (error) {
             setUserCoordinates(null);
+            setShowUserLocation(false);
             console.error("Error getting location: ", error);
             Alert.alert('Error', 'Failed to get your location. Please try again.');
         } finally {
