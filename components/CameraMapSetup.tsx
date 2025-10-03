@@ -3,6 +3,7 @@ import { Camera, CameraRef } from "@maplibre/maplibre-react-native";
 
 //* Constants
 import {
+    CAMERA_BOUNDS,
     CAMERA_DEFAULT_SETTINGS
 } from '@/constants/generalMapConfig';
 import { useEffect, useRef } from 'react';
@@ -57,7 +58,7 @@ export default function CameraMapSetup() {
             minZoomLevel={17}
             maxZoomLevel={20}
             pitch={cameraPitch}
-            // maxBounds={CAMERA_BOUNDS}
+            maxBounds={CAMERA_BOUNDS}
             animationDuration={100}
         />
     );
