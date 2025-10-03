@@ -1,5 +1,5 @@
-import schoolDataSearch from "@/assets/floors/school-data-for-search.json";
-import schoolData from "@/assets/floors/school-data.json";
+import campusDataSearch from "@/assets/floors/campus-data-for-search.json";
+import campusData from "@/assets/floors/campus-data.json";
 import { AreaData, FloorsPerCategory } from "@/types/types";
 
 export const floorsPerCategory: FloorsPerCategory = {
@@ -9,12 +9,12 @@ export const floorsPerCategory: FloorsPerCategory = {
     "Outdoors": ["1F"]
 };
 
-export const officeData = schoolData["Offices"];
-export const roomData = schoolData["Rooms"];
-export const toiletData = schoolData["Toilets"];
-export const outdoorData = schoolData["Outdoors"];
+export const officeData = campusData["Offices"];
+export const roomData = campusData["Rooms"];
+export const toiletData = campusData["Toilets"];
+export const outdoorData = campusData["Outdoors"];
 
-export const schoolDataForSearch: AreaData[] = schoolDataSearch;
+export const campusDataForSearch: AreaData[] = campusDataSearch;
 
 export const roomBuildingNamesPerFloor = {
     "1F": ["Old Building", "Maritime Building", "Susana Building", "Mar-E"],
