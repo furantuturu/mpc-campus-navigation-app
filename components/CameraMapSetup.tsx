@@ -23,7 +23,7 @@ export default function CameraMapSetup() {
             cameraRef.current?.setCamera({
                 stops: [{
                     centerCoordinate: areaCoordinates,
-                    animationDuration: 500
+                    animationDuration: 100
                 }]
             });
         }
@@ -36,14 +36,14 @@ export default function CameraMapSetup() {
             cameraRef.current?.setCamera({
                 centerCoordinate: userCoordinates!,
                 heading: userCameraHeading,
-                animationDuration: 900,
+                animationDuration: 300,
             });
             setCameraPitch(60);
         } else {
             cameraRef.current?.setCamera({
                 stops: [{
                     centerCoordinate: userCoordinates!,
-                    animationDuration: 500,
+                    animationDuration: 100,
                 }]
             });
             setCameraPitch(0);
