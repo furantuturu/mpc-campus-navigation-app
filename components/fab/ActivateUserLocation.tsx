@@ -1,12 +1,14 @@
+import { isUserInsideCampus } from "@/constants/helpers/helper";
 import { useMyStoreV2, useUserLocStore } from "@/store/useMyStore";
 import { Accuracy, enableNetworkProviderAsync, getCurrentPositionAsync, hasServicesEnabledAsync, requestForegroundPermissionsAsync } from "expo-location";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Alert, StyleSheet } from "react-native";
-import { Icon, TouchableRipple } from "react-native-paper";
+import { ActivityIndicator, Icon, TouchableRipple } from "react-native-paper";
 
 export default function ActivateUserLocation() {
     const { showAreaSheet, setCameraFocus, setAreaCoordinates } = useMyStoreV2();
     const { showUserLocation, setShowUserLocation, setUserCoordinates, isLocationServiceEnabled, setIsLocationServiceEnabled, isNavigating } = useUserLocStore();
+    const [isGettingLocation, setIsGettingLocation] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(async () => {
@@ -19,35 +21,49 @@ export default function ActivateUserLocation() {
 
     async function enableLocationService() {
         try {
+            setIsGettingLocation(true);
             await enableNetworkProviderAsync();
         } catch (error) {
             Alert.alert(
                 'Location Services Required',
                 'Please enable location services to use this feature.',
             );
-            return;
+        } finally {
+            setIsGettingLocation(false);
         }
     }
 
     async function getInitUserLocation() {
         try {
+            setIsGettingLocation(true);
             const { status } = await requestForegroundPermissionsAsync();
             if (status !== "granted") {
                 Alert.alert("Permission denied");
                 return;
             }
 
-            const position = await getCurrentPositionAsync({
+
+            const location = await getCurrentPositionAsync({
                 accuracy: Accuracy.BestForNavigation
             });
+            const userCoords = [location.coords.longitude, location.coords.latitude];
+
+            const isInside = isUserInsideCampus(userCoords);
+            if (!isInside) {
+                Alert.alert('Outside Boundary', 'You are currently outside the campus.',);
+                setShowUserLocation(false);
+                return;
+            }
 
             setCameraFocus(true);
-            setAreaCoordinates([position.coords.longitude, position.coords.latitude]);
-            setUserCoordinates([position.coords.longitude, position.coords.latitude]);
+            setAreaCoordinates(userCoords);
+            setUserCoordinates(userCoords);
         } catch (error) {
             setUserCoordinates(null);
             console.error("Error getting location: ", error);
             Alert.alert('Error', 'Failed to get your location. Please try again.');
+        } finally {
+            setIsGettingLocation(false);
         }
     }
 
@@ -86,7 +102,8 @@ export default function ActivateUserLocation() {
         }
 
         if (isLocationServiceEnabled && showUserLocation) {
-            return <Icon source="crosshairs-gps" size={25} color="#5cb85c" />;
+            const icon = isGettingLocation ? <ActivityIndicator size={25} color="#000" /> : <Icon source="crosshairs-gps" size={25} color="#5cb85c" />;
+            return icon;
         } else {
             return <Icon source="crosshairs-off" size={25} color="#000" />;
         }
@@ -99,6 +116,7 @@ export default function ActivateUserLocation() {
                 borderless
                 rippleColor="rgba(0, 0, 0, 0.12)"
                 onPress={!isLocationServiceEnabled ? handleLocationService : handleLocationDisplay}
+                disabled={isGettingLocation}
             >
                 <GpsIcon />
             </TouchableRipple>
