@@ -19,11 +19,10 @@ interface TouchStartData {
 
 export default function MarkerImg({ markerAreaData, image }: MarkerImgProps) {
     const { showAreaSheet, setShowAreaSheet, setAreaData, areaData, setAreaCoordinates, setCameraFocus } = useMyStoreV2();
+    const sameID = isEqual(markerAreaData.id, areaData.id);
 
     const [touchStart, setTouchStart] = useState<TouchStartData | null>(null);
     const [isDragging, setIsDragging] = useState(false);
-
-    const sameID = isEqual(markerAreaData.id, areaData.id);
 
     async function onMarkerPress() {
         if (showAreaSheet) {
@@ -85,7 +84,7 @@ export default function MarkerImg({ markerAreaData, image }: MarkerImgProps) {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
         >
-            <Image source={image} style={sameID ? styles.bigMarker : styles.marker} />
+            <Image source={image} style={sameID ? styles.bigMarker : styles.marker} transition={100} />
         </View>
     );
 }
