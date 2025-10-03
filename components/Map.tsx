@@ -4,30 +4,31 @@ import { StyleSheet } from "react-native";
 
 //* Components
 import CameraMapSetup from "@/components/CameraMapSetup";
-import SchoolCategoryMarkers from "@/components/marker-components/SchoolCategoryMarkers";
+import CampusCategoryMarkers from "@/components/marker-components/CampusCategoryMarkers";
+import CampusBaseMap from "./CampusBaseMap";
 import BuildingMarkers from "./marker-components/BuildingMarkers";
 import DestinationMarker from "./marker-components/DestinationMarker";
 import RouteLinePath from "./marker-components/RouteLinePath";
 import StairsMarkers from "./marker-components/StairsMarkers";
-import SchoolBaseMap from "./SchoolBaseMap";
 import ShowUserLocation from "./ShowUserLocation";
 
 export default function Map() {
-    const { isNavigating } = useUserLocStore();
+    const { isNavigating, userFollowMode } = useUserLocStore();
 
     return (
         <MapView
             style={styles.map}
             attributionEnabled={false}
             compassEnabled={false}
+            scrollEnabled={!userFollowMode}
         >
-            <SchoolBaseMap />
+            <CampusBaseMap />
             <CameraMapSetup />
             <BuildingMarkers />
             <StairsMarkers />
             {isNavigating
                 ? <DestinationMarker />
-                : <SchoolCategoryMarkers />
+                : <CampusCategoryMarkers />
             }
             <RouteLinePath />
             <ShowUserLocation />
