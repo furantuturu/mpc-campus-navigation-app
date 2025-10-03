@@ -1,6 +1,7 @@
 import { areaDetailsSheet } from "@/constants/helpers/helper";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { AreaData } from "@/types/types";
+import { isEqual } from "es-toolkit";
 import { Image } from "expo-image";
 import { useState } from "react";
 import { GestureResponderEvent, StyleSheet, View } from "react-native";
@@ -22,7 +23,7 @@ export default function MarkerImg({ markerAreaData, image }: MarkerImgProps) {
     const [touchStart, setTouchStart] = useState<TouchStartData | null>(null);
     const [isDragging, setIsDragging] = useState(false);
 
-    const sameID = markerAreaData.id === areaData.id;
+    const sameID = isEqual(markerAreaData.id, areaData.id);
 
     async function onMarkerPress() {
         if (showAreaSheet) {
