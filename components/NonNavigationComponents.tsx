@@ -1,8 +1,8 @@
 import FloorBottomSheet from "@/components/bottom-sheet-components/MapBottomSheet";
 import ActivateUserLocation from "@/components/fab/ActivateUserLocation";
+import CampusCategoryButton from "@/components/fab/CampusCategoryButton";
 import FloorsSelectionPerCategoryModal from "@/components/fab/FloorsSelectionPerCategoryModal";
 import MapDimensionToggle from "@/components/fab/MapDimensionToggle";
-import SchoolCategoryButton from "@/components/fab/SchoolCategoryButton";
 import AreaSearchBar from "@/components/fab/SearchAreaModal";
 
 export default function NonNavigationComponents() {
@@ -10,7 +10,7 @@ export default function NonNavigationComponents() {
         <>
             <ActivateUserLocation />
             <AreaSearchBar />
-            <SchoolCategoryButton />
+            <CampusCategoryButton />
             <MapDimensionToggle />
             <FloorsSelectionPerCategoryModal />
             <FloorBottomSheet />
