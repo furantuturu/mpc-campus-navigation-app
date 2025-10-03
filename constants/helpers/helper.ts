@@ -7,6 +7,7 @@ import { includes, toLower } from "es-toolkit/compat";
 import { campus1FObstacles, } from "../1fObstaclesGeojson";
 import { campus2FObstacles } from "../2fObstaclesGeojson";
 import { campus3FObstacles } from "../3fObstaclesGeojson";
+import { IMAGE_OVERLAY_COORDS } from "../generalMapConfig";
 
 export function contains({ category, floor, building, name }: AreaData, query: string) {
     if (
@@ -39,7 +40,7 @@ const activeFalse = {
     Outdoors: false,
 };
 
-export async function categorySelect(
+export function categorySelect(
     category: Category,
     setSelectedCategory: (category: Category) => void,
     setActiveCategory: (category: ActiveCategory) => void,
@@ -53,6 +54,13 @@ export async function categorySelect(
     });
 }
 
+const obstaclesCache: any = {
+    "1F": campus1FObstacles,
+    "2F": campus2FObstacles,
+    "3F": campus3FObstacles,
+    "4F": campus2FObstacles
+} as const;
+
 export function getRoute(
     start: Position,
     end: Position,
@@ -63,21 +71,7 @@ export function getRoute(
     const from = point(start);
     const to = point(end);
 
-    let obstacles;
-    switch (floor) {
-        case "1F":
-            obstacles = campus1FObstacles;
-            break;
-        case "2F":
-            obstacles = campus2FObstacles;
-            break;
-        case "3F":
-            obstacles = campus3FObstacles;
-            break;
-        default:
-            obstacles = campus2FObstacles;
-            break;
-    }
+    const obstacles = obstaclesCache[floor];
 
     const calculateShortestPath = shortestPath(from, to, {
         obstacles: obstacles,
@@ -100,4 +94,21 @@ export function getRoute(
 
     setRoutePath(pathLineString);
     setRouteDistance(pathDistance);
+}
+
+export function isUserInsideCampus(userCoords: Position) {
+    const [x, y] = userCoords;
+    const boundary = IMAGE_OVERLAY_COORDS;
+    let inside = false;
+
+    for (let i = 0, j = boundary.length - 1; i < boundary.length; j = i++) {
+        const [xi, yi] = boundary[i];
+        const [xj, yj] = boundary[j];
+
+        const intersect = ((yi > y) !== (yj > y) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi));
+
+        if (intersect) inside = !inside;
+    }
+
+    return inside;
 }
