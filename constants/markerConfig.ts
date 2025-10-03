@@ -5,7 +5,7 @@ export const initAnchor = {
 
 export const officeMarkerImg = require("@/assets/images/markers/office-marker-enh.png");
 export const roomMarkerImg = require("@/assets/images/markers/room-marker-enh.png");
-export const toilerMarkerImg = require("@/assets/images/markers/toilet-marker-enh.png");
+export const toiletMarkerImg = require("@/assets/images/markers/toilet-marker-enh.png");
 export const canteenMarkerImg = require("@/assets/images/markers/canteen-marker-enh.png");
 export const swimmingMarkerImg = require("@/assets/images/markers/swimming-marker-enh.png");
 export const gymMarkerImg = require("@/assets/images/markers/gym-marker-enh.png");

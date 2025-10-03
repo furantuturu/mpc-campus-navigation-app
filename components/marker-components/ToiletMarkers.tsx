@@ -1,5 +1,5 @@
 import { toiletData } from "@/constants/floorData";
-import { toilerMarkerImg } from "@/constants/markerConfig";
+import { toiletMarkerImg } from "@/constants/markerConfig";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { map } from "es-toolkit/compat";
 import MemoMapMarker from "./MapMarker";
@@ -15,7 +15,7 @@ export default function ToiletMarkers() {
                 <MemoMapMarker
                     key={toiletData.id}
                     areaData={toiletData}
-                    markerImg={toilerMarkerImg}
+                    markerImg={toiletMarkerImg}
                 />
             );
         })
