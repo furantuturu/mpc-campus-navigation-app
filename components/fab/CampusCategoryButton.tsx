@@ -78,7 +78,7 @@ export default function CampusCategoryButton() {
 const styles = StyleSheet.create({
     container: {
         position: 'absolute',
-        top: 30,
+        top: 15,
         pointerEvents: 'box-none'
     },
     scrollViewStyles: {

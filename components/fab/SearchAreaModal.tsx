@@ -146,7 +146,7 @@ export default function AreaSearchBar() {
 const styles = StyleSheet.create({
     container: {
         position: 'absolute',
-        top: 80,
+        top: 65,
         pointerEvents: 'box-none'
     },
     scrollViewStyles: {
