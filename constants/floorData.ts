@@ -24,7 +24,7 @@ export const roomBuildingNamesPerFloor = {
 };
 
 export const officeBuildingNamesPerFloor = {
-    "1F": ["Old Building", "Gym Building", "Maritime Building", "Susana Building", "Mar-E", "Outside"],
+    "1F": ["Old Building", "Gym Building", "Maritime Building", "Mar-E", "Outside"],
     "3F": ["Maritime Building"],
     "4F": ["Susana Building"]
 };
