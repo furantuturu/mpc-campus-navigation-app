@@ -1,4 +1,3 @@
-import FloorBottomSheet from "@/components/bottom-sheet-components/MapBottomSheet";
 import ActivateUserLocation from "@/components/fab/ActivateUserLocation";
 import CampusCategoryButton from "@/components/fab/CampusCategoryButton";
 import FloorsSelectionPerCategoryModal from "@/components/fab/FloorsSelectionPerCategoryModal";
@@ -13,7 +12,6 @@ export default function NonNavigationComponents() {
             <CampusCategoryButton />
             <MapDimensionToggle />
             <FloorsSelectionPerCategoryModal />
-            <FloorBottomSheet />
         </>
     );
 }
