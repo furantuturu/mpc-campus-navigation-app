@@ -209,6 +209,17 @@
         }
     },
     {
+        "id": "GB18",
+        "name": "Anchor Office",
+        "category": "Offices",
+        "floor": "1st Floor / 1F / Ground",
+        "building": "Gym Building",
+        "coordinates": {
+            "latitude": 6.117777,
+            "longitude": 125.144963
+        }
+    },
+    {
         "id": "GB12",
         "name": "Philippine Security of Customs Administration Students (PSCAS)",
         "category": "Offices",
