@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
         borderRadius: 9999,
         backgroundColor: "white",
         position: "absolute",
-        top: '50%',
+        top: 400,
         right: 10,
         flex: 1,
         justifyContent: "center",
