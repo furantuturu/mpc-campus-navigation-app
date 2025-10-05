@@ -2,7 +2,7 @@ import { TrueSheet } from "@lodev09/react-native-true-sheet";
 import { StyleSheet } from "react-native";
 
 //* Components
-import { useMyStoreV2, useUserLocStore } from "@/store/useMyStore";
+import { useMyStoreV2 } from "@/store/useMyStore";
 import { useRef } from "react";
 import AreaSheetContent from "./AreaSheetContent";
 import FloorSheetContent from "./FloorSheetContent";
@@ -11,11 +11,6 @@ export default function FloorBottomSheet() {
     const mainSheetRef = useRef<TrueSheet>(null);
     const subSheetRef = useRef<TrueSheet>(null);
     const { setShowAreaSheet } = useMyStoreV2();
-    const { isNavigating } = useUserLocStore();
-
-    if (isNavigating) {
-        mainSheetRef.current?.dismiss();
-    }
 
     async function dismissAreaSheet() {
         setShowAreaSheet(false);
@@ -55,6 +50,6 @@ export default function FloorBottomSheet() {
 const styles = StyleSheet.create({
     sheet: {
         padding: 20,
-        marginBottom: 25
-    }
+        marginBottom: 25,
+    },
 });
