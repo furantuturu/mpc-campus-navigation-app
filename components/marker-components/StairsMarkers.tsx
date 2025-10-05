@@ -34,11 +34,6 @@ export default function StairsMarkers() {
                     <Image source={stairsMarker} style={styles.stairsMarker} />
                 </View>
             </MarkerView>
-            <MarkerView coordinate={[125.144427, 6.117252]} anchor={initAnchor} allowOverlap={true}>
-                <View style={styles.container}>
-                    <Image source={stairsMarker} style={styles.stairsMarker} />
-                </View>
-            </MarkerView>
             <MarkerView coordinate={[125.143948, 6.117192]} anchor={initAnchor} allowOverlap={true}>
                 <View style={styles.container}>
                     <Image source={stairsMarker} style={styles.stairsMarker} />
