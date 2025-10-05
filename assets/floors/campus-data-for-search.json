@@ -297,17 +297,6 @@
         }
     },
     {
-        "id": "SB1F-6",
-        "name": "RISO Office",
-        "category": "Offices",
-        "floor": "1st Floor / 1F / Ground",
-        "building": "Susana Building",
-        "coordinates": {
-            "latitude": 6.117648,
-            "longitude": 125.144280
-        }
-    },
-    {
         "id": "MAR1F-1",
         "name": "MPC Tech-Voc Office",
         "category": "Offices",
@@ -327,6 +316,17 @@
         "coordinates": {
             "latitude": 6.116869,
             "longitude": 125.144185
+        }
+    },
+    {
+        "id": "O-4",
+        "name": "Electrical Department",
+        "category": "Offices",
+        "floor": "1st Floor / 1F / Ground",
+        "building": "Outside",
+        "coordinates": {
+            "latitude": 6.116824,
+            "longitude": 125.144227
         }
     },
     {
