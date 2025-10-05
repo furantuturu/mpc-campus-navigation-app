@@ -13,7 +13,7 @@ import {
     watchHeadingAsync,
     watchPositionAsync
 } from "expo-location";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ActivityIndicator, Alert, Pressable, StyleSheet, View } from "react-native";
 import { Icon, Text } from "react-native-paper";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -26,6 +26,7 @@ export default function NavigationController() {
     const [headingSubscription, setHeadingSubscription] = useState<LocationSubscription | null>(null);
     const [locSpeed, setLocSpeed] = useState<number | null>(null);
     const [isStarting, setIsStarting] = useState(false);
+    let routeCalculationTimeoutRef = useRef<number | null>(null);
 
     useEffect(() => {
         return () => {
@@ -85,9 +86,14 @@ export default function NavigationController() {
 
                     setUserCoordinates(userCoords);
 
-                    setTimeout(() => {
+                    if (routeCalculationTimeoutRef.current) {
+                        clearTimeout(routeCalculationTimeoutRef.current);
+                    }
+
+                    routeCalculationTimeoutRef.current = setTimeout(() => {
                         getRoute(userCoords, areaCoords, floor, setRoutePath, setRouteDistance);
-                    }, 0);
+                        routeCalculationTimeoutRef.current = null;
+                    }, 100);
 
                     setLocSpeed(newLocation.coords.speed);
                     if (newLocation.coords.heading !== null) {
