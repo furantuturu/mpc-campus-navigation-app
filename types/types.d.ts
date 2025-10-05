@@ -20,6 +20,15 @@ export interface AreaData {
         longitude: number,
     };
 }
+export interface ExploreData {
+    id: string;
+    image: string,
+    coordinates: {
+        latitude: number,
+        longitude: number,
+    };
+}
+
 export type Building = Record<string, AreaData[]>;
 export interface BuildingsFilter {
     id: string;
