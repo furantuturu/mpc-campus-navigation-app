@@ -1,11 +1,9 @@
-import { useMyStoreV2, useUserLocStore } from '@/store/useMyStore';
-import { Camera, CameraRef } from "@maplibre/maplibre-react-native";
-
-//* Constants
 import {
     CAMERA_BOUNDS,
     CAMERA_DEFAULT_SETTINGS
 } from '@/constants/generalMapConfig';
+import { useMyStoreV2, useUserLocStore } from '@/store/useMyStore';
+import { Camera, CameraRef } from "@maplibre/maplibre-react-native";
 import { useEffect, useRef } from 'react';
 
 export default function CameraMapSetup() {
