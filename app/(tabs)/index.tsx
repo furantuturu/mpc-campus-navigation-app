@@ -1,10 +1,12 @@
 import CameraMapSetup from "@/components/CameraMapSetup";
 import CampusBaseMap from "@/components/CampusBaseMap";
 import MapDimensionToggle from "@/components/fab/MapDimensionToggle";
+import ExploreMarkers from "@/components/marker-components/ExploreMarkers";
 import { MapView } from "@maplibre/maplibre-react-native";
 import { StyleSheet, View } from "react-native";
 
 export default function Index() {
+
     return (
         <View style={styles.container}>
             <MapView
@@ -14,6 +16,7 @@ export default function Index() {
             >
                 <CampusBaseMap />
                 <CameraMapSetup />
+                <ExploreMarkers />
             </MapView>
             <MapDimensionToggle />
         </View>
