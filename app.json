@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "TestApp6",
-    "slug": "TestApp6",
+    "name": "MPC Campus Outdoor Navigation",
+    "slug": "mpc-outdoor-navigation",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
