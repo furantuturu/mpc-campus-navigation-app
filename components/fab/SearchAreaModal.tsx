@@ -1,5 +1,6 @@
-import { campusDataForSearch, customBlack, customBlue, customDarkYellow, customRed } from "@/constants/floorData";
+import { campusDataForSearch } from "@/constants/floorData";
 import { areaDetailsSheet, categorySelect, contains } from "@/constants/helpers/helper";
+import { categoryIconOptions } from "@/constants/markerConfig";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { AreaData, Category, Floor } from "@/types/types";
 import { sortBy, trim } from "es-toolkit";
@@ -9,24 +10,7 @@ import { FlatList, Modal, ScrollView, StyleSheet, View } from "react-native";
 import { Button, Divider, Icon, Searchbar, Text, TouchableRipple } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const categoryIconOptions: any = {
-    "Offices": {
-        icon: "office-building",
-        iconColor: customBlue
-    },
-    "Rooms": {
-        icon: "google-classroom",
-        iconColor: customRed
-    },
-    "Toilets": {
-        icon: "toilet",
-        iconColor: customDarkYellow
-    },
-    "Outdoors": {
-        icon: "home-group",
-        iconColor: customBlack
-    }
-};
+
 export default function AreaSearchBar() {
     const { showAreaSheet, setShowAreaSheet, setAreaData, setSelectedCategory, setSelectedFloor, setActiveCategory, setAreaCoordinates, setCameraFocus } = useMyStoreV2();
 
