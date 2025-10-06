@@ -1,0 +1,122 @@
+[
+    {
+        "id": "EXP1",
+        "imageFileName": "exp1",
+        "coordinates": {
+            "latitude": 6.117113,
+            "longitude": 125.144035
+        }
+    },
+    {
+        "id": "EXP2",
+        "imageFileName": "exp2",
+        "coordinates": {
+            "latitude": 6.117150,
+            "longitude": 125.144204
+        }
+    },
+    {
+        "id": "EXP3",
+        "imageFileName": "exp3",
+        "coordinates": {
+            "latitude": 6.117011,
+            "longitude": 125.144339
+        }
+    },
+    {
+        "id": "EXP4",
+        "imageFileName": "exp4",
+        "coordinates": {
+            "latitude": 6.117160,
+            "longitude": 125.144571
+        }
+    },
+    {
+        "id": "EXP5",
+        "imageFileName": "exp5",
+        "coordinates": {
+            "latitude": 6.117202,
+            "longitude": 125.144747
+        }
+    },
+    {
+        "id": "EXP6",
+        "imageFileName": "exp6",
+        "coordinates": {
+            "latitude": 6.117339,
+            "longitude": 125.145087
+        }
+    },
+    {
+        "id": "EXP7",
+        "imageFileName": "exp7",
+        "coordinates": {
+            "latitude": 6.117480,
+            "longitude": 125.145415
+        }
+    },
+    {
+        "id": "EXP8",
+        "imageFileName": "exp8",
+        "coordinates": {
+            "latitude": 6.117698,
+            "longitude": 125.145289
+        }
+    },
+    {
+        "id": "EXP9",
+        "imageFileName": "exp9",
+        "coordinates": {
+            "latitude": 6.117810,
+            "longitude": 125.144916
+        }
+    },
+    {
+        "id": "EXP10",
+        "imageFileName": "exp10",
+        "coordinates": {
+            "latitude": 6.117745,
+            "longitude": 125.144767
+        }
+    },
+    {
+        "id": "EXP11",
+        "imageFileName": "exp11",
+        "coordinates": {
+            "latitude": 6.117620,
+            "longitude": 125.144511
+        }
+    },
+    {
+        "id": "EXP12",
+        "imageFileName": "exp12",
+        "coordinates": {
+            "latitude": 6.117440,
+            "longitude": 125.144570
+        }
+    },
+    {
+        "id": "EXP13",
+        "imageFileName": "exp13",
+        "coordinates": {
+            "latitude": 6.117323,
+            "longitude": 125.145497
+        }
+    },
+    {
+        "id": "EXP14",
+        "imageFileName": "exp14",
+        "coordinates": {
+            "latitude": 6.117001,
+            "longitude": 125.145451
+        }
+    },
+    {
+        "id": "EXP15",
+        "imageFileName": "exp15",
+        "coordinates": {
+            "latitude": 6.116864,
+            "longitude": 125.144825
+        }
+    }
+]
