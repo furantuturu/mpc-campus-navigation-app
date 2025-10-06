@@ -1,18 +1,8 @@
-import { canteenMarkerImg, gymMarkerImg, officeMarkerImg, roomMarkerImg, swimmingMarkerImg, toiletMarkerImg } from "@/constants/markerConfig";
+import { categoryMarkerImg, outDoorsMarkerImg } from "@/constants/markerConfig";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { isEqual } from "es-toolkit";
-import MemoMapMarker from "./MapMarker";
+import MemoAreaMapMarker from "./AreaMapMarker";
 
-const categoryMarkerImg: any = {
-    "Offices": officeMarkerImg,
-    "Rooms": roomMarkerImg,
-    "Toilets": toiletMarkerImg
-};
-const outDoorsMarkerImg: any = {
-    "Gym": gymMarkerImg,
-    "Canteen": canteenMarkerImg,
-    "Swimming Area": swimmingMarkerImg
-};
 export default function DestinationMarker() {
     const { areaData } = useMyStoreV2();
 
@@ -24,7 +14,7 @@ export default function DestinationMarker() {
     }
 
     return (
-        <MemoMapMarker
+        <MemoAreaMapMarker
             areaData={areaData}
             markerImg={markerImg}
         />
