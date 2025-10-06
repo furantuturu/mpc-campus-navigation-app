@@ -1,19 +1,12 @@
+import { floorName } from "@/constants/floorData";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { isEqual } from "es-toolkit";
 import { lazy, Suspense, useMemo } from "react";
 import { ActivityIndicator, ScrollView, StyleSheet } from "react-native";
 import { Divider, Text } from 'react-native-paper';
-
-//* Components
 import OutdoorAreaActionButtons from "./OutdoorAreaActionButton";
 import ToiletAreaActionButtons from "./ToiletAreaActionButton";
 
-const floorName: any = {
-    "1F": "1st Floor / Ground",
-    "2F": "2nd Floor",
-    "3F": "3rd Floor",
-    "4F": "4th Floor"
-};
 export default function FloorSheetContent() {
     const { selectedCategory, selectedFloor } = useMyStoreV2();
 
