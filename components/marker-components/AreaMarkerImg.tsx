@@ -17,7 +17,7 @@ interface TouchStartData {
     time: number;
 }
 
-export default function MarkerImg({ markerAreaData, image }: MarkerImgProps) {
+export default function AreaMarkerImg({ markerAreaData, image }: MarkerImgProps) {
     const { showAreaSheet, setShowAreaSheet, setAreaData, areaData, setAreaCoordinates, setCameraFocus } = useMyStoreV2();
     const sameID = isEqual(markerAreaData.id, areaData.id);
 
