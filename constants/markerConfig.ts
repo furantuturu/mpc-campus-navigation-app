@@ -1,6 +1,12 @@
+import { customBlack, customBlue, customDarkYellow, customRed } from "./floorData";
+
 export const initAnchor = {
     x: 0.5,
     y: 1
+};
+export const exploreAnchor = {
+    x: 0.5,
+    y: 0.7
 };
 
 export const officeMarkerImg = require("@/assets/images/markers/office-marker-enh.png");
@@ -19,3 +25,34 @@ export const gate1NameMarker = require("@/assets/images/buildingnames-markers/Ga
 export const gate2NameMarker = require("@/assets/images/buildingnames-markers/Gate-2.png");
 
 export const stairsMarker = require("@/assets/images/markers/stairs-marker.png");
+export const exploreMarker = require("@/assets/images/markers/explore-marker.png");
+
+export const categoryMarkerImg: any = {
+    "Offices": officeMarkerImg,
+    "Rooms": roomMarkerImg,
+    "Toilets": toiletMarkerImg
+};
+export const outDoorsMarkerImg: any = {
+    "Gym": gymMarkerImg,
+    "Canteen": canteenMarkerImg,
+    "Swimming Area": swimmingMarkerImg
+};
+
+export const categoryIconOptions: any = {
+    "Offices": {
+        icon: "office-building",
+        iconColor: customBlue
+    },
+    "Rooms": {
+        icon: "google-classroom",
+        iconColor: customRed
+    },
+    "Toilets": {
+        icon: "toilet",
+        iconColor: customDarkYellow
+    },
+    "Outdoors": {
+        icon: "home-group",
+        iconColor: customBlack
+    }
+};
