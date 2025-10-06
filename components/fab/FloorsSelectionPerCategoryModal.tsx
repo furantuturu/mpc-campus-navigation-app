@@ -1,4 +1,4 @@
-import { floorsPerCategory } from "@/constants/floorData";
+import { floorName, floorsPerCategory } from "@/constants/floorData";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { Floor } from "@/types/types";
 import { map, size } from "es-toolkit/compat";
@@ -6,12 +6,6 @@ import { useState } from "react";
 import { Modal, StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import { Icon, Menu, Text, TouchableRipple } from 'react-native-paper';
 
-const floorName: any = {
-    "1F": "1st Floor / Ground",
-    "2F": "2nd Floor",
-    "3F": "3rd Floor",
-    "4F": "4th Floor"
-};
 export default function FloorsSelectionPerCategoryModal() {
     const { selectedCategory, selectedFloor, setSelectedFloor, showAreaSheet, setRoutePath } = useMyStoreV2();
     const [visible, setVisible] = useState(false);
