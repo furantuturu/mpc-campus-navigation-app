@@ -1,12 +1,20 @@
-import campusDataSearch from "@/assets/floors/campus-data-for-search.json";
-import campusData from "@/assets/floors/campus-data.json";
-import { AreaData, FloorsPerCategory } from "@/types/types";
+import campusDataSearch from "@/assets/campus-datas/campus-data-for-search.json";
+import campusData from "@/assets/campus-datas/campus-data.json";
+import exploreData from "@/assets/campus-datas/campus-explore-data.json";
+import { AreaData, ExploreData, FloorsPerCategory } from "@/types/types";
 
 export const floorsPerCategory: FloorsPerCategory = {
     "Offices": ["1F", "3F", "4F"],
     "Rooms": ["1F", "2F", "3F", "4F"],
     "Toilets": ["1F", "2F", "3F", "4F"],
     "Outdoors": ["1F"]
+};
+
+export const floorName: any = {
+    "1F": "1st Floor / Ground",
+    "2F": "2nd Floor",
+    "3F": "3rd Floor",
+    "4F": "4th Floor"
 };
 
 export const officeData = campusData["Offices"];
@@ -38,3 +46,6 @@ export const customDarkYellow = "#e0da23ff";
 export const customYellowButton = "#fffed7ff";
 export const customBlack = "#565656";
 export const customBlackButton = "#c4c4c4ff";
+
+export const explore: ExploreData[] = exploreData;
+export const exp1 = require(`@/assets/images/explore/exp1.webp`);
