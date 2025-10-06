@@ -1,10 +1,8 @@
+import CameraMapSetup from "@/components/CameraMapSetup";
+import CampusCategoryMarkers from "@/components/marker-components/CampusCategoryMarkers";
 import { useUserLocStore } from "@/store/useMyStore";
 import { MapView } from "@maplibre/maplibre-react-native";
 import { StyleSheet } from "react-native";
-
-//* Components
-import CameraMapSetup from "@/components/CameraMapSetup";
-import CampusCategoryMarkers from "@/components/marker-components/CampusCategoryMarkers";
 import CampusBaseMap from "./CampusBaseMap";
 import BuildingMarkers from "./marker-components/BuildingMarkers";
 import DestinationMarker from "./marker-components/DestinationMarker";
