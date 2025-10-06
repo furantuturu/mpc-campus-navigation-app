@@ -1,9 +1,7 @@
-import { TrueSheet } from "@lodev09/react-native-true-sheet";
-import { StyleSheet } from "react-native";
-
-//* Components
 import { useMyStoreV2 } from "@/store/useMyStore";
+import { TrueSheet } from "@lodev09/react-native-true-sheet";
 import { useRef } from "react";
+import { StyleSheet } from "react-native";
 import AreaSheetContent from "./AreaSheetContent";
 import FloorSheetContent from "./FloorSheetContent";
 
