@@ -22,7 +22,7 @@ export interface AreaData {
 }
 export interface ExploreData {
     id: string;
-    image: string,
+    imageFileName: string,
     coordinates: {
         latitude: number,
         longitude: number,
