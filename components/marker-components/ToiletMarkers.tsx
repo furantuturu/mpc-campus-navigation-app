@@ -2,7 +2,7 @@ import { toiletData } from "@/constants/floorData";
 import { toiletMarkerImg } from "@/constants/markerConfig";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { map } from "es-toolkit/compat";
-import MemoMapMarker from "./MapMarker";
+import MemoAreaMapMarker from "./AreaMapMarker";
 
 export default function ToiletMarkers() {
     const { selectedFloor } = useMyStoreV2();
@@ -12,7 +12,7 @@ export default function ToiletMarkers() {
     return (
         map(floorToiletData, (toiletData) => {
             return (
-                <MemoMapMarker
+                <MemoAreaMapMarker
                     key={toiletData.id}
                     areaData={toiletData}
                     markerImg={toiletMarkerImg}

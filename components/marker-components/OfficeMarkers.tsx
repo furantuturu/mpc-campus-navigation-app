@@ -3,7 +3,7 @@ import { officeMarkerImg } from "@/constants/markerConfig";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { Building } from "@/types/types";
 import { map } from "es-toolkit/compat";
-import MemoMapMarker from "./MapMarker";
+import MemoAreaMapMarker from "./AreaMapMarker";
 
 export default function OfficeMarkers() {
     const { selectedFloor } = useMyStoreV2();
@@ -17,7 +17,7 @@ export default function OfficeMarkers() {
         map(buldingNameOfficeData, officeBuildingName => {
             return map(buldingOfficeData[officeBuildingName], (officeData) => {
                 return (
-                    <MemoMapMarker
+                    <MemoAreaMapMarker
                         key={officeData.id}
                         areaData={officeData}
                         markerImg={officeMarkerImg}

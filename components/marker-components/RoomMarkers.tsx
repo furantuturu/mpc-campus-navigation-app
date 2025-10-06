@@ -3,7 +3,7 @@ import { roomMarkerImg } from "@/constants/markerConfig";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { Building } from "@/types/types";
 import { map } from "es-toolkit/compat";
-import MemoMapMarker from "./MapMarker";
+import MemoAreaMapMarker from "./AreaMapMarker";
 
 export default function RoomMarkers() {
     const { selectedFloor } = useMyStoreV2();
@@ -15,7 +15,7 @@ export default function RoomMarkers() {
         map(buldingNameRoomData, roomBuildingName => {
             return map(buldingRoomData[roomBuildingName], (roomData) => {
                 return (
-                    <MemoMapMarker
+                    <MemoAreaMapMarker
                         key={roomData.id}
                         areaData={roomData}
                         markerImg={roomMarkerImg}
