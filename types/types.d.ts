@@ -15,6 +15,7 @@ export interface AreaData {
     category: string;
     floor: string;
     building?: string;
+    imageFileName: string,
     coordinates: {
         latitude: number,
         longitude: number,
