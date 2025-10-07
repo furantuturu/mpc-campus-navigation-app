@@ -1,3 +1,4 @@
+import { navigationModePanoramas } from "@/constants/areaPanoramas";
 import { getRoute } from "@/constants/helpers/helper";
 import { useMyStoreV2, useUserLocStore } from "@/store/useMyStore";
 import { Floor } from "@/types/types";
@@ -5,14 +6,26 @@ import { TrueSheet } from "@lodev09/react-native-true-sheet";
 import { isNull, trim } from "es-toolkit";
 import { split } from "es-toolkit/compat";
 import { useState } from "react";
-import { Alert, Pressable, StyleSheet, View } from "react-native";
+import { Alert, Modal, Pressable, StyleSheet, View } from "react-native";
 import { ActivityIndicator, Divider, Icon, Text } from "react-native-paper";
+import PanoramaViewer from "../PanoramaViewer";
 
 export default function AreaSheetContent() {
     const { setShowAreaSheet, areaData, setRoutePath, setRouteDistance } = useMyStoreV2();
     const { setIsNavigating, userCoordinates, isLocationServiceEnabled } = useUserLocStore();
     const [isRouteFetching, setIsRouteFetching] = useState(false);
     const areaCoords = [areaData.coordinates.longitude, areaData.coordinates.latitude];
+    const [isViewerVisible, setIsViewerVisible] = useState(false);
+
+    const panoramaImg = navigationModePanoramas[areaData.imageFileName];
+
+    function onPanoramaOpen() {
+        setIsViewerVisible(true);
+    };
+
+    function onPanoramaClose() {
+        setIsViewerVisible(false);
+    };
 
     async function dismissAreaSheet() {
         setShowAreaSheet(false);
@@ -61,6 +74,18 @@ export default function AreaSheetContent() {
                 </View>
                 <View style={styles.buttonContainer}>
                     <Pressable
+                        style={[styles.buttonStyles, { backgroundColor: "#eee" }]}
+                        android_ripple={{
+                            color: 'rgba(0, 0, 0, 0.2)',
+                            borderless: false,
+                            foreground: true,
+                        }}
+                        onPress={onPanoramaOpen}
+                        disabled={isRouteFetching}
+                    >
+                        <Icon source="image-area" size={25} color="black" />
+                    </Pressable>
+                    <Pressable
                         style={[styles.buttonStyles, { backgroundColor: "#565656" }]}
                         android_ripple={{
                             color: 'rgba(0, 0, 0, 0.2)',
@@ -84,6 +109,7 @@ export default function AreaSheetContent() {
                             foreground: true,
                         }}
                         onPress={dismissAreaSheet}
+                        disabled={isRouteFetching}
                     >
                         <Icon source="close" size={25} color="white" />
                         <Text style={styles.buttonText}>Close</Text>
@@ -91,9 +117,14 @@ export default function AreaSheetContent() {
                 </View>
             </View>
             <Divider />
-            <View>
-
-            </View>
+            <Modal
+                visible={isViewerVisible}
+                animationType="fade"
+                onRequestClose={onPanoramaClose}
+                statusBarTranslucent
+            >
+                <PanoramaViewer imageSource={panoramaImg} />
+            </Modal>
         </>
     );
 }

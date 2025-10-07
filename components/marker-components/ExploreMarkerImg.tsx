@@ -1,7 +1,9 @@
+import { exploreModePanoramas } from "@/constants/explorePanoramas";
 import { ExploreData } from "@/types/types";
 import { Image } from "expo-image";
 import { useState } from "react";
-import { GestureResponderEvent, StyleSheet, View } from "react-native";
+import { GestureResponderEvent, Modal, StyleSheet, View } from "react-native";
+import PanoramaViewer from "../PanoramaViewer";
 
 interface MarkerImgProps {
     markerExploreData: ExploreData;
@@ -15,12 +17,19 @@ interface TouchStartData {
 }
 
 export default function ExploreMarkerImg({ markerExploreData, image }: MarkerImgProps) {
+    const [isViewerVisible, setIsViewerVisible] = useState(false);
     const [touchStart, setTouchStart] = useState<TouchStartData | null>(null);
     const [isDragging, setIsDragging] = useState(false);
 
-    function onMarkerPress() {
-        console.log("explore image popup");
-    }
+    const panoramaImg = exploreModePanoramas[markerExploreData.imageFileName];
+
+    function onPanoramaOpen() {
+        setIsViewerVisible(true);
+    };
+
+    function onPanoramaClose() {
+        setIsViewerVisible(false);
+    };
 
     function handleTouchStart(event: GestureResponderEvent) {
         const { locationX, locationY } = event.nativeEvent;
@@ -57,7 +66,7 @@ export default function ExploreMarkerImg({ markerExploreData, image }: MarkerImg
 
         //* If it's a quick tap without dragging, handle marker press
         if (!isDragging && timeDiff < 300) {
-            onMarkerPress();
+            onPanoramaOpen();
         }
 
         setTouchStart(null);
@@ -72,6 +81,15 @@ export default function ExploreMarkerImg({ markerExploreData, image }: MarkerImg
             onTouchEnd={handleTouchEnd}
         >
             <Image source={image} style={styles.marker} transition={100} />
+
+            <Modal
+                visible={isViewerVisible}
+                animationType="fade"
+                onRequestClose={onPanoramaClose}
+                statusBarTranslucent
+            >
+                <PanoramaViewer imageSource={panoramaImg} />
+            </Modal>
         </View>
     );
 }

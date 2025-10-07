@@ -1,3 +1,4 @@
+import { navigationModePanoramas } from "@/constants/areaPanoramas";
 import { getRoute, isUserInsideCampus } from "@/constants/helpers/helper";
 import { useMyStoreV2, useUserLocStore } from "@/store/useMyStore";
 import { Floor } from "@/types/types";
@@ -14,9 +15,10 @@ import {
     watchPositionAsync
 } from "expo-location";
 import { useEffect, useRef, useState } from "react";
-import { ActivityIndicator, Alert, Pressable, StyleSheet, View } from "react-native";
+import { ActivityIndicator, Alert, Modal, Pressable, StyleSheet, View } from "react-native";
 import { Icon, Text } from "react-native-paper";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import PanoramaViewer from "./PanoramaViewer";
 
 export default function NavigationController() {
     const insets = useSafeAreaInsets();
@@ -27,12 +29,24 @@ export default function NavigationController() {
     const [locSpeed, setLocSpeed] = useState<number | null>(null);
     const [isStarting, setIsStarting] = useState(false);
     let routeCalculationTimeoutRef = useRef<number | null>(null);
+    const [isViewerVisible, setIsViewerVisible] = useState(false);
 
     useEffect(() => {
         return () => {
             locationSubscription?.remove();
         };
     }, [locationSubscription]);
+
+
+    const panoramaImg = navigationModePanoramas[areaData.imageFileName];
+
+    function onPanoramaOpen() {
+        setIsViewerVisible(true);
+    };
+
+    function onPanoramaClose() {
+        setIsViewerVisible(false);
+    };
 
     async function locationTrack() {
         try {
@@ -152,6 +166,17 @@ export default function NavigationController() {
             </View>
             <View style={styles.viewContainer}>
                 <Pressable
+                    style={[styles.buttonStyles, { backgroundColor: "#eee" }]}
+                    android_ripple={{
+                        color: 'rgba(0, 0, 0, 0.2)',
+                        borderless: false,
+                        foreground: true,
+                    }}
+                    onPress={onPanoramaOpen}
+                >
+                    <Icon source="image-area" size={25} color="black" />
+                </Pressable>
+                <Pressable
                     style={[styles.buttonStyles, { backgroundColor: "#3887be" }]}
                     android_ripple={{
                         color: 'rgba(0, 0, 0, 0.2)',
@@ -178,7 +203,7 @@ export default function NavigationController() {
                         }}
                         onPress={() => setUserFollowMode(!userFollowMode)}
                     >
-                        <Text style={styles.buttonText}>{userFollowMode ? "Stop" : "Start"} User Follow</Text>
+                        <Text style={styles.buttonText}>{userFollowMode ? "Stop Follow" : "Start Follow"}</Text>
                     </Pressable>
                     :
                     <Pressable
@@ -196,6 +221,14 @@ export default function NavigationController() {
 
                 }
             </View>
+            <Modal
+                visible={isViewerVisible}
+                animationType="fade"
+                onRequestClose={onPanoramaClose}
+                statusBarTranslucent
+            >
+                <PanoramaViewer imageSource={panoramaImg} />
+            </Modal>
         </View>
     );
 }
