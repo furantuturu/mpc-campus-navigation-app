@@ -87,9 +87,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.furantuturu.TestApp6'
+    namespace 'com.furantuturu.MPCOutdoorNavigation'
     defaultConfig {
-        applicationId 'com.furantuturu.TestApp6'
+        applicationId 'com.furantuturu.MPCOutdoorNavigation'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

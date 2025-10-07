@@ -1,4 +1,4 @@
-package com.furantuturu.TestApp6
+package com.furantuturu.MPCOutdoorNavigation
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build

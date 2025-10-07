@@ -1,4 +1,4 @@
-package com.furantuturu.TestApp6
+package com.furantuturu.MPCOutdoorNavigation
 
 import android.app.Application
 import android.content.res.Configuration
