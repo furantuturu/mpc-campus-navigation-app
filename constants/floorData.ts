@@ -48,4 +48,3 @@ export const customBlack = "#565656";
 export const customBlackButton = "#c4c4c4ff";
 
 export const explore: ExploreData[] = exploreData;
-export const exp1 = require(`@/assets/images/explore/exp1.webp`);
