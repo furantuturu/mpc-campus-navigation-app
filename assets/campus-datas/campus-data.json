@@ -7,6 +7,7 @@
                     "name": "Registrar",
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
+                    "imageFileName": "registrar",
                     "building": "Old Building",
                     "coordinates": {
                         "latitude": 6.117952,
@@ -19,6 +20,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
+                    "imageFileName": "vp-aca-admin",
                     "coordinates": {
                         "latitude": 6.117910,
                         "longitude": 125.145078
@@ -30,6 +32,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
+                    "imageFileName": "hrdo-cashier",
                     "coordinates": {
                         "latitude": 6.117891,
                         "longitude": 125.145017
@@ -40,6 +43,7 @@
                     "name": "Cashier",
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
+                    "imageFileName": "hrdo-cashier",
                     "building": "Old Building",
                     "coordinates": {
                         "latitude": 6.117872,
@@ -52,6 +56,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
+                    "imageFileName": "guide-counsel",
                     "coordinates": {
                         "latitude": 6.117849,
                         "longitude": 125.144917
@@ -63,6 +68,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
+                    "imageFileName": "gad",
                     "coordinates": {
                         "latitude": 6.117802,
                         "longitude": 125.144767
@@ -74,6 +80,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
+                    "imageFileName": "clinic-scholar",
                     "coordinates": {
                         "latitude": 6.117771,
                         "longitude": 125.144680
@@ -85,6 +92,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
+                    "imageFileName": "simul-old",
                     "coordinates": {
                         "latitude": 6.117732,
                         "longitude": 125.144590
@@ -96,6 +104,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
+                    "imageFileName": "bsname-dept-rm-102",
                     "coordinates": {
                         "latitude": 6.117682,
                         "longitude": 125.144468
@@ -109,6 +118,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "bsme-dept-office",
                     "coordinates": {
                         "latitude": 6.117363,
                         "longitude": 125.144802
@@ -120,6 +130,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "bsme-bsit-dept-head",
                     "coordinates": {
                         "latitude": 6.117385,
                         "longitude": 125.144857
@@ -131,6 +142,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "bsca-dept-head",
                     "coordinates": {
                         "latitude": 6.117409,
                         "longitude": 125.144913
@@ -142,6 +154,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "res-dev",
                     "coordinates": {
                         "latitude": 6.117430,
                         "longitude": 125.144966
@@ -153,6 +166,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "prac-coo",
                     "coordinates": {
                         "latitude": 6.117448,
                         "longitude": 125.145049
@@ -164,6 +178,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "porthole",
                     "coordinates": {
                         "latitude": 6.117463,
                         "longitude": 125.145100
@@ -175,6 +190,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "qam",
                     "coordinates": {
                         "latitude": 6.117491,
                         "longitude": 125.145163
@@ -186,6 +202,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "shs-ssg-plant",
                     "coordinates": {
                         "latitude": 6.117799,
                         "longitude": 125.145024
@@ -197,6 +214,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "shs-ssg-plant",
                     "coordinates": {
                         "latitude": 6.117788,
                         "longitude": 125.144994
@@ -208,6 +226,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "shs-ssg-plant",
                     "coordinates": {
                         "latitude": 6.117781,
                         "longitude": 125.144974
@@ -219,6 +238,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "pscas-anchor",
                     "coordinates": {
                         "latitude": 6.117777,
                         "longitude": 125.144963
@@ -230,6 +250,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "pscas-anchor",
                     "coordinates": {
                         "latitude": 6.117769,
                         "longitude": 125.144950
@@ -241,6 +262,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "naval-arch-ssc",
                     "coordinates": {
                         "latitude": 6.117736,
                         "longitude": 125.144874
@@ -252,6 +274,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "naval-arch-ssc",
                     "coordinates": {
                         "latitude": 6.117735,
                         "longitude": 125.144857
@@ -263,6 +286,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "hospitality",
                     "coordinates": {
                         "latitude": 6.117720,
                         "longitude": 125.144820
@@ -274,6 +298,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "osas-nstp",
                     "coordinates": {
                         "latitude": 6.117703,
                         "longitude": 125.144774
@@ -285,6 +310,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Gym Building",
+                    "imageFileName": "sports",
                     "coordinates": {
                         "latitude": 6.117686,
                         "longitude": 125.144732
@@ -298,6 +324,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "dean-maritime",
                     "coordinates": {
                         "latitude": 6.117157,
                         "longitude": 125.144878
@@ -309,6 +336,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "front-office",
                     "coordinates": {
                         "latitude": 6.117132,
                         "longitude": 125.144518
@@ -322,6 +350,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Mar-E",
+                    "imageFileName": "tec-voc",
                     "coordinates": {
                         "latitude": 6.117180,
                         "longitude": 125.143990
@@ -335,6 +364,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Outside",
+                    "imageFileName": "property-electric",
                     "coordinates": {
                         "latitude": 6.116869,
                         "longitude": 125.144185
@@ -346,6 +376,7 @@
                     "category": "Offices",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Outside",
+                    "imageFileName": "property-electric",
                     "coordinates": {
                         "latitude": 6.116824,
                         "longitude": 125.144227
@@ -361,6 +392,7 @@
                     "category": "Offices",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "bscrim-dept-office",
                     "coordinates": {
                         "latitude": 6.117082,
                         "longitude": 125.144670
@@ -376,6 +408,7 @@
                     "category": "Offices",
                     "floor": "4th Floor / 4F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117367,
                         "longitude": 125.144416
@@ -393,6 +426,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Old Building",
+                    "imageFileName": "bsname-dept-rm-102",
                     "coordinates": {
                         "latitude": 6.117664,
                         "longitude": 125.144416
@@ -406,6 +440,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "engine-sim",
                     "coordinates": {
                         "latitude": 6.117348,
                         "longitude": 125.145394
@@ -417,6 +452,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "rm117",
                     "coordinates": {
                         "latitude": 6.117325,
                         "longitude": 125.145294
@@ -428,6 +464,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "rm118",
                     "coordinates": {
                         "latitude": 6.117305,
                         "longitude": 125.145253
@@ -439,6 +476,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "rm119",
                     "coordinates": {
                         "latitude": 6.117285,
                         "longitude": 125.145192
@@ -450,6 +488,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "rm120",
                     "coordinates": {
                         "latitude": 6.117260,
                         "longitude": 125.145130
@@ -461,6 +500,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "rm121",
                     "coordinates": {
                         "latitude": 6.117227,
                         "longitude": 125.145045
@@ -472,6 +512,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "rm122",
                     "coordinates": {
                         "latitude": 6.117208,
                         "longitude": 125.144996
@@ -483,6 +524,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "rm123",
                     "coordinates": {
                         "latitude": 6.117181,
                         "longitude": 125.144938
@@ -494,6 +536,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "faculty",
                     "coordinates": {
                         "latitude": 6.117128,
                         "longitude": 125.144800
@@ -505,6 +548,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "pastry",
                     "coordinates": {
                         "latitude": 6.117095,
                         "longitude": 125.144689
@@ -516,6 +560,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "rm127",
                     "coordinates": {
                         "latitude": 6.117073,
                         "longitude": 125.144643
@@ -527,6 +572,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117045,
                         "longitude": 125.144577
@@ -538,6 +584,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
+                    "imageFileName": "hrm-dining",
                     "coordinates": {
                         "latitude": 6.117009,
                         "longitude": 125.144543
@@ -551,6 +598,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
+                    "imageFileName": "rm1",
                     "coordinates": {
                         "latitude": 6.117274,
                         "longitude": 125.144459
@@ -562,6 +610,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
+                    "imageFileName": "rm2",
                     "coordinates": {
                         "latitude": 6.117351,
                         "longitude": 125.144428
@@ -573,6 +622,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
+                    "imageFileName": "rm3",
                     "coordinates": {
                         "latitude": 6.117440,
                         "longitude": 125.144396
@@ -584,6 +634,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
+                    "imageFileName": "rm4",
                     "coordinates": {
                         "latitude": 6.117514,
                         "longitude": 125.144370
@@ -595,6 +646,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
+                    "imageFileName": "conference",
                     "coordinates": {
                         "latitude": 6.117594,
                         "longitude": 125.144337
@@ -608,6 +660,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Mar-E",
+                    "imageFileName": "tec-voc",
                     "coordinates": {
                         "latitude": 6.117186,
                         "longitude": 125.143981
@@ -623,6 +676,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
+                    "imageFileName": "full-bridge",
                     "coordinates": {
                         "latitude": 6.117352,
                         "longitude": 125.145401
@@ -630,10 +684,11 @@
                 },
                 {
                     "id": "MB2F-2",
-                    "name": "Briefing/Debriefing Room",
+                    "name": "Briefing / Debriefing Room (F2)",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
+                    "imageFileName": "brief-2f",
                     "coordinates": {
                         "latitude": 6.117330,
                         "longitude": 125.145332
@@ -645,6 +700,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
+                    "imageFileName": "rm203",
                     "coordinates": {
                         "latitude": 6.117307,
                         "longitude": 125.145255
@@ -656,6 +712,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
+                    "imageFileName": "rm204",
                     "coordinates": {
                         "latitude": 6.117286,
                         "longitude": 125.145199
@@ -667,6 +724,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
+                    "imageFileName": "rm205",
                     "coordinates": {
                         "latitude": 6.117263,
                         "longitude": 125.145132
@@ -678,6 +736,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
+                    "imageFileName": "rm206",
                     "coordinates": {
                         "latitude": 6.117226,
                         "longitude": 125.145041
@@ -689,6 +748,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
+                    "imageFileName": "rm207",
                     "coordinates": {
                         "latitude": 6.117204,
                         "longitude": 125.144987
@@ -700,6 +760,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
+                    "imageFileName": "rm208",
                     "coordinates": {
                         "latitude": 6.117185,
                         "longitude": 125.144934
@@ -711,6 +772,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
+                    "imageFileName": "simul-maritime",
                     "coordinates": {
                         "latitude": 6.117161,
                         "longitude": 125.144875
@@ -722,6 +784,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
+                    "imageFileName": "it-storage",
                     "coordinates": {
                         "latitude": 6.117135,
                         "longitude": 125.144811
@@ -733,6 +796,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
+                    "imageFileName": "comlab",
                     "coordinates": {
                         "latitude": 6.117085,
                         "longitude": 125.144689
@@ -744,6 +808,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
+                    "imageFileName": "housekeeping",
                     "coordinates": {
                         "latitude": 6.117096,
                         "longitude": 125.144526
@@ -755,6 +820,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Maritime Building",
+                    "imageFileName": "bar",
                     "coordinates": {
                         "latitude": 6.117006,
                         "longitude": 125.144557
@@ -768,6 +834,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117285,
                         "longitude": 125.144456
@@ -779,6 +846,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117342,
                         "longitude": 125.144423
@@ -790,6 +858,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117434,
                         "longitude": 125.144394
@@ -801,6 +870,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117517,
                         "longitude": 125.144360
@@ -812,6 +882,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117575,
                         "longitude": 125.144341
@@ -825,6 +896,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
+                    "imageFileName": "rm1-mar",
                     "coordinates": {
                         "latitude": 6.117173,
                         "longitude": 125.143981
@@ -835,6 +907,7 @@
                     "name": "Room 02",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
+                    "imageFileName": "rm2-3-4",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117200,
@@ -847,6 +920,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
+                    "imageFileName": "rm2-3-4",
                     "coordinates": {
                         "latitude": 6.117218,
                         "longitude": 125.143979
@@ -858,6 +932,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
+                    "imageFileName": "rm2-3-4",
                     "coordinates": {
                         "latitude": 6.117212,
                         "longitude": 125.143964
@@ -869,6 +944,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
+                    "imageFileName": "rm5-6-7-8",
                     "coordinates": {
                         "latitude": 6.117280,
                         "longitude": 125.143953
@@ -880,6 +956,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
+                    "imageFileName": "rm5-6-7-8",
                     "coordinates": {
                         "latitude": 6.117273,
                         "longitude": 125.143938
@@ -891,6 +968,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
+                    "imageFileName": "rm5-6-7-8",
                     "coordinates": {
                         "latitude": 6.117336,
                         "longitude": 125.143931
@@ -901,6 +979,7 @@
                     "name": "Room 08",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
+                    "imageFileName": "rm5-6-7-8",
                     "building": "Mar-E",
                     "coordinates": {
                         "latitude": 6.117329,
@@ -913,6 +992,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
+                    "imageFileName": "rm10-mar",
                     "coordinates": {
                         "latitude": 6.117385,
                         "longitude": 125.143906
@@ -924,6 +1004,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
+                    "imageFileName": "draw-mold",
                     "coordinates": {
                         "latitude": 6.117434,
                         "longitude": 125.143885
@@ -935,6 +1016,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
+                    "imageFileName": "draw-mold",
                     "coordinates": {
                         "latitude": 6.117459,
                         "longitude": 125.143871
@@ -950,6 +1032,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "chart-rm301-ocean-meteo",
                     "coordinates": {
                         "latitude": 6.117301,
                         "longitude": 125.145232
@@ -961,6 +1044,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "chart-rm301-ocean-meteo",
                     "coordinates": {
                         "latitude": 6.117295,
                         "longitude": 125.145218
@@ -972,6 +1056,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "gmdss",
                     "coordinates": {
                         "latitude": 6.117280,
                         "longitude": 125.145183
@@ -979,10 +1064,11 @@
                 },
                 {
                     "id": "MB3F-4",
-                    "name": "Briefing / Debriefing Room",
+                    "name": "Briefing / Debriefing Room (3F)",
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "brief-3f",
                     "coordinates": {
                         "latitude": 6.117271,
                         "longitude": 125.145160
@@ -994,6 +1080,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "speech",
                     "coordinates": {
                         "latitude": 6.117249,
                         "longitude": 125.145104
@@ -1005,6 +1092,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "customs-library",
                     "coordinates": {
                         "latitude": 6.117221,
                         "longitude": 125.145046
@@ -1016,6 +1104,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "customs-library",
                     "coordinates": {
                         "latitude": 6.117204,
                         "longitude": 125.145002
@@ -1027,6 +1116,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "crime-1",
                     "coordinates": {
                         "latitude": 6.117093,
                         "longitude": 125.144702
@@ -1038,6 +1128,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "crime-2-3",
                     "coordinates": {
                         "latitude": 6.117078,
                         "longitude": 125.144656
@@ -1049,6 +1140,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "crime-2-3",
                     "coordinates": {
                         "latitude": 6.117068,
                         "longitude": 125.144627
@@ -1060,6 +1152,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "alpha",
                     "coordinates": {
                         "latitude": 6.117063,
                         "longitude": 125.144619
@@ -1071,6 +1164,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117036,
                         "longitude": 125.144566
@@ -1082,6 +1176,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "court",
                     "coordinates": {
                         "latitude": 6.117007,
                         "longitude": 125.144544
@@ -1093,6 +1188,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "bravo",
                     "coordinates": {
                         "latitude": 6.117081,
                         "longitude": 125.144523
@@ -1100,10 +1196,11 @@
                 },
                 {
                     "id": "MB3F-16",
-                    "name": "Charles",
+                    "name": "Charlie",
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
+                    "imageFileName": "charlie",
                     "coordinates": {
                         "latitude": 6.117128,
                         "longitude": 125.144505
@@ -1117,6 +1214,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117268,
                         "longitude": 125.144459
@@ -1128,6 +1226,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117339,
                         "longitude": 125.144428
@@ -1139,6 +1238,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117435,
                         "longitude": 125.144392
@@ -1150,6 +1250,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117518,
                         "longitude": 125.144363
@@ -1161,6 +1262,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117574,
                         "longitude": 125.144341
@@ -1176,6 +1278,7 @@
                     "category": "Rooms",
                     "floor": "4th Floor / 4F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117300,
                         "longitude": 125.144441
@@ -1187,6 +1290,7 @@
                     "category": "Rooms",
                     "floor": "4th Floor / 4F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117464,
                         "longitude": 125.144377
@@ -1198,6 +1302,7 @@
                     "category": "Rooms",
                     "floor": "4th Floor / 4F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117500,
                         "longitude": 125.144367
@@ -1209,6 +1314,7 @@
                     "category": "Rooms",
                     "floor": "4th Floor / 4F",
                     "building": "Susana Building",
+                    "imageFileName": "",
                     "coordinates": {
                         "latitude": 6.117559,
                         "longitude": 125.144344
@@ -1224,6 +1330,7 @@
                 "name": "Maritime CR Male (1F)",
                 "category": "Toilets",
                 "floor": "1st Floor / 1F / Ground",
+                "imageFileName": "maritime-m-cr-1",
                 "coordinates": {
                     "latitude": 6.117227,
                     "longitude": 125.145109
@@ -1234,6 +1341,7 @@
                 "name": "Maritime CR Female (1F)",
                 "category": "Toilets",
                 "floor": "1st Floor / 1F / Ground",
+                "imageFileName": "maritime-f-cr-1",
                 "coordinates": {
                     "latitude": 6.117082,
                     "longitude": 125.144732
@@ -1244,6 +1352,7 @@
                 "name": "Mar-E CR",
                 "category": "Toilets",
                 "floor": "1st Floor / 1F / Ground",
+                "imageFileName": "mar-cr",
                 "coordinates": {
                     "latitude": 6.117185,
                     "longitude": 125.143971
@@ -1254,6 +1363,7 @@
                 "name": "Back of Canteen CR",
                 "category": "Toilets",
                 "floor": "1st Floor / 1F / Ground",
+                "imageFileName": "canteen-cr",
                 "coordinates": {
                     "latitude": 6.117612,
                     "longitude": 125.144203
@@ -1266,6 +1376,7 @@
                 "name": "Maritime CR (2F)",
                 "category": "Toilets",
                 "floor": "2nd Floor / 2F",
+                "imageFileName": "maritme-cr-2",
                 "coordinates": {
                     "latitude": 6.117224,
                     "longitude": 125.145117
@@ -1276,6 +1387,7 @@
                 "name": "Maritime CR Female (2F)",
                 "category": "Toilets",
                 "floor": "2nd Floor / 2F",
+                "imageFileName": "maritime-cr-f-2",
                 "coordinates": {
                     "latitude": 6.117079,
                     "longitude": 125.144730
@@ -1286,6 +1398,7 @@
                 "name": "Susana CR (2F)",
                 "category": "Toilets",
                 "floor": "2nd Floor / 2F",
+                "imageFileName": "",
                 "coordinates": {
                     "latitude": 6.117689,
                     "longitude": 125.144246
@@ -1298,6 +1411,7 @@
                 "name": "Susana CR (3F)",
                 "category": "Toilets",
                 "floor": "3rd Floor / 3F",
+                "imageFileName": "",
                 "coordinates": {
                     "latitude": 6.117687,
                     "longitude": 125.144246
@@ -1310,6 +1424,7 @@
                 "name": "Susana CR (4F)",
                 "category": "Toilets",
                 "floor": "4th Floor / 4F",
+                "imageFileName": "",
                 "coordinates": {
                     "latitude": 6.117690,
                     "longitude": 125.144245
@@ -1323,6 +1438,7 @@
             "name": "Gym",
             "category": "Outdoors",
             "floor": "1st Floor / 1F / Ground",
+            "imageFileName": "gym",
             "coordinates": {
                 "latitude": 6.117617,
                 "longitude": 125.145000
@@ -1333,6 +1449,7 @@
             "name": "Canteen",
             "category": "Outdoors",
             "floor": "1st Floor / 1F / Ground",
+            "imageFileName": "canteen",
             "coordinates": {
                 "latitude": 6.117333,
                 "longitude": 125.144223
@@ -1343,6 +1460,7 @@
             "name": "Swimming Area",
             "floor": "1st Floor / 1F / Ground",
             "category": "Outdoors",
+            "imageFileName": "swim",
             "coordinates": {
                 "latitude": 6.116813,
                 "longitude": 125.144650
