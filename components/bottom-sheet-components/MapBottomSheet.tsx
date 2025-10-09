@@ -2,6 +2,7 @@ import { useMyStoreV2 } from "@/store/useMyStore";
 import { TrueSheet } from "@lodev09/react-native-true-sheet";
 import { useRef } from "react";
 import { StyleSheet } from "react-native";
+import { Portal } from "react-native-paper";
 import AreaSheetContent from "./AreaSheetContent";
 import FloorSheetContent from "./FloorSheetContent";
 
@@ -28,7 +29,9 @@ export default function FloorBottomSheet() {
                 cornerRadius={24}
                 contentContainerStyle={styles.sheet}
             >
-                <FloorSheetContent />
+                <Portal.Host>
+                    <FloorSheetContent />
+                </Portal.Host>
                 <TrueSheet
                     name="sub-sheet"
                     ref={subSheetRef}
@@ -38,7 +41,9 @@ export default function FloorBottomSheet() {
                     contentContainerStyle={styles.sheet}
                     onDismiss={dismissAreaSheet}
                 >
-                    <AreaSheetContent />
+                    <Portal.Host>
+                        <AreaSheetContent />
+                    </Portal.Host>
                 </TrueSheet>
             </TrueSheet>
         </>
