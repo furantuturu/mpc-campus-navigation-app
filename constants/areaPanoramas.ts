@@ -6,6 +6,7 @@ export const navigationModePanoramas: any = {
     "brief-3f": require("@/assets/images/area-pano/brief-3f.webp"),
     "bsca-dept-head": require("@/assets/images/area-pano/bsca-dept-head.webp"),
     "bscrim-dept-office": require("@/assets/images/area-pano/bscrim-dept-office.webp"),
+    "bshrm-lab": require("@/assets/images/area-pano/bshrm-lab.webp"),
     "bsme-bsit-dept-head": require("@/assets/images/area-pano/bsme-bsit-dept-head.webp"),
     "bsme-dept-office": require("@/assets/images/area-pano/bsme-dept-office.webp"),
     "bsname-dept-rm-102": require("@/assets/images/area-pano/bsname-dept-rm-102.webp"),
