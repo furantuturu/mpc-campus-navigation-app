@@ -572,7 +572,7 @@
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Maritime Building",
-                    "imageFileName": "",
+                    "imageFileName": "bshrm-lab",
                     "coordinates": {
                         "latitude": 6.117045,
                         "longitude": 125.144577
