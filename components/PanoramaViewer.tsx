@@ -1,3 +1,5 @@
+import { PANNELLUM_CSS } from '@/constants/pannellum-css';
+import { PANNELLUM_JS } from '@/constants/pannellum-js';
 import { Asset } from 'expo-asset';
 import * as FileSystem from 'expo-file-system';
 import { useEffect, useState } from 'react';
@@ -52,10 +54,9 @@ export default function PanoramaViewer({ imageSource }: PanoramaViewerProps) {
                     <head>
                         <meta name="viewport" content="width=device-width, initial-scale=1.0">
                         <title>Pannellum Viewer</title>
-                        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
-                        <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
-
                         <style>
+                            ${PANNELLUM_CSS}
+
                             body,
                             html {
                                 margin: 0;
@@ -72,6 +73,9 @@ export default function PanoramaViewer({ imageSource }: PanoramaViewerProps) {
                     </head>
                     <body>
                         <div id="panorama"></div>
+                        <script>
+                            ${PANNELLUM_JS}
+                        </script>
                         <script>
                             pannellum.viewer('panorama', {
                                 "type": "equirectangular",
