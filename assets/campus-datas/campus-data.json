@@ -408,7 +408,7 @@
                     "category": "Offices",
                     "floor": "4th Floor / 4F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "multimedia",
                     "coordinates": {
                         "latitude": 6.117367,
                         "longitude": 125.144416
@@ -594,11 +594,11 @@
             "Susana Building": [
                 {
                     "id": "SB1F-1",
-                    "name": "SHS Room 01",
+                    "name": "SHS Room 1",
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
-                    "imageFileName": "rm1",
+                    "imageFileName": "rm1-sus",
                     "coordinates": {
                         "latitude": 6.117274,
                         "longitude": 125.144459
@@ -606,7 +606,7 @@
                 },
                 {
                     "id": "SB1F-2",
-                    "name": "SHS Room 02",
+                    "name": "SHS Room 2",
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
@@ -618,7 +618,7 @@
                 },
                 {
                     "id": "SB1F-3",
-                    "name": "SHS Room 03",
+                    "name": "SHS Room 3",
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
@@ -630,7 +630,7 @@
                 },
                 {
                     "id": "SB1F-4",
-                    "name": "SHS Room 04",
+                    "name": "SHS Room 4",
                     "category": "Rooms",
                     "floor": "1st Floor / 1F / Ground",
                     "building": "Susana Building",
@@ -842,11 +842,11 @@
                 },
                 {
                     "id": "SB2F-2",
-                    "name": "Room 07",
+                    "name": "Room 7",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "rm7",
                     "coordinates": {
                         "latitude": 6.117342,
                         "longitude": 125.144423
@@ -854,11 +854,11 @@
                 },
                 {
                     "id": "SB2F-3",
-                    "name": "Room 08",
+                    "name": "Room 8",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "rm8",
                     "coordinates": {
                         "latitude": 6.117434,
                         "longitude": 125.144394
@@ -866,11 +866,11 @@
                 },
                 {
                     "id": "SB2F-4",
-                    "name": "Room 09",
+                    "name": "Room 9",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "rm9",
                     "coordinates": {
                         "latitude": 6.117517,
                         "longitude": 125.144360
@@ -878,11 +878,11 @@
                 },
                 {
                     "id": "SB2F-5",
-                    "name": "Room 10 (Susana)",
+                    "name": "Room 10",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "rm10-sus",
                     "coordinates": {
                         "latitude": 6.117575,
                         "longitude": 125.144341
@@ -892,7 +892,7 @@
             "Mar-E": [
                 {
                     "id": "MAR2F-1",
-                    "name": "Room 01",
+                    "name": "Room 1 (Mar-E)",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
@@ -904,7 +904,7 @@
                 },
                 {
                     "id": "MAR2F-2",
-                    "name": "Room 02",
+                    "name": "Room 2 (Mar-E)",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "imageFileName": "rm2-3-4",
@@ -916,7 +916,7 @@
                 },
                 {
                     "id": "MAR2F-3",
-                    "name": "Room 03",
+                    "name": "Room 3 (Mar-E)",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
@@ -928,7 +928,7 @@
                 },
                 {
                     "id": "MAR2F-4",
-                    "name": "Room 04",
+                    "name": "Room 4 (Mar-E)",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
@@ -940,7 +940,7 @@
                 },
                 {
                     "id": "MAR2F-5",
-                    "name": "Room 05",
+                    "name": "Room 5 (Mar-E)",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
@@ -952,7 +952,7 @@
                 },
                 {
                     "id": "MAR2F-6",
-                    "name": "Room 06",
+                    "name": "Room 6 (Mar-E)",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
@@ -964,7 +964,7 @@
                 },
                 {
                     "id": "MAR2F-7",
-                    "name": "Room 07",
+                    "name": "Room 7 (Mar-E)",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Mar-E",
@@ -976,7 +976,7 @@
                 },
                 {
                     "id": "MAR2F-8",
-                    "name": "Room 08",
+                    "name": "Room 8 (Mar-E)",
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "imageFileName": "rm5-6-7-8",
@@ -1226,7 +1226,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "rm12",
                     "coordinates": {
                         "latitude": 6.117339,
                         "longitude": 125.144428
@@ -1238,7 +1238,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "rm13",
                     "coordinates": {
                         "latitude": 6.117435,
                         "longitude": 125.144392
@@ -1250,7 +1250,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "rm14",
                     "coordinates": {
                         "latitude": 6.117518,
                         "longitude": 125.144363
@@ -1262,7 +1262,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "rm15",
                     "coordinates": {
                         "latitude": 6.117574,
                         "longitude": 125.144341
@@ -1278,7 +1278,7 @@
                     "category": "Rooms",
                     "floor": "4th Floor / 4F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "avr",
                     "coordinates": {
                         "latitude": 6.117300,
                         "longitude": 125.144441
@@ -1290,7 +1290,7 @@
                     "category": "Rooms",
                     "floor": "4th Floor / 4F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "physics",
                     "coordinates": {
                         "latitude": 6.117464,
                         "longitude": 125.144377
@@ -1302,7 +1302,7 @@
                     "category": "Rooms",
                     "floor": "4th Floor / 4F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "nat-science",
                     "coordinates": {
                         "latitude": 6.117500,
                         "longitude": 125.144367
@@ -1314,7 +1314,7 @@
                     "category": "Rooms",
                     "floor": "4th Floor / 4F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "chemistry",
                     "coordinates": {
                         "latitude": 6.117559,
                         "longitude": 125.144344
