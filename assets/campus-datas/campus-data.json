@@ -834,7 +834,7 @@
                     "category": "Rooms",
                     "floor": "2nd Floor / 2F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "comlabmar",
                     "coordinates": {
                         "latitude": 6.117285,
                         "longitude": 125.144456
@@ -1398,7 +1398,7 @@
                 "name": "Susana CR (2F)",
                 "category": "Toilets",
                 "floor": "2nd Floor / 2F",
-                "imageFileName": "",
+                "imageFileName": "susana-cr-2",
                 "coordinates": {
                     "latitude": 6.117689,
                     "longitude": 125.144246
@@ -1424,7 +1424,7 @@
                 "name": "Susana CR (4F)",
                 "category": "Toilets",
                 "floor": "4th Floor / 4F",
-                "imageFileName": "",
+                "imageFileName": "susana-cr-4",
                 "coordinates": {
                     "latitude": 6.117690,
                     "longitude": 125.144245
