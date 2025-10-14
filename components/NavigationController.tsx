@@ -2,7 +2,6 @@ import { navigationModePanoramas } from "@/constants/areaPanoramas";
 import { getRoute, isUserInsideCampus } from "@/constants/helpers/helper";
 import { useMyStoreV2, useUserLocStore } from "@/store/useMyStore";
 import { Floor } from "@/types/types";
-import { TrueSheet } from "@lodev09/react-native-true-sheet";
 import { round, trim } from "es-toolkit";
 import { split } from "es-toolkit/compat";
 import {
@@ -74,46 +73,44 @@ export default function NavigationController() {
                     mayShowUserSettingsDialog: true
                 },
                 (newLocation) => {
-                    console.log('Location update:', {
-                        accuracy: newLocation.coords.accuracy,
-                        speed: newLocation.coords.speed,
-                        heading: newLocation.coords.heading,
-                    });
+                    console.log(newLocation.coords.accuracy);
 
-                    const userCoords = [newLocation.coords.longitude, newLocation.coords.latitude];
+                    if (newLocation.coords.accuracy && newLocation.coords.accuracy < 20) {
+                        const userCoords = [newLocation.coords.longitude, newLocation.coords.latitude];
 
-                    const isInside = isUserInsideCampus(userCoords);
-                    if (!isInside) {
-                        Alert.alert('Outside Boundary', 'You are currently outside the campus.', [
-                            {
-                                text: "Cancel operation",
-                                style: 'cancel',
-                                onPress: () => {
-                                    stopLocationTrack();
-                                    onCancel();
-                                    setShowUserLocation(false);
+                        const isInside = isUserInsideCampus(userCoords);
+                        if (!isInside) {
+                            Alert.alert('Outside Boundary', 'You are currently outside the campus.', [
+                                {
+                                    text: "Cancel operation",
+                                    style: 'cancel',
+                                    onPress: () => {
+                                        stopLocationTrack();
+                                        onCancel();
+                                        setShowUserLocation(false);
+                                    }
                                 }
-                            }
-                        ]);
-                        return;
+                            ]);
+                            return;
+                        }
+
+                        setUserCoordinates(userCoords);
+
+                        if (routeCalculationTimeoutRef.current) {
+                            clearTimeout(routeCalculationTimeoutRef.current);
+                        }
+
+                        routeCalculationTimeoutRef.current = setTimeout(() => {
+                            getRoute(userCoords, areaCoords, floor, setRoutePath, setRouteDistance);
+                            routeCalculationTimeoutRef.current = null;
+                        }, 100);
+
                     }
-
-                    setUserCoordinates(userCoords);
-
-                    if (routeCalculationTimeoutRef.current) {
-                        clearTimeout(routeCalculationTimeoutRef.current);
-                    }
-
-                    routeCalculationTimeoutRef.current = setTimeout(() => {
-                        getRoute(userCoords, areaCoords, floor, setRoutePath, setRouteDistance);
-                        routeCalculationTimeoutRef.current = null;
-                    }, 100);
 
                     setLocSpeed(newLocation.coords.speed);
                     if (newLocation.coords.heading !== null) {
                         setUserCameraHeading(newLocation.coords.heading);
                     }
-
                 }
             );
 
@@ -153,8 +150,6 @@ export default function NavigationController() {
         setIsNavigating(false);
         setShowAreaSheet(false);
         setRoutePath(null);
-        await TrueSheet.dismiss("sub-sheet");
-        await TrueSheet.present("main-sheet");
     }
 
     return (
@@ -260,10 +255,6 @@ const styles = StyleSheet.create({
         margin: 5,
         borderRadius: 999,
         elevation: 3,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
         overflow: 'hidden'
     },
     buttonText: {
