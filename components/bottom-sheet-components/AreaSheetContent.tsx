@@ -2,22 +2,34 @@ import { navigationModePanoramas } from "@/constants/areaPanoramas";
 import { getRoute } from "@/constants/helpers/helper";
 import { useMyStoreV2, useUserLocStore } from "@/store/useMyStore";
 import { Floor } from "@/types/types";
-import { TrueSheet } from "@lodev09/react-native-true-sheet";
+import { useIsFocused } from "@react-navigation/native";
 import { isNull, trim } from "es-toolkit";
 import { split } from "es-toolkit/compat";
-import { useState } from "react";
+import { useRouter } from "expo-router";
+import { useEffect, useState } from "react";
 import { Alert, Modal, Pressable, StyleSheet, View } from "react-native";
-import { ActivityIndicator, Divider, Icon, Text } from "react-native-paper";
+import { ActivityIndicator, Icon, Text } from "react-native-paper";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import PanoramaViewer from "../PanoramaViewer";
 
 export default function AreaSheetContent() {
-    const { setShowAreaSheet, areaData, setRoutePath, setRouteDistance } = useMyStoreV2();
+    const insets = useSafeAreaInsets();
+    const isFocused = useIsFocused();
+    const router = useRouter();
+    const { showAreaSheet, setShowAreaSheet, areaData, setRoutePath, setRouteDistance } = useMyStoreV2();
     const { setIsNavigating, userCoordinates, isLocationServiceEnabled } = useUserLocStore();
     const [isRouteFetching, setIsRouteFetching] = useState(false);
-    const areaCoords = [areaData.coordinates.longitude, areaData.coordinates.latitude];
     const [isViewerVisible, setIsViewerVisible] = useState(false);
-
+    const areaCoords = [areaData.coordinates.longitude, areaData.coordinates.latitude];
     const panoramaImg = navigationModePanoramas[areaData.imageFileName];
+
+    useEffect(() => {
+        if (showAreaSheet && !isFocused) {
+            router.dismiss();
+        }
+    }, [showAreaSheet]);
+
+    if (!showAreaSheet) return null;
 
     function onPanoramaOpen() {
         setIsViewerVisible(true);
@@ -29,8 +41,6 @@ export default function AreaSheetContent() {
 
     async function dismissAreaSheet() {
         setShowAreaSheet(false);
-        await TrueSheet.dismiss("sub-sheet");
-        await TrueSheet.present("main-sheet");
     }
 
     async function getAreaRoute() {
@@ -62,7 +72,7 @@ export default function AreaSheetContent() {
     }
 
     return (
-        <>
+        <View style={[styles.container, { bottom: insets.bottom + 10 }]}>
             <View style={styles.titleView}>
                 <View style={styles.titleContainer}>
                     <Text style={styles.titleStyles} variant="titleLarge">{areaData.name}</Text>
@@ -116,7 +126,6 @@ export default function AreaSheetContent() {
                     </Pressable>
                 </View>
             </View>
-            <Divider />
             <Modal
                 visible={isViewerVisible}
                 animationType="fade"
@@ -125,13 +134,21 @@ export default function AreaSheetContent() {
             >
                 <PanoramaViewer imageSource={panoramaImg} />
             </Modal>
-        </>
+        </View>
     );
 }
 
 const styles = StyleSheet.create({
+    container: {
+        position: 'absolute',
+        borderRadius: 24,
+        backgroundColor: "white",
+        width: '100%',
+        alignItems: 'center',
+        zIndex: 1000
+    },
     titleView: {
-        marginBlock: 20
+        marginBlock: 20,
     },
     titleContainer: {
         marginBottom: 15,
@@ -160,10 +177,6 @@ const styles = StyleSheet.create({
         margin: 5,
         borderRadius: 999,
         elevation: 3,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
         overflow: 'hidden'
     },
     buttonText: {
