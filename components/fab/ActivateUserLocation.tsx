@@ -42,7 +42,6 @@ export default function ActivateUserLocation() {
                 return;
             }
 
-
             const location = await getCurrentPositionAsync({
                 accuracy: Accuracy.BestForNavigation
             });
@@ -138,10 +137,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: 50,
         height: 50,
-        shadowColor: '#000',
-        shadowOpacity: 0.12,
-        shadowRadius: 5,
-        shadowOffset: { width: 0, height: 2 },
         elevation: 5,
     }
 });
