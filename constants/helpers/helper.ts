@@ -1,5 +1,4 @@
 import { ActiveCategory, AreaData, Category, Floor, Position } from "@/types/types";
-import { TrueSheet } from "@lodev09/react-native-true-sheet";
 import { point } from "@turf/helpers";
 import { length } from "@turf/length";
 import { shortestPath } from "@turf/shortest-path";
@@ -22,15 +21,13 @@ export function contains({ category, floor, building, name }: AreaData, query: s
     return false;
 }
 
-export async function areaDetailsSheet(
+export function areaDetailsSheet(
     areaData: AreaData,
     setAreaData: (data: AreaData) => void,
     setShowAreaSheet: (areaSheet: boolean) => void
 ) {
     setAreaData(areaData);
     setShowAreaSheet(true);
-    await TrueSheet.dismiss("main-sheet");
-    await TrueSheet.present("sub-sheet", 0);
 }
 
 const activeFalse = {

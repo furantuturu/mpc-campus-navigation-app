@@ -24,11 +24,11 @@ export default function AreaMarkerImg({ markerAreaData, image }: MarkerImgProps)
     const [touchStart, setTouchStart] = useState<TouchStartData | null>(null);
     const [isDragging, setIsDragging] = useState(false);
 
-    async function onMarkerPress() {
+    function onMarkerPress() {
         if (showAreaSheet) {
             setAreaData(markerAreaData);
         } else {
-            await areaDetailsSheet(markerAreaData, setAreaData, setShowAreaSheet);
+            areaDetailsSheet(markerAreaData, setAreaData, setShowAreaSheet);
         }
 
         setCameraFocus(true);

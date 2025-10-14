@@ -39,12 +39,12 @@ export default function AreaSearchBar() {
         setFilteredCampusData(sortedFilteredData);
     }
 
-    async function listPress(areaData: AreaData) {
+    function listPress(areaData: AreaData) {
         closeMenu();
         if (showAreaSheet) {
             setAreaData(areaData);
         } else {
-            await areaDetailsSheet(areaData, setAreaData, setShowAreaSheet);
+            areaDetailsSheet(areaData, setAreaData, setShowAreaSheet);
         }
 
         categorySelect(areaData.category as Category, setSelectedCategory, setActiveCategory);

@@ -11,8 +11,8 @@ interface CustomButtonProps {
 export default function CustomButton({ areaData, buttonColor }: CustomButtonProps) {
     const { setShowAreaSheet, setAreaData, setAreaCoordinates, setCameraFocus } = useMyStoreV2();
 
-    async function buttonSheetPress() {
-        await areaDetailsSheet(areaData, setAreaData, setShowAreaSheet);
+    function buttonSheetPress() {
+        areaDetailsSheet(areaData, setAreaData, setShowAreaSheet);
         setAreaCoordinates([areaData.coordinates.longitude, areaData.coordinates.latitude]);
         setCameraFocus(true);
     }
@@ -39,10 +39,6 @@ const styles = StyleSheet.create({
         margin: 5,
         borderRadius: 999,
         elevation: 3,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
         overflow: 'hidden'
     },
     buttonText: {
