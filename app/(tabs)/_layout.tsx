@@ -1,22 +1,35 @@
 import { useUserLocStore } from "@/store/useMyStore";
-import { Tabs, usePathname } from "expo-router";
+import { useFocusEffect } from '@react-navigation/native';
+import { Tabs } from "expo-router";
+import { useCallback } from "react";
+import { BackHandler } from 'react-native';
 import { Icon } from "react-native-paper";
 
 export default function TabLayout() {
-    const pathname = usePathname();
     const { isNavigating } = useUserLocStore();
 
+    useFocusEffect(
+        useCallback(() => {
+            const onBackPress = () => {
+                return true;
+            };
+
+            BackHandler.addEventListener('hardwareBackPress', onBackPress);
+        }, [])
+    );
+
     return (
-        <Tabs screenOptions={{
-            tabBarActiveTintColor: "#010840",
-            headerShown: false,
-            tabBarStyle: {
-                backgroundColor: "white",
-                display: isNavigating ? "none" : "flex"
-            },
-            animation: 'shift',
-            tabBarPosition: pathname === "/" ? "bottom" : "top",
-        }}>
+        <Tabs
+            screenOptions={{
+                tabBarActiveTintColor: "#010840",
+                headerShown: false,
+                tabBarStyle: {
+                    backgroundColor: "white",
+                    display: isNavigating ? "none" : "flex",
+                },
+                animation: 'shift',
+            }}
+        >
             <Tabs.Screen
                 name="index"
                 options={{
