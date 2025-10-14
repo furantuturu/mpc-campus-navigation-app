@@ -2,7 +2,6 @@ import { customBlack, customBlue, customDarkYellow, customRed, customYellow } fr
 import { categorySelect } from "@/constants/helpers/helper";
 import { useMyStoreV2 } from "@/store/useMyStore";
 import { Category } from "@/types/types";
-import { TrueSheet } from "@lodev09/react-native-true-sheet";
 import { ScrollView, StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -14,8 +13,6 @@ export default function CampusCategoryButton() {
         setRoutePath(null);
         categorySelect(category, setSelectedCategory, setActiveCategory);
         if (showAreaSheet) {
-            await TrueSheet.dismiss("sub-sheet");
-            await TrueSheet.present("main-sheet");
             setShowAreaSheet(false);
         }
     }
