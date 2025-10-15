@@ -1164,7 +1164,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Maritime Building",
-                    "imageFileName": "",
+                    "imageFileName": "crime-scene-simul",
                     "coordinates": {
                         "latitude": 6.117036,
                         "longitude": 125.144566
@@ -1214,7 +1214,7 @@
                     "category": "Rooms",
                     "floor": "3rd Floor / 3F",
                     "building": "Susana Building",
-                    "imageFileName": "",
+                    "imageFileName": "pscas-rm",
                     "coordinates": {
                         "latitude": 6.117268,
                         "longitude": 125.144459
@@ -1411,7 +1411,7 @@
                 "name": "Susana CR (3F)",
                 "category": "Toilets",
                 "floor": "3rd Floor / 3F",
-                "imageFileName": "",
+                "imageFileName": "susana-cr-3",
                 "coordinates": {
                     "latitude": 6.117687,
                     "longitude": 125.144246
