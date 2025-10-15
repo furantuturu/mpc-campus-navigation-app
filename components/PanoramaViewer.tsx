@@ -45,6 +45,10 @@ export default function PanoramaViewer({ imageSource }: PanoramaViewerProps) {
         <View style={styles.container}>
             <WebView
                 originWhitelist={['*']}
+                domStorageEnabled
+                javaScriptEnabled
+                allowFileAccess
+                cacheMode='LOAD_CACHE_ELSE_NETWORK'
                 source={{
                     html: `
                     <!DOCTYPE html>
@@ -72,17 +76,29 @@ export default function PanoramaViewer({ imageSource }: PanoramaViewerProps) {
                     <body>
                         <div id="panorama"></div>
                         <script>
-                            pannellum.viewer('panorama', {
-                                "type": "equirectangular",
-                                "panorama": "${base64Image}",
-                                "autoLoad": true,
-                                "autoRotate": -2,
-                                "showZoomCtrl": false,
-                                "minPitch": 0,
-                                "maxPitch": 0,
-                                "hfov": 30,
-                                "vaov": 65,
-                            });
+                            try {
+                                pannellum.viewer('panorama', {
+                                    "type": "equirectangular",
+                                    "panorama": "${base64Image}",
+                                    "autoLoad": true,
+                                    "autoRotate": -2,
+                                    "showZoomCtrl": false,
+                                    "minPitch": 0,
+                                    "maxPitch": 0,
+                                    "hfov": 30,
+                                    "vaov": 65,
+                                });
+
+                                window.ReactNativeWebView.postMessage(JSON.stringify({
+                                    type: 'load',
+                                    message: 'Panorama loaded successfully'
+                                }));
+                            } catch (error) {
+                                window.ReactNativeWebView.postMessage(JSON.stringify({
+                                    type: 'error',
+                                    message: error.message
+                                }));
+                            }
                         </script>
                     </body>
                     </html>
