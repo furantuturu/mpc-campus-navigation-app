@@ -169,7 +169,7 @@ export default function NavigationController() {
                     }}
                     onPress={onPanoramaOpen}
                 >
-                    <Icon source="image-area" size={25} color="black" />
+                    <Icon source="panorama-variant" size={25} color="black" />
                 </Pressable>
                 <Pressable
                     style={[styles.buttonStyles, { backgroundColor: "#3887be" }]}
@@ -221,6 +221,7 @@ export default function NavigationController() {
                 animationType="fade"
                 onRequestClose={onPanoramaClose}
                 statusBarTranslucent
+                backdropColor="#000"
             >
                 <PanoramaViewer imageSource={panoramaImg} />
             </Modal>

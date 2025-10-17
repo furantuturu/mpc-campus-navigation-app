@@ -87,8 +87,11 @@ export default function ExploreMarkerImg({ markerExploreData, image }: MarkerImg
                 animationType="fade"
                 onRequestClose={onPanoramaClose}
                 statusBarTranslucent
+                backdropColor="#000"
             >
-                <PanoramaViewer imageSource={panoramaImg} />
+                {isViewerVisible && (
+                    <PanoramaViewer imageSource={panoramaImg} />
+                )}
             </Modal>
         </View>
     );

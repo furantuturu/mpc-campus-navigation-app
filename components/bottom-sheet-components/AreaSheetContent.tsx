@@ -93,7 +93,7 @@ export default function AreaSheetContent() {
                         onPress={onPanoramaOpen}
                         disabled={isRouteFetching}
                     >
-                        <Icon source="image-area" size={25} color="black" />
+                        <Icon source="panorama-variant" size={25} color="black" />
                     </Pressable>
                     <Pressable
                         style={[styles.buttonStyles, { backgroundColor: "#565656" }]}
@@ -131,8 +131,11 @@ export default function AreaSheetContent() {
                 animationType="fade"
                 onRequestClose={onPanoramaClose}
                 statusBarTranslucent
+                backdropColor="#000"
             >
-                <PanoramaViewer imageSource={panoramaImg} />
+                {isViewerVisible && (
+                    <PanoramaViewer imageSource={panoramaImg} />
+                )}
             </Modal>
         </View>
     );
