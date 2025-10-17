@@ -8,9 +8,6 @@
     "scheme": "mpcoutnav",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "assetBundlePatterns": [
-      "assets/**/*"
-    ],
     "ios": {
       "supportsTablet": true,
       "runtimeVersion": {
