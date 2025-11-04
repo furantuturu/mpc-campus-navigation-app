@@ -118,5 +118,13 @@
             "latitude": 6.116864,
             "longitude": 125.144825
         }
+    },
+    {
+        "id": "EXP16",
+        "imageFileName": "exp16",
+        "coordinates": {
+            "latitude": 6.117315,
+            "longitude": 125.143932
+        }
     }
 ]
