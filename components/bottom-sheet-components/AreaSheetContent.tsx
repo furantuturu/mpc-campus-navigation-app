@@ -133,9 +133,7 @@ export default function AreaSheetContent() {
                 statusBarTranslucent
                 backdropColor="#000"
             >
-                {isViewerVisible && (
-                    <PanoramaViewer imageSource={panoramaImg} />
-                )}
+                <PanoramaViewer imageSource={panoramaImg} />
             </Modal>
         </View>
     );

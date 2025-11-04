@@ -89,9 +89,7 @@ export default function ExploreMarkerImg({ markerExploreData, image }: MarkerImg
                 statusBarTranslucent
                 backdropColor="#000"
             >
-                {isViewerVisible && (
-                    <PanoramaViewer imageSource={panoramaImg} />
-                )}
+                <PanoramaViewer imageSource={panoramaImg} />
             </Modal>
         </View>
     );
