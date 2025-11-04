@@ -13,5 +13,6 @@ export const exploreModePanoramas: any = {
     exp12: require(`@/assets/images/explore-pano/exp12.jpg`),
     exp13: require(`@/assets/images/explore-pano/exp13.jpg`),
     exp14: require(`@/assets/images/explore-pano/exp14.jpg`),
-    exp15: require(`@/assets/images/explore-pano/exp15.jpg`)
+    exp15: require(`@/assets/images/explore-pano/exp15.jpg`),
+    exp16: require(`@/assets/images/explore-pano/exp16.jpg`),
 };
