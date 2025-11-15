@@ -88,11 +88,12 @@ export default function AreaSearchBar() {
                         onChangeText={(query) => searchArea(query)}
                         elevation={3}
                         autoFocus={true}
+                        iconColor="black"
                     />
                 </View>
                 <Divider />
                 <View style={styles.areaListStyles}>
-                    <Text variant="labelLarge">Results:</Text>
+                    <Text variant="labelLarge" style={{ color: "black" }}>Results:</Text>
                     <View style={styles.areaListContainer}>
                         {trim(searchQuery).length > 0 && (
                             <FlatList
@@ -146,7 +147,8 @@ const styles = StyleSheet.create({
         padding: 20
     },
     searchBarStyle: {
-        backgroundColor: "white"
+        backgroundColor: "white",
+        color: "black"
     },
     areaListContainer: {
         marginBlockEnd: 50
@@ -165,6 +167,7 @@ const styles = StyleSheet.create({
     },
     areaTextStyles: {
         flexShrink: 1,
-        lineHeight: 21
+        lineHeight: 21,
+        color: "black"
     }
 });

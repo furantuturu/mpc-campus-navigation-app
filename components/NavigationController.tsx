@@ -156,8 +156,8 @@ export default function NavigationController() {
         <View style={[styles.container, { bottom: insets.bottom + 10 }]}>
             <Text style={styles.titleStyles} variant="titleLarge">{areaData.name}</Text>
             <View style={[styles.viewContainer, { gap: 15 }]}>
-                <Text variant="titleMedium">Distance: {round(routeDistance, 2)}m</Text>
-                <Text variant="titleMedium">Floor: {split(areaData.floor, '/')[0]}</Text>
+                <Text style={styles.navigateDetailText} variant="titleMedium">Distance: {round(routeDistance, 2)}m</Text>
+                <Text style={styles.navigateDetailText} variant="titleMedium">Floor: {split(areaData.floor, '/')[0]}</Text>
             </View>
             <View style={styles.viewContainer}>
                 <Pressable
@@ -246,6 +246,10 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontWeight: 'bold',
         marginBottom: 15,
+        color: "black"
+    },
+    navigateDetailText: {
+        color: "black"
     },
     buttonStyles: {
         flexDirection: 'row',

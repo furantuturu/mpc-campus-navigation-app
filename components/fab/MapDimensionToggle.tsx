@@ -24,7 +24,7 @@ export default function MapDimensionToggle() {
             rippleColor="rgba(0, 0, 0, 0.12)"
             onPress={handleDimension}
         >
-            <Icon source="camera-switch" size={25} />
+            <Icon source="camera-switch" size={25} color="black" />
         </TouchableRipple>
     );
 }

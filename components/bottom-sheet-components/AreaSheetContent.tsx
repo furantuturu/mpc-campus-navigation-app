@@ -77,9 +77,9 @@ export default function AreaSheetContent() {
                 <View style={styles.titleContainer}>
                     <Text style={styles.titleStyles} variant="titleLarge">{areaData.name}</Text>
                     <View style={styles.areaOriginDetail}>
-                        <Text variant="labelSmall">Category: {areaData.category},</Text>
-                        <Text variant="labelSmall">Floor: {split(areaData.floor, '/')[0]},</Text>
-                        <Text variant="labelSmall">Building: {areaData.building ?? "N/A"}</Text>
+                        <Text style={styles.areaOriginDetailText} variant="labelSmall">Category: {areaData.category},</Text>
+                        <Text style={styles.areaOriginDetailText} variant="labelSmall">Floor: {split(areaData.floor, '/')[0]},</Text>
+                        <Text style={styles.areaOriginDetailText} variant="labelSmall">Building: {areaData.building ?? "N/A"}</Text>
                     </View>
                 </View>
                 <View style={styles.buttonContainer}>
@@ -158,11 +158,15 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontWeight: 'bold',
         marginBottom: 15,
+        color: "black"
     },
     areaOriginDetail: {
         flexDirection: "row",
         justifyContent: 'center',
         gap: 10
+    },
+    areaOriginDetailText: {
+        color: "black"
     },
     buttonContainer: {
         flexDirection: 'row',
